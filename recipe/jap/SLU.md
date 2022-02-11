@@ -1,0 +1,4 @@
+# SLU
+| Directory name          | Corpus name                                                                             | Task                    | Language              | URL                                                                                                          | Note         |
+| ----------------------- | --------------------------------------------------------------------------------------- | ----------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------ | ------------ |
+| jdcinal                 | Japanese Dialogue Corpus of Information Navigation and Attentive Listening Annotated with Extended ISO-24617-2 Dialogue Act Tags              | SLU               | JP                    | http://www.lrec-conf.org/proceedings/lrec2018/pdf/464.pdf http://tts.speech.cs.cmu.edu/awb/infomation_navigation_and_attentive_listening_0.2.zip |              |

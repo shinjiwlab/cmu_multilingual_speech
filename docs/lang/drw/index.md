@@ -1,0 +1,23 @@
+---
+hide:
+- toc
+- navigation
+---
+# drw
+|                      | info     |
+|:---------------------|:---------|
+| id                   | darw1234 |
+| family_id            | indo1319 |
+| parent_id            | taji1245 |
+| name                 | Darwazi  |
+| bookkeeping          | False    |
+| level                | dialect  |
+| latitude             | 38.3161  |
+| longitude            | 70.7643  |
+| iso639P3code         | drw      |
+| description          | nan      |
+| markup_description   | nan      |
+| child_family_count   | 0        |
+| child_language_count | 0        |
+| child_dialect_count  | 0        |
+| country_ids          | AF       |

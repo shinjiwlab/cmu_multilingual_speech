@@ -1,0 +1,23 @@
+---
+hide:
+- toc
+- navigation
+---
+# kcv
+|                      | info     |
+|:---------------------|:---------|
+| id                   | kete1252 |
+| family_id            | atla1278 |
+| parent_id            | ruun1240 |
+| name                 | Kete     |
+| bookkeeping          | False    |
+| level                | language |
+| latitude             | -7.15104 |
+| longitude            | 22.9027  |
+| iso639P3code         | kcv      |
+| description          | nan      |
+| markup_description   | nan      |
+| child_family_count   | 0        |
+| child_language_count | 0        |
+| child_dialect_count  | 0        |
+| country_ids          | CD       |

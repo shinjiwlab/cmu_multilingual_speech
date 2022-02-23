@@ -1,0 +1,33 @@
+---
+hide:
+- toc
+- navigation
+---
+eː
+i
+k
+kʰ
+kʷ
+kʷʰ
+kʼ
+n̪
+n̪ː
+oː
+s̪
+s̪ʼ
+s̪ː
+t̪
+t̪s̪
+t̪s̪ʼ
+t̪s̪ː
+t̪ʰ
+u
+w
+w̰
+ɒ
+ɒː
+ɛ
+ɛː
+ɦ
+ʈʂʰ
+ʔ

@@ -1,0 +1,29 @@
+---
+hide:
+- toc
+- navigation
+---
+# Model
+|corpus|task|name|url|fs|lang|gender|pytorch|espnet|commit|valid|
+|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
+|csmsc|tts|kan-bayashi/csmsc_tts_train_tacotron2_raw_phn_pypinyin_g2p_phone_train.loss.best|https://zenodo.org/record/3969118/files/tts_train_tacotron2_raw_phn_pypinyin_g2p_phone_train.loss.best.zip?download=1|24000|zh|female||||true|
+|csmsc|tts|kan-bayashi/csmsc_tts_train_fastspeech_raw_phn_pypinyin_g2p_phone_train.loss.best|https://zenodo.org/record/3986227/files/tts_train_fastspeech_raw_phn_pypinyin_g2p_phone_train.loss.best.zip?download=1|24000|zh|female||||true|
+|csmsc|tts|kan-bayashi/csmsc_tacotron2|https://zenodo.org/record/3969118/files/tts_train_tacotron2_raw_phn_pypinyin_g2p_phone_train.loss.best.zip?download=1|24000|zh|female||||true|
+|csmsc|tts|kan-bayashi/csmsc_fastspeech|https://zenodo.org/record/3986227/files/tts_train_fastspeech_raw_phn_pypinyin_g2p_phone_train.loss.best.zip?download=1|24000|zh|female||||true|
+|csmsc|tts|kan-bayashi/csmsc_tts_train_fastspeech2_raw_phn_pypinyin_g2p_phone_train.loss.ave|https://zenodo.org/record/4031953/files/tts_train_fastspeech2_raw_phn_pypinyin_g2p_phone_train.loss.ave.zip?download=1|24000|zh|female|1.6.0|0.9.3|f366560|true|
+|csmsc|tts|kan-bayashi/csmsc_tts_train_conformer_fastspeech2_raw_phn_pypinyin_g2p_phone_train.loss.ave|https://zenodo.org/record/4031955/files/tts_train_conformer_fastspeech2_raw_phn_pypinyin_g2p_phone_train.loss.ave.zip?download=1|24000|zh|female|1.6.0|0.9.3|f366560|true|
+|csmsc|tts|kan-bayashi/csmsc_fastspeech2|https://zenodo.org/record/4031953/files/tts_train_fastspeech2_raw_phn_pypinyin_g2p_phone_train.loss.ave.zip?download=1|24000|zh|female|1.6.0|0.9.3|f366560|true|
+|csmsc|tts|kan-bayashi/csmsc_conformer_fastspeech2|https://zenodo.org/record/4031955/files/tts_train_conformer_fastspeech2_raw_phn_pypinyin_g2p_phone_train.loss.ave.zip?download=1|24000|zh|female|1.6.0|0.9.3|f366560|true|
+|csmsc|tts|kan-bayashi/csmsc_tts_train_transformer_raw_phn_pypinyin_g2p_phone_train.loss.ave|https://zenodo.org/record/4034125/files/tts_train_transformer_raw_phn_pypinyin_g2p_phone_train.loss.ave.zip?download=1|24000|zh|female|1.5.1|0.9.3|67ca53d|true|
+|csmsc|tts|kan-bayashi/csmsc_transformer|https://zenodo.org/record/4034125/files/tts_train_transformer_raw_phn_pypinyin_g2p_phone_train.loss.ave.zip?download=1|24000|zh|female|1.5.1|0.9.3|67ca53d|true|
+|csj|asr|kan-bayashi/csj_asr_train_asr_transformer_raw_char_sp_valid.acc.ave|https://zenodo.org/record/4037458/files/asr_train_asr_transformer_raw_char_sp_valid.acc.ave.zip?download=1|16000|jp||1.5.1|0.9.3|67ca53d|true|
+|aishell|asr|kamo-naoyuki/aishell_conformer|https://zenodo.org/record/4105763/files/asr_train_asr_conformer3_raw_char_batch_bins4000000_accum_grad4_sp_valid.acc.ave.zip?download=1|16000|zh||1.6.0|0.9.0|20b0c89|true|
+|hkust|asr|kamo-naoyuki/hkust_asr_train_asr_transformer2_raw_zh_char_batch_bins20000000_ctc_confignore_nan_gradtrue_sp_valid.acc.ave|https://zenodo.org/record/4430974/files/asr_train_asr_transformer2_raw_zh_char_batch_bins20000000_ctc_confignore_nan_gradtrue_sp_valid.acc.ave.zip?download=1|16000|zh||1.4.0|0.9.6|db7dfea|true|
+|aishell|asr_stream|Emiru Tsunoo/aishell_asr_train_asr_streaming_transformer_raw_zh_char_sp_valid.acc.ave|https://zenodo.org/record/4604023/files/asr_train_asr_streaming_transformer_raw_zh_char_sp_valid.acc.ave.zip?download=1|16000|zh||1.4.0|0.9.7||true|
+|csmsc|tts|kan-bayashi/csmsc_tts_train_full_band_vits_raw_phn_pypinyin_g2p_phone_train.total_count.ave|https://zenodo.org/record/5521404/files/tts_train_full_band_vits_raw_phn_pypinyin_g2p_phone_train.total_count.ave.zip?download=1|44100|zh|female|1.7.1|0.10.3a1|dee654|true|
+|csmsc|tts|kan-bayashi/csmsc_full_band_vits|https://zenodo.org/record/5521404/files/tts_train_full_band_vits_raw_phn_pypinyin_g2p_phone_train.total_count.ave.zip?download=1|44100|zh|female|1.7.1|0.10.3a1|dee654|true|
+|csmsc|tts|kan-bayashi/csmsc_tts_train_vits_raw_phn_pypinyin_g2p_phone_train.total_count.ave|https://zenodo.org/record/5499120/files/tts_train_vits_raw_phn_pypinyin_g2p_phone_train.total_count.ave.zip?download=1|22050|zh|female|1.7.1|0.10.3a2|628b46|true|
+|csmsc|tts|kan-bayashi/csmsc_vits|https://zenodo.org/record/5499120/files/tts_train_vits_raw_phn_pypinyin_g2p_phone_train.total_count.ave.zip?download=1|22050|zh|female|1.7.1|0.10.3a2|628b46|true|
+|open_li52|asr|ftshijt/open_li52_asr_train_asr_raw_bpe7000_valid.acc.ave_10best|https://zenodo.org/record/4738407/files/asr_train_asr_raw_bpe7000_valid.acc.ave_10best.zip?download=1|16000|multilingual||1.7.1|0.9.7|59bc1f7|true|
+|open_li52|asr|ftshijt/open_li52_asr_train_asr_raw_bpe7000_valid.acc.ave_10best|https://zenodo.org/record/4738407/files/asr_train_asr_raw_bpe7000_valid.acc.ave_10best.zip?download=1|16000|multilingual||1.7.1|0.9.7|59bc1f7|true|
+|open_li52|asr|ftshijt/open_li52_asr_train_asr_raw_bpe7000_valid.acc.ave_10best|https://zenodo.org/record/4738407/files/asr_train_asr_raw_bpe7000_valid.acc.ave_10best.zip?download=1|16000|multilingual||1.7.1|0.9.7|59bc1f7|true|

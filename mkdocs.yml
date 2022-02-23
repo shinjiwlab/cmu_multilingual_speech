@@ -1,0 +1,12 @@
+site_name: CMU Multilingual Speech DB 
+theme:
+    name: material 
+    features:
+     - toc.integrate
+     - navigation.tabs
+     - navigation.sections
+
+markdown_extensions:
+  - toc:
+      toc_depth : "1-1"
+

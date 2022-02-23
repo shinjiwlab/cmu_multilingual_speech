@@ -1,0 +1,29 @@
+---
+hide:
+- toc
+- navigation
+---
+a
+b
+d̠ʒ
+d̪
+i
+k
+l̪
+m
+n̪
+o
+p
+r̪
+s̪
+t̠ʃ
+t̪
+u
+x
+ŋ
+ɘ
+ɡ
+ɪ
+ɲ
+ʝ
+β

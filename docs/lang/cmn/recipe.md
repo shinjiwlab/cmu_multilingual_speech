@@ -1,0 +1,17 @@
+---
+hide:
+- toc
+- navigation
+---
+# Recipe
+| Directory name          | Corpus name                                                                             | Task                    | Language              | URL                                                                                                          | Note         |
+| ----------------------- | --------------------------------------------------------------------------------------- | ----------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------ | ------------ |
+| aidatatang_200zh        | Aidatatang_200zh A free Chinese Mandarin speech corpus                                  | ASR                     | ZH                    | http://www.openslr.org/resources/62                                                                          |              |
+| aishell                 | AISHELL-ASR0009-OS1 Open Source Mandarin Speech Corpus                                  | ASR                     | ZH                    | http://www.aishelltech.com/kysjcp                                                                            |              |
+| aishell3                | AISHELL3 Mandarin multi-speaker text-to-speech                                          | TTS                     | ZH                    | https://www.openslr.org/93/                                                                                  |              |
+| catslu               	  | CATSLU-MAPS                                                                             | SLU                     | ZH           	      | https://sites.google.com/view/catslu/home                                                                    |              |
+| csmsc                   | Chinese Standard Mandarin Speech Copus                                                  | TTS                     | ZH                    | https://www.data-baker.com/open_source.html                                                                  |              |
+| hkust                   | HKUST/MTS: A very large scale Mandarin telephone speech corpus                          | ASR                     | ZH                    | https://catalog.ldc.upenn.edu/LDC2005S15                                                                     |              |
+| primewords_chinese      | Primewords Chinese Corpus Set 1                                                         | ASR                     | ZH                    | https://www.openslr.org/47/                                                                                  |              |
+| thchs30                 | A Free Chinese Speech Corpus Released by CSLT@Tsinghua University                       | TTS                     | ZH                    | https://www.openslr.org/18/                                                                                  |              |
+| wenetspeech             | WenetSpeech: A 10000+ Hours Multi-domain Chinese Corpus for Speech Recognition          | ASR                     | ZH                    | https://wenet-e2e.github.io/WenetSpeech/                                                                     |              |

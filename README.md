@@ -9,6 +9,21 @@ This repository is a collection of resources and models for multilingual speech 
 
 Each directory is organized by languages where each language is specified by the ISO639-3 Id. 
 
+## How to contribute
+
+- If you find any relevant speech resources (e.g: corpus, model, recipe), you can edit the corresponding file under `data/lang/<your lang>`
+- If there are no existing file, you can create a file following the style in the English directory
+- Once your pull request is merged, it will be automatically integrated into our website
+
+## How to build the web interface locally
+
+Our web interface is based on the [mkdocs framework](https://www.mkdocs.org/) and its theme [mkdocs-material](https://squidfunk.github.io/mkdocs-material/)
+
+We would 
+
+
+## Common Language Id
+
 The most common language id are as follows:
 
 | ISO id | Language        |

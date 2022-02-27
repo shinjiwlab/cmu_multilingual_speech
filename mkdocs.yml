@@ -6,6 +6,13 @@ theme:
      - navigation.tabs
      - navigation.sections
 
+extra_css:
+  - stylesheets/leaflet.css
+
+extra_javascript:
+  - javascripts/leaflet.js
+  - javascripts/build_map.js
+
 markdown_extensions:
   - toc:
       toc_depth : "1-1"

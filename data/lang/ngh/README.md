@@ -4,7 +4,7 @@
 | id                   | nngg1234  |
 | family_id            | tuuu1241  |
 | parent_id            | nuuu1241  |
-| name                 | N||ng     |
+| name                 | Nluu      |
 | bookkeeping          | False     |
 | level                | language  |
 | latitude             | -29.70543 |

@@ -1,9 +1,0 @@
----
-hide:
-- toc
-- navigation
----
-# Recipe
-| Directory name          | Corpus name                                                                             | Task                    | Language              | URL                                                                                                          | Note         |
-| ----------------------- | --------------------------------------------------------------------------------------- | ----------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------ | ------------ |
-| hui_acg                 | HUI-audio-corpus-german                                                                 | TTS                     | DE                    | https://opendata.iisys.de/datasets.html#hui-audio-corpus-german                                              |              |

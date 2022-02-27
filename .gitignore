@@ -129,4 +129,7 @@ dmypy.json
 .pyre/
 
 .idea
-scripts
+sandbox
+preprocess
+docs/lang
+docs/*.md

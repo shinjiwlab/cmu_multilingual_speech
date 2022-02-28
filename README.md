@@ -19,8 +19,18 @@ Each directory is organized by languages where each language is specified by the
 
 Our web interface is based on the [mkdocs framework](https://www.mkdocs.org/) and its theme [mkdocs-material](https://squidfunk.github.io/mkdocs-material/)
 
-We would 
+You need to first install those software
 
+```bash
+pip install mkdocs-material
+```
+
+Then build the docs and serve it 
+
+```bash
+python mkbuild/build_docs.py
+mkdocs serve
+```
 
 ## Common Language Id
 

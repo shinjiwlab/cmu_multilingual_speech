@@ -13,7 +13,7 @@ def clean_docs():
         shutil.rmtree(MkbuildConfig.docs_path / 'lang')
 
 
-def write_table(w, lang_lst):
+def write_table(w, lang_lst, relative_path='./lang'):
 
     w.write("| Language Id | Language Name | Corpus | Recipe | Model | Inventory |\n|-|-|-|-|-|-|\n")
 
@@ -32,19 +32,19 @@ def write_table(w, lang_lst):
 
         # create corpus
         if lang.corpus is not None:
-            row.append('[yes](./lang/'+lang_id+'/corpus.md)')
+            row.append('[yes]('+relative_Path+'/'+lang_id+'/corpus.md)')
         else:
             row.append('')
 
         # create recipe
         if lang.recipe is not None:
-            row.append('[yes](./lang/'+lang_id+'/recipe.md)')
+            row.append('[yes]('+relative_Path+'/'+lang_id+'/recipe.md)')
         else:
             row.append('')
             
         # create model
         if lang.model is not None:
-            row.append('[yes](./lang/'+lang_id+'/model.md)')
+            row.append('[yes]('+relative_Path+'/'+lang_id+'/model.md)')
         else:
             row.append('')
             
@@ -57,67 +57,9 @@ def write_table(w, lang_lst):
         w.write('|' + '|'.join(row) + '|\n')
             
 
-
-    # for lang_dir in lang_lst:
-    #     lang_id = lang_dir.stem
-    #
-    #     lst = []
-    #
-    #     lst.append(f'[{lang_id}]({MkbuildConfig.github_root}/data/lang/{lang_id})')
-    #     readme = lang_dir /'README.md'
-    #
-    #     if not readme.exists():
-    #         continue
-    #
-    #     r = open(readme, 'r')
-    #     for line in r:
-    #         if not line.startswith('| name'):
-    #             continue
-    #         lang_name = line.strip().split('|')[2]
-    #         lst.append(lang_name)
-    #         break
-    #
-    #     if (lang_dir / 'corpus.md').exists():
-    #         lst.append('[yes](./lang/'+lang_id+'/corpus.md)')
-    #     else:
-    #         lst.append('')
-    #
-    #     if (lang_dir / 'recipe.md').exists():
-    #         lst.append('[yes](./lang/'+lang_id+'/recipe.md)')
-    #     else:
-    #         lst.append('')
-    #
-    #     if (lang_dir / 'model.md').exists():
-    #         lst.append('[yes](./lang/'+lang_id+'/model.md)')
-    #     else:
-    #         lst.append('')
-    #
-    #     if (lang_dir / 'phoible.txt').exists():
-    #         lst.append(f'[yes]({MkbuildConfig.github_root}/data/lang/{lang_id}/phoible.txt)')
-    #     else:
-    #         lst.append('')
-    #
-    #     w.write('|' + '|'.join(lst) + '|\n')
-
-
-def write_langs():
-
-    """
-    var langs = [{
-    "type": "Point",
-    "coordinates": [0, 0],
-    "popupContent": "<a href='https://www.google.com'>hello</a>"
-}, {
-    "type": "Point",
-    "coordinates": [30, 30],
-    "popupContent": "world"
-}];
-    """
-
-
 def embed_map(w, langs):
 
-    w.write("""\n\n<div id='map' style='height: 500px'></div>\n<script>var langs = [""")
+    w.write("""\n\n<div id='map' style='height: 640px'></div>\n<script>var langs = [""")
     for lang in langs:
         if lang.info is not None:
             a = float(lang.info['info']['latitude'])
@@ -125,7 +67,7 @@ def embed_map(w, langs):
             if a is None or np.isnan(a) or b is None or np.isnan(b):
                 continue
 
-            w.write("{"+f"""\"type": "Point", "coordinates": [{b}, {a}], "popupContent": "<a href='/lang/{lang.lang_id}'>{lang.lang_id}</a>\""""+"},\n")
+            w.write("{"+f"""\"type": "Point", "coordinates": [{b}, {a}], "popupContent": "<a href='/cmu_multilingual_speech/lang/{lang.lang_id}'>{lang.lang_id}</a>\""""+"},\n")
     w.write("];\n</script>\n\n")
 
 
@@ -142,7 +84,7 @@ def build_lang_index(lang_collection):
     w.write("""---\nhide:\n- toc\n- navigation\n---\n""")
     w.write("""# Language\n""")
     embed_map(w, lang_collection.langs)
-    write_table(w, lang_collection.langs)
+    write_table(w, lang_collection.langs, '.')
     w.close()
 
 
@@ -198,6 +140,7 @@ def build_individual_lang(source_lang_dir, target_lang_dir, lang):
         w.write(r.read())
         r.close()
 
+    w.write("\n\n")
     write_table(w, [lang])
 
     w.close()

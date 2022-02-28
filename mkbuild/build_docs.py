@@ -114,7 +114,7 @@ def build_recipe(lang_collection):
 
     w = open(MkbuildConfig.docs_path / 'recipe.md', 'w')
     w.write("""---\nhide:\n- toc\n- navigation\n---\n""")
-    w.write("""# Model\n\n""")
+    w.write("""# Recipe\n\n""")
     lang_lst = lang_collection.filter_by_recipe()
     embed_map(w, lang_lst)
     write_table(w, lang_lst)

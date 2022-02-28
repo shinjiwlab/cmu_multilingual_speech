@@ -32,19 +32,19 @@ def write_table(w, lang_lst, relative_path='./lang'):
 
         # create corpus
         if lang.corpus is not None:
-            row.append('[yes]('+relative_Path+'/'+lang_id+'/corpus.md)')
+            row.append('[yes]('+relative_path+'/'+lang_id+'/corpus.md)')
         else:
             row.append('')
 
         # create recipe
         if lang.recipe is not None:
-            row.append('[yes]('+relative_Path+'/'+lang_id+'/recipe.md)')
+            row.append('[yes]('+relative_path+'/'+lang_id+'/recipe.md)')
         else:
             row.append('')
             
         # create model
         if lang.model is not None:
-            row.append('[yes]('+relative_Path+'/'+lang_id+'/model.md)')
+            row.append('[yes]('+relative_path+'/'+lang_id+'/model.md)')
         else:
             row.append('')
             

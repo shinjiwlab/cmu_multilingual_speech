@@ -46,6 +46,9 @@ class LanguageCollection:
     def __init__(self, langs):
         self.langs = sorted(langs, key=lambda lang: lang.lang_id) 
         
+    def __len__(self):
+        return len(self.langs)
+        
     def filter_by_corpus(self):
         return list(filter(lambda lang: lang.corpus is not None, self.langs))
 

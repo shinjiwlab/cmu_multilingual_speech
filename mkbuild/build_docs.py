@@ -74,7 +74,8 @@ def embed_map(w, langs):
 def build_index(lang_collection):
     w = open(MkbuildConfig.docs_path / 'index.md', 'w')
     w.write("""---\nhide:\n- toc\n- navigation\n---\n""")
-    w.write("""# Home \nWelcome to CMU Speech Multilingual DB\nFor full data, visit our repository.\n\n""")
+    w.write("""# Home \nWelcome to CMU Speech Multilingual DB\nFor full data, visit our [repository](https://github.com/shinjiwlab/cmu_multilingual_speech).\n\n""")
+    w.write(f"We attempt to index speech database for **{len(lang_collection)}** languages.")
     w.write("![map](./img/map.png)\n")
     w.close()
 
@@ -88,6 +89,11 @@ def build_lang_index(lang_collection):
     w.close()
 
 
+def write_progressbar(w, lang_collection, lang_lst):
+
+    w.write(f"[={len(lang_lst)*100/len(lang_collection):.2f}% \"{len(lang_lst)*100/len(lang_collection):.2f}% available \"]\n\n")
+
+
 def build_corpus(lang_collection):
 
     w = open(MkbuildConfig.docs_path / 'corpus.md', 'w')
@@ -95,6 +101,7 @@ def build_corpus(lang_collection):
     w.write("""# Corpus\n\n""")
     lang_lst = lang_collection.filter_by_corpus()
     embed_map(w, lang_lst)
+    write_progressbar(w, lang_collection, lang_lst)
     write_table(w, lang_lst)
     w.close()
 
@@ -106,6 +113,8 @@ def build_model(lang_collection):
     w.write("""# Model\n\n""")
     lang_lst = lang_collection.filter_by_model()
     embed_map(w, lang_lst)
+    write_progressbar(w, lang_collection, lang_lst)
+
     write_table(w, lang_lst)
     w.close()
 
@@ -117,6 +126,7 @@ def build_recipe(lang_collection):
     w.write("""# Recipe\n\n""")
     lang_lst = lang_collection.filter_by_recipe()
     embed_map(w, lang_lst)
+    write_progressbar(w, lang_collection, lang_lst)
     write_table(w, lang_lst)
     w.close()
 

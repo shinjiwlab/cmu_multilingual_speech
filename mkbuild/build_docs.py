@@ -17,7 +17,7 @@ def clean_docs():
         shutil.rmtree(MkbuildConfig.docs_path / 'index')
 
 
-def write_table(w, lang_lst, relative_path='/lang'):
+def write_table(w, lang_lst, relative_path='/cmu_multilingual_speech/lang'):
 
     w.write("| Language Id | Language Name | Corpus | Recipe | Model | Inventory |\n|-|-|-|-|-|-|\n")
 
@@ -105,7 +105,7 @@ def build_alphabet_index(lang_collection):
     w.write("## Language Index\n\n")
     for i in range(ord('a'), ord('z')+1):
         char = chr(i)
-        w.write(f"[Languages ISO Prefix {char.upper()}](/index/{char})\n\n")
+        w.write(f"[Languages ISO Prefix {char.upper()}](/cmu_multilingual_speech/index/{char})\n\n")
 
     w.close()
 

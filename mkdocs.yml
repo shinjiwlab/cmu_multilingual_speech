@@ -1,4 +1,12 @@
 site_name: CMU Multilingual Speech DB 
+
+nav:
+    - index.md
+    - corpus.md
+    - model.md
+    - recipe.md
+    - index/index.md
+
 theme:
     name: material 
     features:

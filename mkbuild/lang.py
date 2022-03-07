@@ -58,6 +58,9 @@ class LanguageCollection:
     def filter_by_model(self):
         return list(filter(lambda lang: lang.model is not None, self.langs))
 
+    def filter_by_alphabet(self, char):
+        return list(filter(lambda lang: lang.lang_id.startswith(char), self.langs))
+
 
 class Language:
 

@@ -133,3 +133,4 @@ sandbox
 preprocess
 docs/lang
 docs/*.md
+docs/index

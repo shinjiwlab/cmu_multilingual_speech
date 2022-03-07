@@ -12,8 +12,12 @@ def clean_docs():
         print("cleaning old files...")
         shutil.rmtree(MkbuildConfig.docs_path / 'lang')
 
+    if (MkbuildConfig.docs_path / 'index').exists():
+        print("cleaning old files...")
+        shutil.rmtree(MkbuildConfig.docs_path / 'index')
 
-def write_table(w, lang_lst, relative_path='./lang'):
+
+def write_table(w, lang_lst, relative_path='/lang'):
 
     w.write("| Language Id | Language Name | Corpus | Recipe | Model | Inventory |\n|-|-|-|-|-|-|\n")
 
@@ -32,19 +36,19 @@ def write_table(w, lang_lst, relative_path='./lang'):
 
         # create corpus
         if lang.corpus is not None:
-            row.append('[yes]('+relative_path+'/'+lang_id+'/corpus.md)')
+            row.append('[yes]('+relative_path+'/'+lang_id+'/corpus)')
         else:
             row.append('')
 
         # create recipe
         if lang.recipe is not None:
-            row.append('[yes]('+relative_path+'/'+lang_id+'/recipe.md)')
+            row.append('[yes]('+relative_path+'/'+lang_id+'/recipe)')
         else:
             row.append('')
             
         # create model
         if lang.model is not None:
-            row.append('[yes]('+relative_path+'/'+lang_id+'/model.md)')
+            row.append('[yes]('+relative_path+'/'+lang_id+'/model)')
         else:
             row.append('')
             
@@ -87,6 +91,33 @@ def build_lang_index(lang_collection):
     embed_map(w, lang_collection.langs)
     write_table(w, lang_collection.langs, '.')
     w.close()
+
+
+def build_alphabet_index(lang_collection):
+
+    (MkbuildConfig.docs_path / 'index').mkdir(parents=True, exist_ok=True)
+
+    w = open(MkbuildConfig.docs_path / 'index/index.md', 'w')
+    w.write("""---\nhide:\n- toc\n- navigation\n---\n""")
+    w.write("""# Language\n""")
+    embed_map(w, lang_collection.langs)
+
+    w.write("## Language Index\n\n")
+    for i in range(ord('a'), ord('z')+1):
+        char = chr(i)
+        w.write(f"[Languages ISO Prefix {char.upper()}](/index/{char})\n\n")
+
+    w.close()
+
+    for i in range(ord('a'), ord('z')+1):
+        char = chr(i)
+        w = open(MkbuildConfig.docs_path / f'index/{char}.md', 'w')
+        lang_lst = lang_collection.filter_by_alphabet(char)
+        w.write("""---\nhide:\n- toc\n- navigation\n---\n""")
+        w.write(f"# Language {char.upper()}\n\n")
+        embed_map(w, lang_lst)
+        write_table(w, lang_lst)
+        w.close()
 
 
 def write_progressbar(w, lang_collection, lang_lst):
@@ -203,3 +234,4 @@ if __name__ == '__main__':
     build_recipe(lang_collection)
     build_language(lang_collection)
     build_lang_index(lang_collection)
+    build_alphabet_index(lang_collection)

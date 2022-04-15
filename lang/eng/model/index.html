@@ -1,0 +1,1427 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>Model - CMU Multilingual Speech DB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/leaflet.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="CMU Multilingual Speech DB" class="md-header__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CMU Multilingual Speech DB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../corpus/" class="md-tabs__link">
+      Corpus
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../model/" class="md-tabs__link">
+      Model
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../recipe/" class="md-tabs__link">
+      Recipe
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../index/" class="md-tabs__link">
+      Language
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CMU Multilingual Speech DB" class="md-nav__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CMU Multilingual Speech DB
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../corpus/" class="md-nav__link">
+        Corpus
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../model/" class="md-nav__link">
+        Model
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../recipe/" class="md-nav__link">
+        Recipe
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index/" class="md-nav__link">
+        Language
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="model">Model</h1>
+<table>
+<thead>
+<tr>
+<th>corpus</th>
+<th>task</th>
+<th>name</th>
+<th>url</th>
+<th>fs</th>
+<th>lang</th>
+<th>gender</th>
+<th>pytorch</th>
+<th>espnet</th>
+<th>commit</th>
+<th>valid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mini_an4</td>
+<td>asr</td>
+<td>kamo-naoyuki/mini_an4_asr_train_raw_bpe_valid.acc.best</td>
+<td><a href="https://zenodo.org/record/3957940/files/asr_train_raw_bpe_valid.acc.best.zip?download=1">https://zenodo.org/record/3957940/files/asr_train_raw_bpe_valid.acc.best.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>librispeech</td>
+<td>asr</td>
+<td>Shinji Watanabe/librispeech_asr_train_asr_transformer_e18_raw_bpe_sp_valid.acc.best</td>
+<td><a href="https://zenodo.org/record/4030677/files/asr_train_asr_transformer_e18_raw_bpe_sp_valid.acc.best.zip?download=1">https://zenodo.org/record/4030677/files/asr_train_asr_transformer_e18_raw_bpe_sp_valid.acc.best.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.best</td>
+<td><a href="https://zenodo.org/record/3989498/files/tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1">https://zenodo.org/record/3989498/files/tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td></td>
+<td></td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_tts_train_fastspeech_raw_phn_tacotron_g2p_en_no_space_train.loss.best</td>
+<td><a href="https://zenodo.org/record/3986231/files/tts_train_fastspeech_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1">https://zenodo.org/record/3986231/files/tts_train_fastspeech_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td></td>
+<td></td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_gst_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.best</td>
+<td><a href="https://zenodo.org/record/3986237/files/tts_train_gst_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1">https://zenodo.org/record/3986237/files/tts_train_gst_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_gst_fastspeech_raw_phn_tacotron_g2p_en_no_space_train.loss.best</td>
+<td><a href="https://zenodo.org/record/3986241/files/tts_train_gst_fastspeech_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1">https://zenodo.org/record/3986241/files/tts_train_gst_fastspeech_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>false</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_tacotron2</td>
+<td><a href="https://zenodo.org/record/3989498/files/tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1">https://zenodo.org/record/3989498/files/tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td></td>
+<td></td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_fastspeech</td>
+<td><a href="https://zenodo.org/record/3986231/files/tts_train_fastspeech_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1">https://zenodo.org/record/3986231/files/tts_train_fastspeech_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td></td>
+<td></td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_gst_tacotron2</td>
+<td><a href="https://zenodo.org/record/3986237/files/tts_train_gst_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1">https://zenodo.org/record/3986237/files/tts_train_gst_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_gst_fastspeech</td>
+<td><a href="https://zenodo.org/record/3986241/files/tts_train_gst_fastspeech_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1">https://zenodo.org/record/3986241/files/tts_train_gst_fastspeech_raw_phn_tacotron_g2p_en_no_space_train.loss.best.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>false</td>
+</tr>
+<tr>
+<td>wsj</td>
+<td>asr</td>
+<td>kamo-naoyuki/wsj</td>
+<td><a href="https://zenodo.org/record/4003381/files/asr_train_asr_transformer_raw_char_valid.acc.ave.zip?download=1">https://zenodo.org/record/4003381/files/asr_train_asr_transformer_raw_char_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.6.0</td>
+<td>0.9.1</td>
+<td>e67a1ad</td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_tts_train_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4036272/files/tts_train_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4036272/files/tts_train_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td>1.6.0</td>
+<td>0.9.3</td>
+<td>322a5cf</td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_tts_train_conformer_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4036268/files/tts_train_conformer_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4036268/files/tts_train_conformer_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td>1.6.0</td>
+<td>0.9.3</td>
+<td>322a5cf</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_gst_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4037456/files/tts_train_gst_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4037456/files/tts_train_gst_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.3</td>
+<td>67ca53d</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_gst_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4036266/files/tts_train_gst_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4036266/files/tts_train_gst_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.6.0</td>
+<td>0.9.3</td>
+<td>322a5cf</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_gst_conformer_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4036264/files/tts_train_gst_conformer_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4036264/files/tts_train_gst_conformer_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.6.0</td>
+<td>0.9.3</td>
+<td>322a5cf</td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_fastspeech2</td>
+<td><a href="https://zenodo.org/record/4036272/files/tts_train_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4036272/files/tts_train_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td>1.6.0</td>
+<td>0.9.3</td>
+<td>322a5cf</td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_conformer_fastspeech2</td>
+<td><a href="https://zenodo.org/record/4036268/files/tts_train_conformer_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4036268/files/tts_train_conformer_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td>1.6.0</td>
+<td>0.9.3</td>
+<td>322a5cf</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_gst_transformer</td>
+<td><a href="https://zenodo.org/record/4037456/files/tts_train_gst_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4037456/files/tts_train_gst_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.3</td>
+<td>67ca53d</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_gst_fastspeech2</td>
+<td><a href="https://zenodo.org/record/4036266/files/tts_train_gst_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4036266/files/tts_train_gst_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.6.0</td>
+<td>0.9.3</td>
+<td>322a5cf</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_gst_conformer_fastspeech2</td>
+<td><a href="https://zenodo.org/record/4036264/files/tts_train_gst_conformer_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4036264/files/tts_train_gst_conformer_fastspeech2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.6.0</td>
+<td>0.9.3</td>
+<td>322a5cf</td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_tts_train_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4039194/files/tts_train_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4039194/files/tts_train_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td>1.5.1</td>
+<td>0.9.3</td>
+<td>67ca53d</td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_transformer</td>
+<td><a href="https://zenodo.org/record/4039194/files/tts_train_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4039194/files/tts_train_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td>1.5.1</td>
+<td>0.9.3</td>
+<td>67ca53d</td>
+<td>true</td>
+</tr>
+<tr>
+<td>wsj</td>
+<td>asr</td>
+<td>kamo-naoyuki/wsj_transformer2</td>
+<td><a href="https://zenodo.org/record/4243201/files/asr_train_asr_transformer_raw_char_valid.acc.ave.zip?download=1">https://zenodo.org/record/4243201/files/asr_train_asr_transformer_raw_char_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.6.0</td>
+<td>0.9.0</td>
+<td>e7d278a</td>
+<td>true</td>
+</tr>
+<tr>
+<td>reverb</td>
+<td>asr</td>
+<td>kamo-naoyuki/reverb_asr_train_asr_transformer4_raw_char_batch_bins16000000_accum_grad1_sp_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4278363/files/asr_train_asr_transformer4_raw_char_batch_bins16000000_accum_grad1_sp_valid.acc.ave.zip?download=1">https://zenodo.org/record/4278363/files/asr_train_asr_transformer4_raw_char_batch_bins16000000_accum_grad1_sp_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.5</td>
+<td>7aad824</td>
+<td>true</td>
+</tr>
+<tr>
+<td>timit</td>
+<td>asr</td>
+<td>kamo-naoyuki/timit_asr_train_asr_raw_word_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4284058/files/asr_train_asr_raw_word_valid.acc.ave.zip?download=1">https://zenodo.org/record/4284058/files/asr_train_asr_raw_word_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.6.0</td>
+<td>0.9.5</td>
+<td>f157fcd</td>
+<td>true</td>
+</tr>
+<tr>
+<td>chime4</td>
+<td>asr</td>
+<td>kamo-naoyuki/chime4_asr_train_asr_transformer3_raw_en_char_sp_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4414883/files/asr_train_asr_transformer3_raw_en_char_sp_valid.acc.ave.zip?download=1">https://zenodo.org/record/4414883/files/asr_train_asr_transformer3_raw_en_char_sp_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.4.0</td>
+<td>0.9.6</td>
+<td>d5ddd5e</td>
+<td>true</td>
+</tr>
+<tr>
+<td>dirha_wsj</td>
+<td>asr</td>
+<td>kamo-naoyuki/dirha_wsj_asr_train_asr_transformer_cmvn_raw_char_rir_scpdatadirha_irwav.scp_noise_db_range10_17_noise_scpdatadirha_noisewav.scp_speech_volume_normalize1.0_num_workers2_rir_apply_prob1._sp_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4415021/files/asr_train_asr_transformer_cmvn_raw_char_rir_scpdatadirha_irwav.scp_noise_db_range10_17_noise_scpdatadirha_noisewav.scp_speech_volume_normalize1.0_num_workers2_rir_apply_prob1._sp_valid.acc.ave.zip?download=1">https://zenodo.org/record/4415021/files/asr_train_asr_transformer_cmvn_raw_char_rir_scpdatadirha_irwav.scp_noise_db_range10_17_noise_scpdatadirha_noisewav.scp_speech_volume_normalize1.0_num_workers2_rir_apply_prob1._sp_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>c30ce88</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_xvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4393279/files/tts_train_xvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4393279/files/tts_train_xvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>96ce09</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_gst+xvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4393277/files/tts_train_gst%2Bxvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4393277/files/tts_train_gst%2Bxvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>96ce09</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_xvector_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4394600/files/tts_train_xvector_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4394600/files/tts_train_xvector_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>96ce09</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_gst+xvector_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4394598/files/tts_train_gst%2Bxvector_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4394598/files/tts_train_gst%2Bxvector_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>96ce09</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_xvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4394602/files/tts_train_xvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4394602/files/tts_train_xvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>96ce09</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_gst+xvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4394608/files/tts_train_gst%2Bxvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4394608/files/tts_train_gst%2Bxvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>96ce09</td>
+<td>true</td>
+</tr>
+<tr>
+<td>libritts</td>
+<td>tts</td>
+<td>kan-bayashi/libritts_tts_train_xvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4409704/files/tts_train_xvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4409704/files/tts_train_xvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>861431</td>
+<td>true</td>
+</tr>
+<tr>
+<td>libritts</td>
+<td>tts</td>
+<td>kan-bayashi/libritts_tts_train_gst+xvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave</td>
+<td><a href="https://zenodo.org/record/4409702/files/tts_train_gst%2Bxvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4409702/files/tts_train_gst%2Bxvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>861431</td>
+<td>true</td>
+</tr>
+<tr>
+<td>libritts</td>
+<td>tts</td>
+<td>kan-bayashi/libritts_tts_train_xvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss</td>
+<td><a href="https://zenodo.org/record/4418754/files/tts_train_xvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4418754/files/tts_train_xvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>861431</td>
+<td>true</td>
+</tr>
+<tr>
+<td>libritts</td>
+<td>tts</td>
+<td>kan-bayashi/libritts_tts_train_gst+xvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss</td>
+<td><a href="https://zenodo.org/record/4418774/files/tts_train_gst%2Bxvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4418774/files/tts_train_gst%2Bxvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>861431</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_xvector_transformer</td>
+<td><a href="https://zenodo.org/record/4393279/files/tts_train_xvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4393279/files/tts_train_xvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>96ce09</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_gst+xvector_transformer</td>
+<td><a href="https://zenodo.org/record/4393277/files/tts_train_gst%2Bxvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4393277/files/tts_train_gst%2Bxvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>96ce09</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_xvector_tacotron2</td>
+<td><a href="https://zenodo.org/record/4394600/files/tts_train_xvector_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4394600/files/tts_train_xvector_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>96ce09</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_gst+xvector_tacotron2</td>
+<td><a href="https://zenodo.org/record/4394598/files/tts_train_gst%2Bxvector_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4394598/files/tts_train_gst%2Bxvector_tacotron2_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>96ce09</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_xvector_conformer_fastspeech2</td>
+<td><a href="https://zenodo.org/record/4394602/files/tts_train_xvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4394602/files/tts_train_xvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>96ce09</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_gst+xvector_conformer_fastspeech2</td>
+<td><a href="https://zenodo.org/record/4394608/files/tts_train_gst%2Bxvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4394608/files/tts_train_gst%2Bxvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>96ce09</td>
+<td>true</td>
+</tr>
+<tr>
+<td>libritts</td>
+<td>tts</td>
+<td>kan-bayashi/libritts_xvector_transformer</td>
+<td><a href="https://zenodo.org/record/4409704/files/tts_train_xvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4409704/files/tts_train_xvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>861431</td>
+<td>true</td>
+</tr>
+<tr>
+<td>libritts</td>
+<td>tts</td>
+<td>kan-bayashi/libritts_gst+xvector_transformer</td>
+<td><a href="https://zenodo.org/record/4409702/files/tts_train_gst%2Bxvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4409702/files/tts_train_gst%2Bxvector_transformer_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>861431</td>
+<td>true</td>
+</tr>
+<tr>
+<td>libritts</td>
+<td>tts</td>
+<td>kan-bayashi/libritts_xvector_conformer_fastspeech2</td>
+<td><a href="https://zenodo.org/record/4418754/files/tts_train_xvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4418754/files/tts_train_xvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>861431</td>
+<td>true</td>
+</tr>
+<tr>
+<td>libritts</td>
+<td>tts</td>
+<td>kan-bayashi/libritts_gst+xvector_conformer_fastspeech2</td>
+<td><a href="https://zenodo.org/record/4418774/files/tts_train_gst%2Bxvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1">https://zenodo.org/record/4418774/files/tts_train_gst%2Bxvector_conformer_fastspeech2_transformer_teacher_raw_phn_tacotron_g2p_en_no_space_train.loss.ave.zip?download=1</a></td>
+<td>24000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.6</td>
+<td>861431</td>
+<td>true</td>
+</tr>
+<tr>
+<td>reverb</td>
+<td>asr</td>
+<td>kamo-naoyuki/reverb_asr_train_asr_transformer2_raw_en_char_rir_scpdatareverb_rir_singlewav.scp_noise_db_range12_17_noise_scpdatareverb_noise_singlewav.scp_speech_volume_normalize1.0_num_workers2_rir_apply_prob0.999_noise_apply_prob1._sp_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4441309/files/asr_train_asr_transformer2_raw_en_char_rir_scpdatareverb_rir_singlewav.scp_noise_db_range12_17_noise_scpdatareverb_noise_singlewav.scp_speech_volume_normalize1.0_num_workers2_rir_apply_prob0.999_noise_apply_prob1._sp_valid.acc.ave.zip?download=1">https://zenodo.org/record/4441309/files/asr_train_asr_transformer2_raw_en_char_rir_scpdatareverb_rir_singlewav.scp_noise_db_range12_17_noise_scpdatareverb_noise_singlewav.scp_speech_volume_normalize1.0_num_workers2_rir_apply_prob0.999_noise_apply_prob1._sp_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.5</td>
+<td>03659ca</td>
+<td>true</td>
+</tr>
+<tr>
+<td>librispeech</td>
+<td>asr</td>
+<td>kamo-naoyuki/librispeech_asr_train_asr_conformer5_raw_bpe5000_scheduler_confwarmup_steps25000_batch_bins140000000_optim_conflr0.0015_initnone_accum_grad2_sp_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4541452/files/asr_train_asr_conformer5_raw_bpe5000_scheduler_confwarmup_steps25000_batch_bins140000000_optim_conflr0.0015_initnone_accum_grad2_sp_valid.acc.ave.zip?download=1">https://zenodo.org/record/4541452/files/asr_train_asr_conformer5_raw_bpe5000_scheduler_confwarmup_steps25000_batch_bins140000000_optim_conflr0.0015_initnone_accum_grad2_sp_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.9.6</td>
+<td>8eff1a9</td>
+<td>true</td>
+</tr>
+<tr>
+<td>librispeech</td>
+<td>asr</td>
+<td>kamo-naoyuki/librispeech_asr_train_asr_conformer5_raw_bpe5000_frontend_confn_fft400_frontend_confhop_length160_scheduler_confwarmup_steps25000_batch_bins140000000_optim_conflr0.0015_initnone_sp_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4543003/files/asr_train_asr_conformer5_raw_bpe5000_frontend_confn_fft400_frontend_confhop_length160_scheduler_confwarmup_steps25000_batch_bins140000000_optim_conflr0.0015_initnone_sp_valid.acc.ave.zip?download=1">https://zenodo.org/record/4543003/files/asr_train_asr_conformer5_raw_bpe5000_frontend_confn_fft400_frontend_confhop_length160_scheduler_confwarmup_steps25000_batch_bins140000000_optim_conflr0.0015_initnone_sp_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.9.6</td>
+<td>8eff1a9</td>
+<td>true</td>
+</tr>
+<tr>
+<td>librispeech</td>
+<td>asr</td>
+<td>kamo-naoyuki/librispeech_asr_train_asr_conformer5_raw_bpe5000_frontend_confn_fft512_frontend_confhop_length256_scheduler_confwarmup_steps25000_batch_bins140000000_optim_conflr0.0015_initnone_sp_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4543018/files/asr_train_asr_conformer5_raw_bpe5000_frontend_confn_fft512_frontend_confhop_length256_scheduler_confwarmup_steps25000_batch_bins140000000_optim_conflr0.0015_initnone_sp_valid.acc.ave.zip?download=1">https://zenodo.org/record/4543018/files/asr_train_asr_conformer5_raw_bpe5000_frontend_confn_fft512_frontend_confhop_length256_scheduler_confwarmup_steps25000_batch_bins140000000_optim_conflr0.0015_initnone_sp_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.9.6</td>
+<td>8eff1a9</td>
+<td>true</td>
+</tr>
+<tr>
+<td>mls</td>
+<td>asr</td>
+<td>ftshijt/mls_asr_transformer_valid.acc.best</td>
+<td><a href="https://zenodo.org/record/4458452/files/asr_transformer_valid.acc.best.zip?download=1">https://zenodo.org/record/4458452/files/asr_transformer_valid.acc.best.zip?download=1</a></td>
+<td>16000</td>
+<td>es</td>
+<td></td>
+<td>1.6.0</td>
+<td>0.9.2</td>
+<td>c0c3724</td>
+<td>true</td>
+</tr>
+<tr>
+<td>librimix</td>
+<td>enh</td>
+<td>anogkongda/librimix_enh_train_raw_valid.si_snr.ave</td>
+<td><a href="https://zenodo.org/record/4480771/files/enh_train_raw_valid.si_snr.ave.zip?download=1">https://zenodo.org/record/4480771/files/enh_train_raw_valid.si_snr.ave.zip?download=1</a></td>
+<td>8000</td>
+<td>en</td>
+<td></td>
+<td>1.6.0</td>
+<td>0.9.7</td>
+<td>dccadcd</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>wsj0_2mix</td>
+<td>enh</td>
+<td>Chenda Li/wsj0_2mix_enh_train_enh_conv_tasnet_raw_valid.si_snr.ave</td>
+<td><a href="https://zenodo.org/record/4498562/files/enh_train_enh_conv_tasnet_raw_valid.si_snr.ave.zip?download=1">https://zenodo.org/record/4498562/files/enh_train_enh_conv_tasnet_raw_valid.si_snr.ave.zip?download=1</a></td>
+<td>8000</td>
+<td>en</td>
+<td></td>
+<td>1.5.0</td>
+<td>0.9.7</td>
+<td>110eca5</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>wsj0_2mix</td>
+<td>enh</td>
+<td>Chenda Li/wsj0_2mix_enh_train_enh_rnn_tf_raw_valid.si_snr.ave</td>
+<td><a href="https://zenodo.org/record/4498554/files/enh_train_enh_rnn_tf_raw_valid.si_snr.ave.zip?download=1">https://zenodo.org/record/4498554/files/enh_train_enh_rnn_tf_raw_valid.si_snr.ave.zip?download=1</a></td>
+<td>8000</td>
+<td>en</td>
+<td></td>
+<td>1.5.1</td>
+<td>0.9.8</td>
+<td>110eca5</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>spgispeech</td>
+<td>asr</td>
+<td>Shinji Watanabe/spgispeech_asr_train_asr_conformer6_n_fft512_hop_length256_raw_en_unnorm_bpe5000_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4585558/files/asr_train_asr_conformer6_n_fft512_hop_length256_raw_en_unnorm_bpe5000_valid.acc.ave.zip?download=1">https://zenodo.org/record/4585558/files/asr_train_asr_conformer6_n_fft512_hop_length256_raw_en_unnorm_bpe5000_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en_unnorm</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.9.8</td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>spgispeech</td>
+<td>asr</td>
+<td>Shinji Watanabe/spgispeech_asr_train_asr_conformer6_n_fft512_hop_length256_raw_en_bpe5000_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4585546/files/asr_train_asr_conformer6_n_fft512_hop_length256_raw_en_bpe5000_valid.acc.ave.zip?download=1">https://zenodo.org/record/4585546/files/asr_train_asr_conformer6_n_fft512_hop_length256_raw_en_bpe5000_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.9.8</td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>librispeech</td>
+<td>asr</td>
+<td>kamo-naoyuki/librispeech_asr_train_asr_conformer6_n_fft512_hop_length256_raw_en_bpe5000_scheduler_confwarmup_steps40000_optim_conflr0.0025_sp_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4604066/files/asr_train_asr_conformer6_n_fft512_hop_length256_raw_en_bpe5000_scheduler_confwarmup_steps40000_optim_conflr0.0025_sp_valid.acc.ave.zip?download=1">https://zenodo.org/record/4604066/files/asr_train_asr_conformer6_n_fft512_hop_length256_raw_en_bpe5000_scheduler_confwarmup_steps40000_optim_conflr0.0025_sp_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.8.0</td>
+<td>0.9.8</td>
+<td>2ccd176</td>
+<td>true</td>
+</tr>
+<tr>
+<td>gigaspeech</td>
+<td>asr</td>
+<td>Shinji Watanabe/gigaspeech_asr_train_asr_raw_en_bpe5000_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4630406/files/asr_train_asr_raw_en_bpe5000_valid.acc.ave.zip?download=1">https://zenodo.org/record/4630406/files/asr_train_asr_raw_en_bpe5000_valid.acc.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.9.8</td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>switchboard</td>
+<td>asr</td>
+<td>Yuekai Zhang/swbd_asr_train_asr_cformer5_raw_bpe2000_sp_valid.acc.ave</td>
+<td><a href="https://zenodo.org/record/4978923/files/asr_train_asr_cformer5_raw_bpe2000_sp_valid.acc.ave.zip?download=1">https://zenodo.org/record/4978923/files/asr_train_asr_cformer5_raw_bpe2000_sp_valid.acc.ave.zip?download=1</a></td>
+<td>8000</td>
+<td>en</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.9.8</td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>dns_ins20</td>
+<td>enh</td>
+<td>Yen-Ju Lu/dns_ins20_enh_train_enh_blstm_tf_raw_valid.loss.best</td>
+<td><a href="https://zenodo.org/record/4923697/files/enh_train_enh_blstm_tf_raw_valid.loss.best.zip?download=1">https://zenodo.org/record/4923697/files/enh_train_enh_blstm_tf_raw_valid.loss.best.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.4.0</td>
+<td>0.9.9</td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>librispeech</td>
+<td>asr</td>
+<td>byan/librispeech_asr_train_asr_conformer_raw_bpe_batch_bins30000000_accum_grad3_optim_conflr0.001_sp</td>
+<td><a href="https://huggingface.co/">https://huggingface.co/</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>mini_librispeech</td>
+<td>diar</td>
+<td>Yushi Ueda/mini_librispeech_diar_train_diar_raw_max_epoch20_valid.acc.best</td>
+<td><a href="https://zenodo.org/record/5264020/files/diar_train_diar_raw_max_epoch20_valid.acc.best.zip?download=1">https://zenodo.org/record/5264020/files/diar_train_diar_raw_max_epoch20_valid.acc.best.zip?download=1</a></td>
+<td>8000</td>
+<td></td>
+<td></td>
+<td>1.9.1</td>
+<td>0.10.2</td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_tts_train_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave</td>
+<td><a href="https://zenodo.org/record/5443814/files/tts_train_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1">https://zenodo.org/record/5443814/files/tts_train_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td>1.7.1</td>
+<td>0.10.3a1</td>
+<td>dee654</td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_vits</td>
+<td><a href="https://zenodo.org/record/5443814/files/tts_train_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1">https://zenodo.org/record/5443814/files/tts_train_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td>1.7.1</td>
+<td>0.10.3a1</td>
+<td>dee654</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_multi_spk_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave</td>
+<td><a href="https://zenodo.org/record/5500759/files/tts_train_multi_spk_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1">https://zenodo.org/record/5500759/files/tts_train_multi_spk_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.10.3a2</td>
+<td>628b46</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_multi_spk_vits</td>
+<td><a href="https://zenodo.org/record/5500759/files/tts_train_multi_spk_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1">https://zenodo.org/record/5500759/files/tts_train_multi_spk_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.10.3a2</td>
+<td>628b46</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_tts_train_full_band_multi_spk_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave</td>
+<td><a href="https://zenodo.org/record/5521431/files/tts_train_full_band_multi_spk_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1">https://zenodo.org/record/5521431/files/tts_train_full_band_multi_spk_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1</a></td>
+<td>44100</td>
+<td>en</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.10.3a2</td>
+<td>628b46</td>
+<td>true</td>
+</tr>
+<tr>
+<td>vctk</td>
+<td>tts</td>
+<td>kan-bayashi/vctk_full_band_multi_spk_vits</td>
+<td><a href="https://zenodo.org/record/5521431/files/tts_train_full_band_multi_spk_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1">https://zenodo.org/record/5521431/files/tts_train_full_band_multi_spk_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1</a></td>
+<td>44100</td>
+<td>en</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.10.3a2</td>
+<td>628b46</td>
+<td>true</td>
+</tr>
+<tr>
+<td>libritts</td>
+<td>tts</td>
+<td>kan-bayashi/libritts_tts_train_xvector_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave</td>
+<td><a href="https://zenodo.org/record/5521416/files/tts_train_xvector_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1">https://zenodo.org/record/5521416/files/tts_train_xvector_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.10.3a2</td>
+<td>628b46</td>
+<td>true</td>
+</tr>
+<tr>
+<td>libritts</td>
+<td>tts</td>
+<td>kan-bayashi/libritts_xvector_vits</td>
+<td><a href="https://zenodo.org/record/5521416/files/tts_train_xvector_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1">https://zenodo.org/record/5521416/files/tts_train_xvector_vits_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.10.3a2</td>
+<td>628b46</td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_tts_train_joint_conformer_fastspeech2_hifigan_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave</td>
+<td><a href="https://zenodo.org/record/5498487/files/tts_train_joint_conformer_fastspeech2_hifigan_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1">https://zenodo.org/record/5498487/files/tts_train_joint_conformer_fastspeech2_hifigan_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td>1.7.1</td>
+<td>0.10.3a2</td>
+<td>628b46</td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_tts_finetune_joint_conformer_fastspeech2_hifigan_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave</td>
+<td><a href="https://zenodo.org/record/5498896/files/tts_finetune_joint_conformer_fastspeech2_hifigan_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1">https://zenodo.org/record/5498896/files/tts_finetune_joint_conformer_fastspeech2_hifigan_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td>1.7.1</td>
+<td>0.10.3a2</td>
+<td>628b46</td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_joint_train_conformer_fastspeech2_hifigan</td>
+<td><a href="https://zenodo.org/record/5498487/files/tts_train_joint_conformer_fastspeech2_hifigan_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1">https://zenodo.org/record/5498487/files/tts_train_joint_conformer_fastspeech2_hifigan_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td>1.7.1</td>
+<td>0.10.3a2</td>
+<td>628b46</td>
+<td>true</td>
+</tr>
+<tr>
+<td>ljspeech</td>
+<td>tts</td>
+<td>kan-bayashi/ljspeech_joint_finetune_conformer_fastspeech2_hifigan</td>
+<td><a href="https://zenodo.org/record/5498896/files/tts_finetune_joint_conformer_fastspeech2_hifigan_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1">https://zenodo.org/record/5498896/files/tts_finetune_joint_conformer_fastspeech2_hifigan_raw_phn_tacotron_g2p_en_no_space_train.total_count.ave.zip?download=1</a></td>
+<td>22050</td>
+<td>en</td>
+<td>female</td>
+<td>1.7.1</td>
+<td>0.10.3a2</td>
+<td>628b46</td>
+<td>true</td>
+</tr>
+<tr>
+<td>tedlium2</td>
+<td>asr_stream</td>
+<td>D-Keqi/espnet_asr_train_asr_streaming_transformer_raw_en_bpe500_sp_valid.acc.ave</td>
+<td>huggingface.co</td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>chime4</td>
+<td>enh</td>
+<td>Wangyou-Zhang/chime4_enh_train_enh_beamformer_mvdr_raw_valid.si_snr.ave</td>
+<td><a href="https://zenodo.org/record/6025881/files/enh_train_enh_beamformer_mvdr_raw_valid.si_snr.ave.zip?download=1">https://zenodo.org/record/6025881/files/enh_train_enh_beamformer_mvdr_raw_valid.si_snr.ave.zip?download=1</a></td>
+<td>16000</td>
+<td>en</td>
+<td></td>
+<td>1.6.0</td>
+<td>0.9.7</td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>open_li52</td>
+<td>asr</td>
+<td>ftshijt/open_li52_asr_train_asr_raw_bpe7000_valid.acc.ave_10best</td>
+<td><a href="https://zenodo.org/record/4738407/files/asr_train_asr_raw_bpe7000_valid.acc.ave_10best.zip?download=1">https://zenodo.org/record/4738407/files/asr_train_asr_raw_bpe7000_valid.acc.ave_10best.zip?download=1</a></td>
+<td>16000</td>
+<td>multilingual</td>
+<td></td>
+<td>1.7.1</td>
+<td>0.9.7</td>
+<td>59bc1f7</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["toc.integrate", "navigation.tabs", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+        <script src="../../../javascripts/leaflet.js"></script>
+      
+        <script src="../../../javascripts/build_map.js"></script>
+      
+    
+  </body>
+</html>

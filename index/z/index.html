@@ -1,0 +1,1982 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>Language Z - CMU Multilingual Speech DB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/leaflet.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#language-z" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CMU Multilingual Speech DB" class="md-header__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CMU Multilingual Speech DB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Language Z
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../corpus/" class="md-tabs__link">
+      Corpus
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../model/" class="md-tabs__link">
+      Model
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../recipe/" class="md-tabs__link">
+      Recipe
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../" class="md-tabs__link">
+      Language
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CMU Multilingual Speech DB" class="md-nav__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CMU Multilingual Speech DB
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../corpus/" class="md-nav__link">
+        Corpus
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/" class="md-nav__link">
+        Model
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipe/" class="md-nav__link">
+        Recipe
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Language
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="language-z">Language Z</h1>
+<div id='map' style='height: 640px'></div>
+<script>var langs = [{"type": "Point", "coordinates": [-96.6191, 17.4219], "popupContent": "<a href='/cmu_multilingual_speech/lang/zaa'>zaa</a>"},
+{"type": "Point", "coordinates": [-96.5967, 17.0332], "popupContent": "<a href='/cmu_multilingual_speech/lang/zab'>zab</a>"},
+{"type": "Point", "coordinates": [-96.7263, 16.8258], "popupContent": "<a href='/cmu_multilingual_speech/lang/zac'>zac</a>"},
+{"type": "Point", "coordinates": [-96.3352, 17.1427], "popupContent": "<a href='/cmu_multilingual_speech/lang/zad'>zad</a>"},
+{"type": "Point", "coordinates": [-96.7052, 17.3406], "popupContent": "<a href='/cmu_multilingual_speech/lang/zae'>zae</a>"},
+{"type": "Point", "coordinates": [-96.8575, 16.6633], "popupContent": "<a href='/cmu_multilingual_speech/lang/zaf'>zaf</a>"},
+{"type": "Point", "coordinates": [23.4626, 17.4842], "popupContent": "<a href='/cmu_multilingual_speech/lang/zag'>zag</a>"},
+{"type": "Point", "coordinates": [9.74694, 10.2284], "popupContent": "<a href='/cmu_multilingual_speech/lang/zah'>zah</a>"},
+{"type": "Point", "coordinates": [-94.8444, 16.4548], "popupContent": "<a href='/cmu_multilingual_speech/lang/zai'>zai</a>"},
+{"type": "Point", "coordinates": [38.9258, -6.87705], "popupContent": "<a href='/cmu_multilingual_speech/lang/zaj'>zaj</a>"},
+{"type": "Point", "coordinates": [34.0542, -2.26367], "popupContent": "<a href='/cmu_multilingual_speech/lang/zak'>zak</a>"},
+{"type": "Point", "coordinates": [98.8634, 26.4572], "popupContent": "<a href='/cmu_multilingual_speech/lang/zal'>zal</a>"},
+{"type": "Point", "coordinates": [-96.6647, 16.2197], "popupContent": "<a href='/cmu_multilingual_speech/lang/zam'>zam</a>"},
+{"type": "Point", "coordinates": [-96.3686, 16.04], "popupContent": "<a href='/cmu_multilingual_speech/lang/zao'>zao</a>"},
+{"type": "Point", "coordinates": [-96.7438, 17.4137], "popupContent": "<a href='/cmu_multilingual_speech/lang/zaq'>zaq</a>"},
+{"type": "Point", "coordinates": [-96.3144, 17.4451], "popupContent": "<a href='/cmu_multilingual_speech/lang/zar'>zar</a>"},
+{"type": "Point", "coordinates": [-96.281, 17.0345], "popupContent": "<a href='/cmu_multilingual_speech/lang/zas'>zas</a>"},
+{"type": "Point", "coordinates": [-96.2777, 17.2822], "popupContent": "<a href='/cmu_multilingual_speech/lang/zat'>zat</a>"},
+{"type": "Point", "coordinates": [77.4013, 33.2397], "popupContent": "<a href='/cmu_multilingual_speech/lang/zau'>zau</a>"},
+{"type": "Point", "coordinates": [-96.284, 17.1869], "popupContent": "<a href='/cmu_multilingual_speech/lang/zav'>zav</a>"},
+{"type": "Point", "coordinates": [-96.29434, 16.86849], "popupContent": "<a href='/cmu_multilingual_speech/lang/zaw'>zaw</a>"},
+{"type": "Point", "coordinates": [-96.0318, 15.8822], "popupContent": "<a href='/cmu_multilingual_speech/lang/zax'>zax</a>"},
+{"type": "Point", "coordinates": [37.3409, 5.83747], "popupContent": "<a href='/cmu_multilingual_speech/lang/zay'>zay</a>"},
+{"type": "Point", "coordinates": [9.40332, 9.71269], "popupContent": "<a href='/cmu_multilingual_speech/lang/zaz'>zaz</a>"},
+{"type": "Point", "coordinates": [114.565, 3.97194], "popupContent": "<a href='/cmu_multilingual_speech/lang/zbc'>zbc</a>"},
+{"type": "Point", "coordinates": [114.606, 3.96098], "popupContent": "<a href='/cmu_multilingual_speech/lang/zbe'>zbe</a>"},
+{"type": "Point", "coordinates": [122.487151, -1.254442], "popupContent": "<a href='/cmu_multilingual_speech/lang/zbt'>zbt</a>"},
+{"type": "Point", "coordinates": [9.57, 10.28], "popupContent": "<a href='/cmu_multilingual_speech/lang/zbu'>zbu</a>"},
+{"type": "Point", "coordinates": [114.528, 3.9815], "popupContent": "<a href='/cmu_multilingual_speech/lang/zbw'>zbw</a>"},
+{"type": "Point", "coordinates": [-96.7336, 16.5609], "popupContent": "<a href='/cmu_multilingual_speech/lang/zca'>zca</a>"},
+{"type": "Point", "coordinates": [108.0, 23.95], "popupContent": "<a href='/cmu_multilingual_speech/lang/zch'>zch</a>"},
+{"type": "Point", "coordinates": [43.36, -11.6129], "popupContent": "<a href='/cmu_multilingual_speech/lang/zdj'>zdj</a>"},
+{"type": "Point", "coordinates": [3.85428, 51.4981], "popupContent": "<a href='/cmu_multilingual_speech/lang/zea'>zea</a>"},
+{"type": "Point", "coordinates": [146.546, -6.93858], "popupContent": "<a href='/cmu_multilingual_speech/lang/zeg'>zeg</a>"},
+{"type": "Point", "coordinates": [109.0, 23.7], "popupContent": "<a href='/cmu_multilingual_speech/lang/zeh'>zeh</a>"},
+{"type": "Point", "coordinates": [-16.1711, 16.82], "popupContent": "<a href='/cmu_multilingual_speech/lang/zen'>zen</a>"},
+{"type": "Point", "coordinates": [34.2321, -9.35868], "popupContent": "<a href='/cmu_multilingual_speech/lang/zga'>zga</a>"},
+{"type": "Point", "coordinates": [108.1, 24.9], "popupContent": "<a href='/cmu_multilingual_speech/lang/zgb'>zgb</a>"},
+{"type": "Point", "coordinates": [105.5, 23.33], "popupContent": "<a href='/cmu_multilingual_speech/lang/zgm'>zgm</a>"},
+{"type": "Point", "coordinates": [106.2, 24.3], "popupContent": "<a href='/cmu_multilingual_speech/lang/zgn'>zgn</a>"},
+{"type": "Point", "coordinates": [149.26, -10.2321], "popupContent": "<a href='/cmu_multilingual_speech/lang/zgr'>zgr</a>"},
+{"type": "Point", "coordinates": [100.983, 30.7416], "popupContent": "<a href='/cmu_multilingual_speech/lang/zhb'>zhb</a>"},
+{"type": "Point", "coordinates": [104.4, 23.4], "popupContent": "<a href='/cmu_multilingual_speech/lang/zhd'>zhd</a>"},
+{"type": "Point", "coordinates": [7.93, 9.55], "popupContent": "<a href='/cmu_multilingual_speech/lang/zhi'>zhi</a>"},
+{"type": "Point", "coordinates": [104.75, 23.6], "popupContent": "<a href='/cmu_multilingual_speech/lang/zhn'>zhn</a>"},
+{"type": "Point", "coordinates": [10.16651, 6.53614], "popupContent": "<a href='/cmu_multilingual_speech/lang/zhw'>zhw</a>"},
+{"type": "Point", "coordinates": [147.579, -7.95814], "popupContent": "<a href='/cmu_multilingual_speech/lang/zia'>zia</a>"},
+{"type": "Point", "coordinates": [31.0216, -17.9128], "popupContent": "<a href='/cmu_multilingual_speech/lang/zib'>zib</a>"},
+{"type": "Point", "coordinates": [141.452, -7.3701], "popupContent": "<a href='/cmu_multilingual_speech/lang/zik'>zik</a>"},
+{"type": "Point", "coordinates": [-9.51, 8.43], "popupContent": "<a href='/cmu_multilingual_speech/lang/zil'>zil</a>"},
+{"type": "Point", "coordinates": [15.7018, 9.28888], "popupContent": "<a href='/cmu_multilingual_speech/lang/zim'>zim</a>"},
+{"type": "Point", "coordinates": [32.1755, -2.64132], "popupContent": "<a href='/cmu_multilingual_speech/lang/zin'>zin</a>"},
+{"type": "Point", "coordinates": [8.72792, 10.5218], "popupContent": "<a href='/cmu_multilingual_speech/lang/zir'>zir</a>"},
+{"type": "Point", "coordinates": [38.41138, -5.61864], "popupContent": "<a href='/cmu_multilingual_speech/lang/ziw'>ziw</a>"},
+{"type": "Point", "coordinates": [13.5233, 10.4689], "popupContent": "<a href='/cmu_multilingual_speech/lang/ziz'>ziz</a>"},
+{"type": "Point", "coordinates": [122.538, -5.65447], "popupContent": "<a href='/cmu_multilingual_speech/lang/zka'>zka</a>"},
+{"type": "Point", "coordinates": [-96.4856, 28.9082], "popupContent": "<a href='/cmu_multilingual_speech/lang/zkk'>zkk</a>"},
+{"type": "Point", "coordinates": [94.0, 55.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/zko'>zko</a>"},
+{"type": "Point", "coordinates": [-50.429849, -21.771882], "popupContent": "<a href='/cmu_multilingual_speech/lang/zkp'>zkp</a>"},
+{"type": "Point", "coordinates": [97.022, 28.129], "popupContent": "<a href='/cmu_multilingual_speech/lang/zkr'>zkr</a>"},
+{"type": "Point", "coordinates": [115.986, 44.3773], "popupContent": "<a href='/cmu_multilingual_speech/lang/zkt'>zkt</a>"},
+{"type": "Point", "coordinates": [138.4800794, -34.34966141], "popupContent": "<a href='/cmu_multilingual_speech/lang/zku'>zku</a>"},
+{"type": "Point", "coordinates": [26.74, -4.584], "popupContent": "<a href='/cmu_multilingual_speech/lang/zla'>zla</a>"},
+{"type": "Point", "coordinates": [109.25, 24.2], "popupContent": "<a href='/cmu_multilingual_speech/lang/zlj'>zlj</a>"},
+{"type": "Point", "coordinates": [103.0, 1.85856], "popupContent": "<a href='/cmu_multilingual_speech/lang/zlm'>zlm</a>"},
+{"type": "Point", "coordinates": [112.05, 24.5], "popupContent": "<a href='/cmu_multilingual_speech/lang/zln'>zln</a>"},
+{"type": "Point", "coordinates": [109.75, 24.1], "popupContent": "<a href='/cmu_multilingual_speech/lang/zlq'>zlq</a>"},
+{"type": "Point", "coordinates": [129.885, -13.6481], "popupContent": "<a href='/cmu_multilingual_speech/lang/zma'>zma</a>"},
+{"type": "Point", "coordinates": [26.6083, -4.013], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmb'>zmb</a>"},
+{"type": "Point", "coordinates": [144.892, -26.789], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmc'>zmc</a>"},
+{"type": "Point", "coordinates": [130.079, -14.0542], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmd'>zmd</a>"},
+{"type": "Point", "coordinates": [132.973, -12.2391], "popupContent": "<a href='/cmu_multilingual_speech/lang/zme'>zme</a>"},
+{"type": "Point", "coordinates": [16.2559, -4.26573], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmf'>zmf</a>"},
+{"type": "Point", "coordinates": [129.837, -14.0058], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmg'>zmg</a>"},
+{"type": "Point", "coordinates": [151.709, -4.87995], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmh'>zmh</a>"},
+{"type": "Point", "coordinates": [102.291, 2.66503], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmi'>zmi</a>"},
+{"type": "Point", "coordinates": [129.844, -13.8754], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmj'>zmj</a>"},
+{"type": "Point", "coordinates": [148.978, -26.573], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmk'>zmk</a>"},
+{"type": "Point", "coordinates": [130.6, -13.9479], "popupContent": "<a href='/cmu_multilingual_speech/lang/zml'>zml</a>"},
+{"type": "Point", "coordinates": [130.561, -14.1788], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmm'>zmm</a>"},
+{"type": "Point", "coordinates": [13.5956, -2.28729], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmn'>zmn</a>"},
+{"type": "Point", "coordinates": [33.5677, 10.793], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmo'>zmo</a>"},
+{"type": "Point", "coordinates": [19.4269, -5.21134], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmp'>zmp</a>"},
+{"type": "Point", "coordinates": [25.104, -1.57031], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmq'>zmq</a>"},
+{"type": "Point", "coordinates": [130.12, -13.6754], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmr'>zmr</a>"},
+{"type": "Point", "coordinates": [22.8389, 1.6207], "popupContent": "<a href='/cmu_multilingual_speech/lang/zms'>zms</a>"},
+{"type": "Point", "coordinates": [130.25, -14.3819], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmt'>zmt</a>"},
+{"type": "Point", "coordinates": [146.546, -28.9618], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmu'>zmu</a>"},
+{"type": "Point", "coordinates": [143.789, -14.529], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmv'>zmv</a>"},
+{"type": "Point", "coordinates": [28.018, 1.11602], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmw'>zmw</a>"},
+{"type": "Point", "coordinates": [17.3733, 1.70044], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmx'>zmx</a>"},
+{"type": "Point", "coordinates": [129.876, -13.7687], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmy'>zmy</a>"},
+{"type": "Point", "coordinates": [19.4455, 3.98003], "popupContent": "<a href='/cmu_multilingual_speech/lang/zmz'>zmz</a>"},
+{"type": "Point", "coordinates": [19.1416, 10.5885], "popupContent": "<a href='/cmu_multilingual_speech/lang/zna'>zna</a>"},
+{"type": "Point", "coordinates": [26.7157, 4.62047], "popupContent": "<a href='/cmu_multilingual_speech/lang/zne'>zne</a>"},
+{"type": "Point", "coordinates": [102.133, 21.4305], "popupContent": "<a href='/cmu_multilingual_speech/lang/zng'>zng</a>"},
+{"type": "Point", "coordinates": [132.352, -11.361], "popupContent": "<a href='/cmu_multilingual_speech/lang/znk'>znk</a>"},
+{"type": "Point", "coordinates": [9.76103, 10.0839], "popupContent": "<a href='/cmu_multilingual_speech/lang/zns'>zns</a>"},
+{"type": "Point", "coordinates": [-93.3183, 17.2157], "popupContent": "<a href='/cmu_multilingual_speech/lang/zoc'>zoc</a>"},
+{"type": "Point", "coordinates": [-94.6913, 16.6543], "popupContent": "<a href='/cmu_multilingual_speech/lang/zoh'>zoh</a>"},
+{"type": "Point", "coordinates": [93.9253, 24.0649], "popupContent": "<a href='/cmu_multilingual_speech/lang/zom'>zom</a>"},
+{"type": "Point", "coordinates": [-96.8704, 16.8762], "popupContent": "<a href='/cmu_multilingual_speech/lang/zoo'>zoo</a>"},
+{"type": "Point", "coordinates": [-93.0968, 18.1713], "popupContent": "<a href='/cmu_multilingual_speech/lang/zoq'>zoq</a>"},
+{"type": "Point", "coordinates": [-93.1006, 17.2953], "popupContent": "<a href='/cmu_multilingual_speech/lang/zor'>zor</a>"},
+{"type": "Point", "coordinates": [-93.3633, 17.3654], "popupContent": "<a href='/cmu_multilingual_speech/lang/zos'>zos</a>"},
+{"type": "Point", "coordinates": [-95.5367, 16.5772], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpa'>zpa</a>"},
+{"type": "Point", "coordinates": [-95.92825, 16.44147], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpb'>zpb</a>"},
+{"type": "Point", "coordinates": [-95.8656, 17.4371], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpc'>zpc</a>"},
+{"type": "Point", "coordinates": [-96.6199, 17.2588], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpd'>zpd</a>"},
+{"type": "Point", "coordinates": [-95.1118, 16.8023], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpe'>zpe</a>"},
+{"type": "Point", "coordinates": [-96.0899, 16.7608], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpf'>zpf</a>"},
+{"type": "Point", "coordinates": [-95.3641, 16.7312], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpg'>zpg</a>"},
+{"type": "Point", "coordinates": [-97.0824, 16.8554], "popupContent": "<a href='/cmu_multilingual_speech/lang/zph'>zph</a>"},
+{"type": "Point", "coordinates": [-96.0486, 16.033], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpi'>zpi</a>"},
+{"type": "Point", "coordinates": [-95.6761, 16.7565], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpj'>zpj</a>"},
+{"type": "Point", "coordinates": [-95.7414, 16.2971], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpk'>zpk</a>"},
+{"type": "Point", "coordinates": [-96.9318, 16.7215], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpl'>zpl</a>"},
+{"type": "Point", "coordinates": [-96.2372, 16.1724], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpm'>zpm</a>"},
+{"type": "Point", "coordinates": [-96.7527, 16.8842], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpn'>zpn</a>"},
+{"type": "Point", "coordinates": [-96.4003, 16.2707], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpo'>zpo</a>"},
+{"type": "Point", "coordinates": [-96.9987, 16.8742], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpp'>zpp</a>"},
+{"type": "Point", "coordinates": [-96.3433, 17.2016], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpq'>zpq</a>"},
+{"type": "Point", "coordinates": [-96.2186, 15.8836], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpr'>zpr</a>"},
+{"type": "Point", "coordinates": [-96.7683, 16.1463], "popupContent": "<a href='/cmu_multilingual_speech/lang/zps'>zps</a>"},
+{"type": "Point", "coordinates": [-96.8667, 16.2817], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpt'>zpt</a>"},
+{"type": "Point", "coordinates": [-96.2183, 17.2134], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpu'>zpu</a>"},
+{"type": "Point", "coordinates": [-96.5486, 16.8459], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpv'>zpv</a>"},
+{"type": "Point", "coordinates": [-97.2876, 16.6804], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpw'>zpw</a>"},
+{"type": "Point", "coordinates": [-96.762, 16.0409], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpx'>zpx</a>"},
+{"type": "Point", "coordinates": [-96.8791, 17.1547], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpy'>zpy</a>"},
+{"type": "Point", "coordinates": [-97.08947, 16.49197], "popupContent": "<a href='/cmu_multilingual_speech/lang/zpz'>zpz</a>"},
+{"type": "Point", "coordinates": [104.15, 24.15], "popupContent": "<a href='/cmu_multilingual_speech/lang/zqe'>zqe</a>"},
+{"type": "Point", "coordinates": [81.33599, 23.43055], "popupContent": "<a href='/cmu_multilingual_speech/lang/zrg'>zrg</a>"},
+{"type": "Point", "coordinates": [18.5374, 12.2275], "popupContent": "<a href='/cmu_multilingual_speech/lang/zrn'>zrn</a>"},
+{"type": "Point", "coordinates": [-76.364, -1.99871], "popupContent": "<a href='/cmu_multilingual_speech/lang/zro'>zro</a>"},
+{"type": "Point", "coordinates": [4.38771, 45.5627], "popupContent": "<a href='/cmu_multilingual_speech/lang/zrp'>zrp</a>"},
+{"type": "Point", "coordinates": [134.071, -3.4511], "popupContent": "<a href='/cmu_multilingual_speech/lang/zrs'>zrs</a>"},
+{"type": "Point", "coordinates": [146.4, -6.18], "popupContent": "<a href='/cmu_multilingual_speech/lang/zsa'>zsa</a>"},
+{"type": "Point", "coordinates": [28.9898, -15.5134], "popupContent": "<a href='/cmu_multilingual_speech/lang/zsl'>zsl</a>"},
+{"type": "Point", "coordinates": [101.699, 3.08896], "popupContent": "<a href='/cmu_multilingual_speech/lang/zsm'>zsm</a>"},
+{"type": "Point", "coordinates": [-96.3775, 17.3031], "popupContent": "<a href='/cmu_multilingual_speech/lang/zsr'>zsr</a>"},
+{"type": "Point", "coordinates": [146.34187, -6.28], "popupContent": "<a href='/cmu_multilingual_speech/lang/zsu'>zsu</a>"},
+{"type": "Point", "coordinates": [-97.1912, 16.8693], "popupContent": "<a href='/cmu_multilingual_speech/lang/zte'>zte</a>"},
+{"type": "Point", "coordinates": [-96.1927, 15.9748], "popupContent": "<a href='/cmu_multilingual_speech/lang/ztg'>ztg</a>"},
+{"type": "Point", "coordinates": [-96.1636, 16.0676], "popupContent": "<a href='/cmu_multilingual_speech/lang/ztl'>ztl</a>"},
+{"type": "Point", "coordinates": [-96.3362, 16.2202], "popupContent": "<a href='/cmu_multilingual_speech/lang/ztm'>ztm</a>"},
+{"type": "Point", "coordinates": [-96.3512, 17.0446], "popupContent": "<a href='/cmu_multilingual_speech/lang/ztn'>ztn</a>"},
+{"type": "Point", "coordinates": [-96.6997, 15.8442], "popupContent": "<a href='/cmu_multilingual_speech/lang/ztp'>ztp</a>"},
+{"type": "Point", "coordinates": [-96.1555, 16.3416], "popupContent": "<a href='/cmu_multilingual_speech/lang/ztq'>ztq</a>"},
+{"type": "Point", "coordinates": [-96.6321, 16.8529], "popupContent": "<a href='/cmu_multilingual_speech/lang/zts'>zts</a>"},
+{"type": "Point", "coordinates": [-96.8876, 17.0944], "popupContent": "<a href='/cmu_multilingual_speech/lang/ztt'>ztt</a>"},
+{"type": "Point", "coordinates": [-96.4572, 16.8824], "popupContent": "<a href='/cmu_multilingual_speech/lang/ztu'>ztu</a>"},
+{"type": "Point", "coordinates": [-96.82337, 17.00245], "popupContent": "<a href='/cmu_multilingual_speech/lang/ztx'>ztx</a>"},
+{"type": "Point", "coordinates": [-96.198, 17.2888], "popupContent": "<a href='/cmu_multilingual_speech/lang/zty'>zty</a>"},
+{"type": "Point", "coordinates": [9.28934, 9.95001], "popupContent": "<a href='/cmu_multilingual_speech/lang/zua'>zua</a>"},
+{"type": "Point", "coordinates": [145.298, -6.05047], "popupContent": "<a href='/cmu_multilingual_speech/lang/zuh'>zuh</a>"},
+{"type": "Point", "coordinates": [30.2, -28.9], "popupContent": "<a href='/cmu_multilingual_speech/lang/zul'>zul</a>"},
+{"type": "Point", "coordinates": [56.4202, 26.1602], "popupContent": "<a href='/cmu_multilingual_speech/lang/zum'>zum</a>"},
+{"type": "Point", "coordinates": [-108.782, 35.0056], "popupContent": "<a href='/cmu_multilingual_speech/lang/zun'>zun</a>"},
+{"type": "Point", "coordinates": [14.44451, 10.55798], "popupContent": "<a href='/cmu_multilingual_speech/lang/zuy'>zuy</a>"},
+{"type": "Point", "coordinates": [38.8258, 8.01148], "popupContent": "<a href='/cmu_multilingual_speech/lang/zwa'>zwa</a>"},
+{"type": "Point", "coordinates": [108.15, 23.1], "popupContent": "<a href='/cmu_multilingual_speech/lang/zyb'>zyb</a>"},
+{"type": "Point", "coordinates": [106.393188, 23.091864], "popupContent": "<a href='/cmu_multilingual_speech/lang/zyg'>zyg</a>"},
+{"type": "Point", "coordinates": [106.9, 23.75], "popupContent": "<a href='/cmu_multilingual_speech/lang/zyj'>zyj</a>"},
+{"type": "Point", "coordinates": [108.0, 22.8], "popupContent": "<a href='/cmu_multilingual_speech/lang/zyn'>zyn</a>"},
+{"type": "Point", "coordinates": [93.264, 22.524], "popupContent": "<a href='/cmu_multilingual_speech/lang/zyp'>zyp</a>"},
+{"type": "Point", "coordinates": [106.9, 22.4], "popupContent": "<a href='/cmu_multilingual_speech/lang/zzj'>zzj</a>"},
+];
+</script>
+
+<table>
+<thead>
+<tr>
+<th>Language Id</th>
+<th>Language Name</th>
+<th>Corpus</th>
+<th>Recipe</th>
+<th>Model</th>
+<th>Inventory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zaa">zaa</a></td>
+<td>Sierra de Juárez Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zab">zab</a></td>
+<td>Western Tlacolula Valley Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zac">zac</a></td>
+<td>Ocotlán Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zad">zad</a></td>
+<td>Cajonos Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zae">zae</a></td>
+<td>Yareni Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zaf">zaf</a></td>
+<td>Ayoquesco Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zag">zag</a></td>
+<td>Beria</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zah">zah</a></td>
+<td>Zangwal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zai">zai</a></td>
+<td>Isthmus Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zaj">zaj</a></td>
+<td>Zaramo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zak">zak</a></td>
+<td>Zanaki</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zal">zal</a></td>
+<td>Zauzou</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zam">zam</a></td>
+<td>Cuixtla-Xitla Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zao">zao</a></td>
+<td>Ozolotepec Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zap">zap</a></td>
+<td>Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zaq">zaq</a></td>
+<td>Aloápam Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zar">zar</a></td>
+<td>Rincón Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zas">zas</a></td>
+<td>Santo Domingo Albarradas Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zat">zat</a></td>
+<td>Tabaa Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zau">zau</a></td>
+<td>Zangskari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zav">zav</a></td>
+<td>Yatzachi Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zaw">zaw</a></td>
+<td>Mitla Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zax">zax</a></td>
+<td>Xadani Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zay">zay</a></td>
+<td>Zayse-Zergulla</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zaz">zaz</a></td>
+<td>Zari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zbc">zbc</a></td>
+<td>Central Berawan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zbe">zbe</a></td>
+<td>East Berawan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zbl">zbl</a></td>
+<td>Blissymbols</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zbt">zbt</a></td>
+<td>Batui</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zbu">zbu</a></td>
+<td>Bu (Zaranda)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zbw">zbw</a></td>
+<td>West Berawan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zca">zca</a></td>
+<td>Coatecas Altas Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zch">zch</a></td>
+<td>Central Hongshuihe Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zdj">zdj</a></td>
+<td>Ngazidja Comorian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zea">zea</a></td>
+<td>Zeeuws</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zeg">zeg</a></td>
+<td>Zenag</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zeh">zeh</a></td>
+<td>Eastern Hongshuihe Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zen">zen</a></td>
+<td>Zenaga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zga">zga</a></td>
+<td>Kinga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zgb">zgb</a></td>
+<td>Guibei Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zgh">zgh</a></td>
+<td>Standard Moroccan Tamazight</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zgm">zgm</a></td>
+<td>Minz Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zgn">zgn</a></td>
+<td>Guibian Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zgr">zgr</a></td>
+<td>Magori</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zha">zha</a></td>
+<td>Northern Daic</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zhb">zhb</a></td>
+<td>Zhaba</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zhd">zhd</a></td>
+<td>Dai Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zhi">zhi</a></td>
+<td>Zhire</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zhn">zhn</a></td>
+<td>Nong Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zhw">zhw</a></td>
+<td>Zhoa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zia">zia</a></td>
+<td>Zia</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zib">zib</a></td>
+<td>Zimbabwe Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zik">zik</a></td>
+<td>Zimakani</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zil">zil</a></td>
+<td>Zialo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zim">zim</a></td>
+<td>Mesme</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zin">zin</a></td>
+<td>Zinza</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zir">zir</a></td>
+<td>Ziriya</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ziw">ziw</a></td>
+<td>Zigula-Mushungulu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ziz">ziz</a></td>
+<td>Zizilivakan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zka">zka</a></td>
+<td>Kaimbulawa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zkb">zkb</a></td>
+<td>Samoyed Koibal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zkd">zkd</a></td>
+<td>Kadu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zkg">zkg</a></td>
+<td>Koguryo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zkk">zkk</a></td>
+<td>Karankawa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zkn">zkn</a></td>
+<td>Ganaan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zko">zko</a></td>
+<td>Kott-Assan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zkp">zkp</a></td>
+<td>São Paulo Kaingáng</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zkr">zkr</a></td>
+<td>Zakhring</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zkt">zkt</a></td>
+<td>Kitan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zku">zku</a></td>
+<td>Kaurna</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zla">zla</a></td>
+<td>Zula</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zlj">zlj</a></td>
+<td>Liujiang Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zlm">zlm</a></td>
+<td>Central Malay</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zln">zln</a></td>
+<td>Lianshan Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zlq">zlq</a></td>
+<td>Liuqian Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zma">zma</a></td>
+<td>Manda (Australia)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmb">zmb</a></td>
+<td>Zimba</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmc">zmc</a></td>
+<td>Margany</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmd">zmd</a></td>
+<td>Maridan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zme">zme</a></td>
+<td>Mangerr</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmf">zmf</a></td>
+<td>Mfinu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmg">zmg</a></td>
+<td>Marti Ke</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmh">zmh</a></td>
+<td>Makolkol</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmi">zmi</a></td>
+<td>Negeri Sembilan Malay</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmj">zmj</a></td>
+<td>Maridjabin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmk">zmk</a></td>
+<td>Mandandanyi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zml">zml</a></td>
+<td>Madngele</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmm">zmm</a></td>
+<td>Marimanindji</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmn">zmn</a></td>
+<td>Mbangwe</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmo">zmo</a></td>
+<td>Molo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmp">zmp</a></td>
+<td>Mbuun</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmq">zmq</a></td>
+<td>Mituku</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmr">zmr</a></td>
+<td>Maranunggu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zms">zms</a></td>
+<td>Mbesa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmt">zmt</a></td>
+<td>Maringarr</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmu">zmu</a></td>
+<td>Muruwari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmv">zmv</a></td>
+<td>Rimanggudhinma</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmw">zmw</a></td>
+<td>Mbo (Democratic Republic of Congo)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmx">zmx</a></td>
+<td>Bomitaba</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmy">zmy</a></td>
+<td>Mariyedi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zmz">zmz</a></td>
+<td>Mbandja</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zna">zna</a></td>
+<td>Zan Gula</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zne">zne</a></td>
+<td>Zande</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zng">zng</a></td>
+<td>Mang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/znk">znk</a></td>
+<td>Manangkari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zns">zns</a></td>
+<td>Mangas</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zoc">zoc</a></td>
+<td>Copainalá Zoque</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zoh">zoh</a></td>
+<td>Chimalapa Zoque</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zom">zom</a></td>
+<td>Zou</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zoo">zoo</a></td>
+<td>Asunción Mixtepec Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zoq">zoq</a></td>
+<td>Tabasco Zoque</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zor">zor</a></td>
+<td>Rayón Zoque</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zos">zos</a></td>
+<td>Francisco León Zoque</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpa">zpa</a></td>
+<td>Lachiguiri Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpb">zpb</a></td>
+<td>Yautepec Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpc">zpc</a></td>
+<td>Choapan Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpd">zpd</a></td>
+<td>Southeastern Ixtlán Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpe">zpe</a></td>
+<td>Petapa Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpf">zpf</a></td>
+<td>San Pedro Quiatoni Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpg">zpg</a></td>
+<td>Guevea De Humboldt Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zph">zph</a></td>
+<td>Totomachapan Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpi">zpi</a></td>
+<td>Santa María Quiegolani Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpj">zpj</a></td>
+<td>Quiavicuzas Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpk">zpk</a></td>
+<td>Tlacolulita Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpl">zpl</a></td>
+<td>Lachixío Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpm">zpm</a></td>
+<td>Mixtepec Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpn">zpn</a></td>
+<td>Santa Inés Yatzechi Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpo">zpo</a></td>
+<td>Amatlán Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpp">zpp</a></td>
+<td>El Alto Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpq">zpq</a></td>
+<td>Zoogocho Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpr">zpr</a></td>
+<td>Santiago Xanica Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zps">zps</a></td>
+<td>Coatlán Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpt">zpt</a></td>
+<td>San Vicente Coatlán Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpu">zpu</a></td>
+<td>Yalálag Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpv">zpv</a></td>
+<td>Chichicapan Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpw">zpw</a></td>
+<td>Zaniza Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpx">zpx</a></td>
+<td>San Baltazar Loxicha Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpy">zpy</a></td>
+<td>Mazaltepec Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zpz">zpz</a></td>
+<td>Texmelucan Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zqe">zqe</a></td>
+<td>Qiubei Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zrg">zrg</a></td>
+<td>Mirgan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zrn">zrn</a></td>
+<td>Zirenkel</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zro">zro</a></td>
+<td>Záparo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zrp">zrp</a></td>
+<td>Zarphatic</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zrs">zrs</a></td>
+<td>Mairasi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zsa">zsa</a></td>
+<td>Sarasira</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zsl">zsl</a></td>
+<td>Zambian Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zsm">zsm</a></td>
+<td>Standard Malay</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zsr">zsr</a></td>
+<td>Southern Rincon Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zsu">zsu</a></td>
+<td>Sukurum</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ztc">ztc</a></td>
+<td>Lachirioag Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zte">zte</a></td>
+<td>Elotepec Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ztg">ztg</a></td>
+<td>Xanaguía Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ztl">ztl</a></td>
+<td>Lapaguía-Guivini Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ztm">ztm</a></td>
+<td>San Agustín Mixtepec Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ztn">ztn</a></td>
+<td>Santa Catarina Albarradas Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ztp">ztp</a></td>
+<td>Loxicha Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ztq">ztq</a></td>
+<td>Quioquitani-Quieri Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zts">zts</a></td>
+<td>Tilquiapan Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ztt">ztt</a></td>
+<td>Tejalapan Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ztu">ztu</a></td>
+<td>Güilá Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ztx">ztx</a></td>
+<td>Zaachila Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zty">zty</a></td>
+<td>Yatee Zapotec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zua">zua</a></td>
+<td>Zeem</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zuh">zuh</a></td>
+<td>Tokano</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zul">zul</a></td>
+<td>Zulu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zum">zum</a></td>
+<td>Kumzari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zun">zun</a></td>
+<td>Zuni</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zuy">zuy</a></td>
+<td>Zumaya</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zwa">zwa</a></td>
+<td>Zay</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zyb">zyb</a></td>
+<td>Yongbei Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zyg">zyg</a></td>
+<td>Yang Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zyj">zyj</a></td>
+<td>Youjiang Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zyn">zyn</a></td>
+<td>Yongnan Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zyp">zyp</a></td>
+<td>Zyphe</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zza">zza</a></td>
+<td>Zaza</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/zzj">zzj</a></td>
+<td>Zuojiang Zhuang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.tabs", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+        <script src="../../javascripts/leaflet.js"></script>
+      
+        <script src="../../javascripts/build_map.js"></script>
+      
+    
+  </body>
+</html>

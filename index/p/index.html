@@ -1,0 +1,3637 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>Language P - CMU Multilingual Speech DB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/leaflet.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#language-p" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CMU Multilingual Speech DB" class="md-header__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CMU Multilingual Speech DB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Language P
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../corpus/" class="md-tabs__link">
+      Corpus
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../model/" class="md-tabs__link">
+      Model
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../recipe/" class="md-tabs__link">
+      Recipe
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../" class="md-tabs__link">
+      Language
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CMU Multilingual Speech DB" class="md-nav__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CMU Multilingual Speech DB
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../corpus/" class="md-nav__link">
+        Corpus
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/" class="md-nav__link">
+        Model
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipe/" class="md-nav__link">
+        Recipe
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Language
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="language-p">Language P</h1>
+<div id='map' style='height: 640px'></div>
+<script>var langs = [{"type": "Point", "coordinates": [-57.4059, -14.5929], "popupContent": "<a href='/cmu_multilingual_speech/lang/pab'>pab</a>"},
+{"type": "Point", "coordinates": [107.094, 16.3353], "popupContent": "<a href='/cmu_multilingual_speech/lang/pac'>pac</a>"},
+{"type": "Point", "coordinates": [-64.2803, -5.78403], "popupContent": "<a href='/cmu_multilingual_speech/lang/pad'>pad</a>"},
+{"type": "Point", "coordinates": [22.1212, 3.15636], "popupContent": "<a href='/cmu_multilingual_speech/lang/pae'>pae</a>"},
+{"type": "Point", "coordinates": [-59.053, -9.34239], "popupContent": "<a href='/cmu_multilingual_speech/lang/paf'>paf</a>"},
+{"type": "Point", "coordinates": [120.365, 15.9377], "popupContent": "<a href='/cmu_multilingual_speech/lang/pag'>pag</a>"},
+{"type": "Point", "coordinates": [-61.936, -7.92626], "popupContent": "<a href='/cmu_multilingual_speech/lang/pah'>pah</a>"},
+{"type": "Point", "coordinates": [9.56437, 9.27191], "popupContent": "<a href='/cmu_multilingual_speech/lang/pai'>pai</a>"},
+{"type": "Point", "coordinates": [-50.0621, -4.64681], "popupContent": "<a href='/cmu_multilingual_speech/lang/pak'>pak</a>"},
+{"type": "Point", "coordinates": [52.7, 30.06], "popupContent": "<a href='/cmu_multilingual_speech/lang/pal'>pal</a>"},
+{"type": "Point", "coordinates": [120.502, 14.9603], "popupContent": "<a href='/cmu_multilingual_speech/lang/pam'>pam</a>"},
+{"type": "Point", "coordinates": [75.6702, 30.0368], "popupContent": "<a href='/cmu_multilingual_speech/lang/pan'>pan</a>"},
+{"type": "Point", "coordinates": [-119.536, 40.0799], "popupContent": "<a href='/cmu_multilingual_speech/lang/pao'>pao</a>"},
+{"type": "Point", "coordinates": [-69.93988, 12.48485], "popupContent": "<a href='/cmu_multilingual_speech/lang/pap'>pap</a>"},
+{"type": "Point", "coordinates": [69.26, 36.4922], "popupContent": "<a href='/cmu_multilingual_speech/lang/paq'>paq</a>"},
+{"type": "Point", "coordinates": [-117.901, 36.0007], "popupContent": "<a href='/cmu_multilingual_speech/lang/par'>par</a>"},
+{"type": "Point", "coordinates": [138.605, -2.87535], "popupContent": "<a href='/cmu_multilingual_speech/lang/pas'>pas</a>"},
+{"type": "Point", "coordinates": [147.417, -2.06222], "popupContent": "<a href='/cmu_multilingual_speech/lang/pat'>pat</a>"},
+{"type": "Point", "coordinates": [134.476678, 7.34138], "popupContent": "<a href='/cmu_multilingual_speech/lang/pau'>pau</a>"},
+{"type": "Point", "coordinates": [-64.56152, -10.69948], "popupContent": "<a href='/cmu_multilingual_speech/lang/pav'>pav</a>"},
+{"type": "Point", "coordinates": [-96.8937, 36.2862], "popupContent": "<a href='/cmu_multilingual_speech/lang/paw'>paw</a>"},
+{"type": "Point", "coordinates": [-39.6667, -9.08332], "popupContent": "<a href='/cmu_multilingual_speech/lang/pax'>pax</a>"},
+{"type": "Point", "coordinates": [-85.558, 15.8033], "popupContent": "<a href='/cmu_multilingual_speech/lang/pay'>pay</a>"},
+{"type": "Point", "coordinates": [-37.0167, -8.99999], "popupContent": "<a href='/cmu_multilingual_speech/lang/paz'>paz</a>"},
+{"type": "Point", "coordinates": [-76.31254, 2.61516], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbb'>pbb</a>"},
+{"type": "Point", "coordinates": [-59.5772, 4.75826], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbc'>pbc</a>"},
+{"type": "Point", "coordinates": [-97.5879, 18.1442], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbe'>pbe</a>"},
+{"type": "Point", "coordinates": [-97.6258, 18.3814], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbf'>pbf</a>"},
+{"type": "Point", "coordinates": [-71.8399, 10.8427], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbg'>pbg</a>"},
+{"type": "Point", "coordinates": [-65.8483, 6.95035], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbh'>pbh</a>"},
+{"type": "Point", "coordinates": [14.0964, 11.0206], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbi'>pbi</a>"},
+{"type": "Point", "coordinates": [11.1337, 9.37299], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbl'>pbl</a>"},
+{"type": "Point", "coordinates": [-96.9894, 18.2806], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbm'>pbm</a>"},
+{"type": "Point", "coordinates": [11.231, 8.75286], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbn'>pbn</a>"},
+{"type": "Point", "coordinates": [-15.8388, 11.8977], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbo'>pbo</a>"},
+{"type": "Point", "coordinates": [-13.4759, 12.6425], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbp'>pbp</a>"},
+{"type": "Point", "coordinates": [34.8039, -9.96782], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbr'>pbr</a>"},
+{"type": "Point", "coordinates": [-99.2898, 21.3762], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbs'>pbs</a>"},
+{"type": "Point", "coordinates": [65.7, 31.5], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbt'>pbt</a>"},
+{"type": "Point", "coordinates": [71.33, 34.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbu'>pbu</a>"},
+{"type": "Point", "coordinates": [92.2628, 24.8237], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbv'>pbv</a>"},
+{"type": "Point", "coordinates": [141.018, -4.45003], "popupContent": "<a href='/cmu_multilingual_speech/lang/pby'>pby</a>"},
+{"type": "Point", "coordinates": [97.1666, 18.5], "popupContent": "<a href='/cmu_multilingual_speech/lang/pbz'>pbz</a>"},
+{"type": "Point", "coordinates": [-97.85991, 18.38647], "popupContent": "<a href='/cmu_multilingual_speech/lang/pca'>pca</a>"},
+{"type": "Point", "coordinates": [105.028, 13.593], "popupContent": "<a href='/cmu_multilingual_speech/lang/pcb'>pcb</a>"},
+{"type": "Point", "coordinates": [106.187, 24.8484], "popupContent": "<a href='/cmu_multilingual_speech/lang/pcc'>pcc</a>"},
+{"type": "Point", "coordinates": [3.25085, 50.2831], "popupContent": "<a href='/cmu_multilingual_speech/lang/pcd'>pcd</a>"},
+{"type": "Point", "coordinates": [98.0915, 21.6176], "popupContent": "<a href='/cmu_multilingual_speech/lang/pce'>pce</a>"},
+{"type": "Point", "coordinates": [77.1863, 10.087], "popupContent": "<a href='/cmu_multilingual_speech/lang/pcf'>pcf</a>"},
+{"type": "Point", "coordinates": [76.0779, 11.7318], "popupContent": "<a href='/cmu_multilingual_speech/lang/pcg'>pcg</a>"},
+{"type": "Point", "coordinates": [79.7773, 22.1666], "popupContent": "<a href='/cmu_multilingual_speech/lang/pch'>pch</a>"},
+{"type": "Point", "coordinates": [82.4881, 19.0534], "popupContent": "<a href='/cmu_multilingual_speech/lang/pci'>pci</a>"},
+{"type": "Point", "coordinates": [83.9723, 19.075], "popupContent": "<a href='/cmu_multilingual_speech/lang/pcj'>pcj</a>"},
+{"type": "Point", "coordinates": [93.6136, 24.0381], "popupContent": "<a href='/cmu_multilingual_speech/lang/pck'>pck</a>"},
+{"type": "Point", "coordinates": [77.1234, 19.9989], "popupContent": "<a href='/cmu_multilingual_speech/lang/pcl'>pcl</a>"},
+{"type": "Point", "coordinates": [4.21068, 9.65873], "popupContent": "<a href='/cmu_multilingual_speech/lang/pcm'>pcm</a>"},
+{"type": "Point", "coordinates": [8.47037, 10.1361], "popupContent": "<a href='/cmu_multilingual_speech/lang/pcn'>pcn</a>"},
+{"type": "Point", "coordinates": [-65.5568, -11.9968], "popupContent": "<a href='/cmu_multilingual_speech/lang/pcp'>pcp</a>"},
+{"type": "Point", "coordinates": [86.8317, 30.7272], "popupContent": "<a href='/cmu_multilingual_speech/lang/pcr'>pcr</a>"},
+{"type": "Point", "coordinates": [9.43733, 9.09539], "popupContent": "<a href='/cmu_multilingual_speech/lang/pcw'>pcw</a>"},
+{"type": "Point", "coordinates": [145.051, -4.68869], "popupContent": "<a href='/cmu_multilingual_speech/lang/pda'>pda</a>"},
+{"type": "Point", "coordinates": [-76.3211, 40.030507], "popupContent": "<a href='/cmu_multilingual_speech/lang/pdc'>pdc</a>"},
+{"type": "Point", "coordinates": [103.486, 26.3112], "popupContent": "<a href='/cmu_multilingual_speech/lang/pdi'>pdi</a>"},
+{"type": "Point", "coordinates": [139.456, -2.20572], "popupContent": "<a href='/cmu_multilingual_speech/lang/pdn'>pdn</a>"},
+{"type": "Point", "coordinates": [121.236, -2.60642], "popupContent": "<a href='/cmu_multilingual_speech/lang/pdo'>pdo</a>"},
+{"type": "Point", "coordinates": [-109.353868, 49.578028], "popupContent": "<a href='/cmu_multilingual_speech/lang/pdt'>pdt</a>"},
+{"type": "Point", "coordinates": [97.4138, 19.5183], "popupContent": "<a href='/cmu_multilingual_speech/lang/pdu'>pdu</a>"},
+{"type": "Point", "coordinates": [112.619, -7.982], "popupContent": "<a href='/cmu_multilingual_speech/lang/pea'>pea</a>"},
+{"type": "Point", "coordinates": [-122.586, 38.5647], "popupContent": "<a href='/cmu_multilingual_speech/lang/peb'>peb</a>"},
+{"type": "Point", "coordinates": [145.04, -4.35889], "popupContent": "<a href='/cmu_multilingual_speech/lang/ped'>ped</a>"},
+{"type": "Point", "coordinates": [120.078, -0.72583], "popupContent": "<a href='/cmu_multilingual_speech/lang/pee'>pee</a>"},
+{"type": "Point", "coordinates": [-122.509, 39.2894], "popupContent": "<a href='/cmu_multilingual_speech/lang/pef'>pef</a>"},
+{"type": "Point", "coordinates": [83.6552, 19.3435], "popupContent": "<a href='/cmu_multilingual_speech/lang/peg'>peg</a>"},
+{"type": "Point", "coordinates": [102.01778, 35.515], "popupContent": "<a href='/cmu_multilingual_speech/lang/peh'>peh</a>"},
+{"type": "Point", "coordinates": [-100.524, 21.2943], "popupContent": "<a href='/cmu_multilingual_speech/lang/pei'>pei</a>"},
+{"type": "Point", "coordinates": [-123.209, 39.1084], "popupContent": "<a href='/cmu_multilingual_speech/lang/pej'>pej</a>"},
+{"type": "Point", "coordinates": [147.81, -2.29891], "popupContent": "<a href='/cmu_multilingual_speech/lang/pek'>pek</a>"},
+{"type": "Point", "coordinates": [101.691, -3.02248], "popupContent": "<a href='/cmu_multilingual_speech/lang/pel'>pel</a>"},
+{"type": "Point", "coordinates": [19.8275, -5.64735], "popupContent": "<a href='/cmu_multilingual_speech/lang/pem'>pem</a>"},
+{"type": "Point", "coordinates": [54.0, 32.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/peo'>peo</a>"},
+{"type": "Point", "coordinates": [141.424, -8.92289], "popupContent": "<a href='/cmu_multilingual_speech/lang/pep'>pep</a>"},
+{"type": "Point", "coordinates": [-122.545, 38.7643], "popupContent": "<a href='/cmu_multilingual_speech/lang/peq'>peq</a>"},
+{"type": "Point", "coordinates": [53.3, 32.9], "popupContent": "<a href='/cmu_multilingual_speech/lang/pes'>pes</a>"},
+{"type": "Point", "coordinates": [-66.082, 5.248], "popupContent": "<a href='/cmu_multilingual_speech/lang/pev'>pev</a>"},
+{"type": "Point", "coordinates": [154.593, -5.34068], "popupContent": "<a href='/cmu_multilingual_speech/lang/pex'>pex</a>"},
+{"type": "Point", "coordinates": [106.8, -6.16593], "popupContent": "<a href='/cmu_multilingual_speech/lang/pey'>pey</a>"},
+{"type": "Point", "coordinates": [114.584, 4.5915], "popupContent": "<a href='/cmu_multilingual_speech/lang/pez'>pez</a>"},
+{"type": "Point", "coordinates": [152.240167, 8.610194], "popupContent": "<a href='/cmu_multilingual_speech/lang/pfa'>pfa</a>"},
+{"type": "Point", "coordinates": [12.2518, 7.82186], "popupContent": "<a href='/cmu_multilingual_speech/lang/pfe'>pfe</a>"},
+{"type": "Point", "coordinates": [6.846, 49.701], "popupContent": "<a href='/cmu_multilingual_speech/lang/pfl'>pfl</a>"},
+{"type": "Point", "coordinates": [28.774, 5.654], "popupContent": "<a href='/cmu_multilingual_speech/lang/pga'>pga</a>"},
+{"type": "Point", "coordinates": [76.5569, 32.9753], "popupContent": "<a href='/cmu_multilingual_speech/lang/pgg'>pgg</a>"},
+{"type": "Point", "coordinates": [141.246, -3.04649], "popupContent": "<a href='/cmu_multilingual_speech/lang/pgi'>pgi</a>"},
+{"type": "Point", "coordinates": [167.651, -16.2934], "popupContent": "<a href='/cmu_multilingual_speech/lang/pgk'>pgk</a>"},
+{"type": "Point", "coordinates": [11.196, 9.304], "popupContent": "<a href='/cmu_multilingual_speech/lang/pgs'>pgs</a>"},
+{"type": "Point", "coordinates": [127.78, 1.2134], "popupContent": "<a href='/cmu_multilingual_speech/lang/pgu'>pgu</a>"},
+{"type": "Point", "coordinates": [88.0925, 26.8613], "popupContent": "<a href='/cmu_multilingual_speech/lang/pgy'>pgy</a>"},
+{"type": "Point", "coordinates": [147.116667, -9.5], "popupContent": "<a href='/cmu_multilingual_speech/lang/pgz'>pgz</a>"},
+{"type": "Point", "coordinates": [105.165, 22.8049], "popupContent": "<a href='/cmu_multilingual_speech/lang/pha'>pha</a>"},
+{"type": "Point", "coordinates": [73.3684, 18.7153], "popupContent": "<a href='/cmu_multilingual_speech/lang/phd'>phd</a>"},
+{"type": "Point", "coordinates": [107.467, 16.2118], "popupContent": "<a href='/cmu_multilingual_speech/lang/phg'>phg</a>"},
+{"type": "Point", "coordinates": [106.148, 25.5277], "popupContent": "<a href='/cmu_multilingual_speech/lang/phh'>phh</a>"},
+{"type": "Point", "coordinates": [95.8131, 27.8197], "popupContent": "<a href='/cmu_multilingual_speech/lang/phk'>phk</a>"},
+{"type": "Point", "coordinates": [71.8421, 35.5096], "popupContent": "<a href='/cmu_multilingual_speech/lang/phl'>phl</a>"},
+{"type": "Point", "coordinates": [33.3514, -15.8364], "popupContent": "<a href='/cmu_multilingual_speech/lang/phm'>phm</a>"},
+{"type": "Point", "coordinates": [35.65, 34.12], "popupContent": "<a href='/cmu_multilingual_speech/lang/phn'>phn</a>"},
+{"type": "Point", "coordinates": [100.957, 20.7996], "popupContent": "<a href='/cmu_multilingual_speech/lang/pho'>pho</a>"},
+{"type": "Point", "coordinates": [101.978, 21.9387], "popupContent": "<a href='/cmu_multilingual_speech/lang/phq'>phq</a>"},
+{"type": "Point", "coordinates": [73.8071, 33.6424], "popupContent": "<a href='/cmu_multilingual_speech/lang/phr'>phr</a>"},
+{"type": "Point", "coordinates": [104.684233333, 17.7544966667], "popupContent": "<a href='/cmu_multilingual_speech/lang/pht'>pht</a>"},
+{"type": "Point", "coordinates": [102.191, 17.5207], "popupContent": "<a href='/cmu_multilingual_speech/lang/phu'>phu</a>"},
+{"type": "Point", "coordinates": [62.1978, 31.3267], "popupContent": "<a href='/cmu_multilingual_speech/lang/phv'>phv</a>"},
+{"type": "Point", "coordinates": [87.35371, 27.15945], "popupContent": "<a href='/cmu_multilingual_speech/lang/phw'>phw</a>"},
+{"type": "Point", "coordinates": [-108.326, 28.654], "popupContent": "<a href='/cmu_multilingual_speech/lang/pia'>pia</a>"},
+{"type": "Point", "coordinates": [-73.3087, -11.1086], "popupContent": "<a href='/cmu_multilingual_speech/lang/pib'>pib</a>"},
+{"type": "Point", "coordinates": [11.223, -1.90305], "popupContent": "<a href='/cmu_multilingual_speech/lang/pic'>pic</a>"},
+{"type": "Point", "coordinates": [-67.7574, 4.41805], "popupContent": "<a href='/cmu_multilingual_speech/lang/pid'>pid</a>"},
+{"type": "Point", "coordinates": [-106.415, 35.2291], "popupContent": "<a href='/cmu_multilingual_speech/lang/pie'>pie</a>"},
+{"type": "Point", "coordinates": [160.711, 6.20743], "popupContent": "<a href='/cmu_multilingual_speech/lang/pif'>pif</a>"},
+{"type": "Point", "coordinates": [-73.3411, -6.32551], "popupContent": "<a href='/cmu_multilingual_speech/lang/pig'>pig</a>"},
+{"type": "Point", "coordinates": [-128.324075, -24.379858], "popupContent": "<a href='/cmu_multilingual_speech/lang/pih'>pih</a>"},
+{"type": "Point", "coordinates": [121.995, -26.8016], "popupContent": "<a href='/cmu_multilingual_speech/lang/pii'>pii</a>"},
+{"type": "Point", "coordinates": [-75.3333, 0.49999], "popupContent": "<a href='/cmu_multilingual_speech/lang/pij'>pij</a>"},
+{"type": "Point", "coordinates": [1.81099, 9.87186], "popupContent": "<a href='/cmu_multilingual_speech/lang/pil'>pil</a>"},
+{"type": "Point", "coordinates": [-77.20752, 36.99422], "popupContent": "<a href='/cmu_multilingual_speech/lang/pim'>pim</a>"},
+{"type": "Point", "coordinates": [142.784, -4.85835], "popupContent": "<a href='/cmu_multilingual_speech/lang/pin'>pin</a>"},
+{"type": "Point", "coordinates": [-68.5953, 4.37718], "popupContent": "<a href='/cmu_multilingual_speech/lang/pio'>pio</a>"},
+{"type": "Point", "coordinates": [11.044, 9.62092], "popupContent": "<a href='/cmu_multilingual_speech/lang/pip'>pip</a>"},
+{"type": "Point", "coordinates": [-69.5032, 0.50714], "popupContent": "<a href='/cmu_multilingual_speech/lang/pir'>pir</a>"},
+{"type": "Point", "coordinates": [160.137, -9.567], "popupContent": "<a href='/cmu_multilingual_speech/lang/pis'>pis</a>"},
+{"type": "Point", "coordinates": [139.983, -22.7952], "popupContent": "<a href='/cmu_multilingual_speech/lang/pit'>pit</a>"},
+{"type": "Point", "coordinates": [130.643, -23.2963], "popupContent": "<a href='/cmu_multilingual_speech/lang/piu'>piu</a>"},
+{"type": "Point", "coordinates": [166.247188, -10.173335], "popupContent": "<a href='/cmu_multilingual_speech/lang/piv'>piv</a>"},
+{"type": "Point", "coordinates": [31.4289, -6.81358], "popupContent": "<a href='/cmu_multilingual_speech/lang/piw'>piw</a>"},
+{"type": "Point", "coordinates": [146.455, -6.96694], "popupContent": "<a href='/cmu_multilingual_speech/lang/pix'>pix</a>"},
+{"type": "Point", "coordinates": [10.8379, 9.31975], "popupContent": "<a href='/cmu_multilingual_speech/lang/piy'>piy</a>"},
+{"type": "Point", "coordinates": [164.942, -20.7824], "popupContent": "<a href='/cmu_multilingual_speech/lang/piz'>piz</a>"},
+{"type": "Point", "coordinates": [131.357, -26.9704], "popupContent": "<a href='/cmu_multilingual_speech/lang/pjt'>pjt</a>"},
+{"type": "Point", "coordinates": [40.2897, -2.31587], "popupContent": "<a href='/cmu_multilingual_speech/lang/pkb'>pkb</a>"},
+{"type": "Point", "coordinates": [147.767, -2.05269], "popupContent": "<a href='/cmu_multilingual_speech/lang/pkg'>pkg</a>"},
+{"type": "Point", "coordinates": [92.4581, 22.4124], "popupContent": "<a href='/cmu_multilingual_speech/lang/pkh'>pkh</a>"},
+{"type": "Point", "coordinates": [142.74, -15.0908], "popupContent": "<a href='/cmu_multilingual_speech/lang/pkn'>pkn</a>"},
+{"type": "Point", "coordinates": [35.2318, 1.57023], "popupContent": "<a href='/cmu_multilingual_speech/lang/pko'>pko</a>"},
+{"type": "Point", "coordinates": [-165.83, -10.91], "popupContent": "<a href='/cmu_multilingual_speech/lang/pkp'>pkp</a>"},
+{"type": "Point", "coordinates": [76.5365, 11.1575], "popupContent": "<a href='/cmu_multilingual_speech/lang/pkr'>pkr</a>"},
+{"type": "Point", "coordinates": [67.8843, 28.0667], "popupContent": "<a href='/cmu_multilingual_speech/lang/pks'>pks</a>"},
+{"type": "Point", "coordinates": [105.52746, 17.913525], "popupContent": "<a href='/cmu_multilingual_speech/lang/pkt'>pkt</a>"},
+{"type": "Point", "coordinates": [115.087, -1.9063], "popupContent": "<a href='/cmu_multilingual_speech/lang/pku'>pku</a>"},
+{"type": "Point", "coordinates": [145.276, -4.42116], "popupContent": "<a href='/cmu_multilingual_speech/lang/pla'>pla</a>"},
+{"type": "Point", "coordinates": [167.09, -15.4653], "popupContent": "<a href='/cmu_multilingual_speech/lang/plb'>plb</a>"},
+{"type": "Point", "coordinates": [117.838, 8.77013], "popupContent": "<a href='/cmu_multilingual_speech/lang/plc'>plc</a>"},
+{"type": "Point", "coordinates": [-1.39091, 51.7866], "popupContent": "<a href='/cmu_multilingual_speech/lang/pld'>pld</a>"},
+{"type": "Point", "coordinates": [121.718, -8.32877], "popupContent": "<a href='/cmu_multilingual_speech/lang/ple'>ple</a>"},
+{"type": "Point", "coordinates": [-60.1537, -25.0058], "popupContent": "<a href='/cmu_multilingual_speech/lang/plg'>plg</a>"},
+{"type": "Point", "coordinates": [128.779, -3.25404], "popupContent": "<a href='/cmu_multilingual_speech/lang/plh'>plh</a>"},
+{"type": "Point", "coordinates": [82.251, 24.5271], "popupContent": "<a href='/cmu_multilingual_speech/lang/pli'>pli</a>"},
+{"type": "Point", "coordinates": [9.53362, 10.0258], "popupContent": "<a href='/cmu_multilingual_speech/lang/plj'>plj</a>"},
+{"type": "Point", "coordinates": [73.3207, 35.1741], "popupContent": "<a href='/cmu_multilingual_speech/lang/plk'>plk</a>"},
+{"type": "Point", "coordinates": [97.7972, 23.6729], "popupContent": "<a href='/cmu_multilingual_speech/lang/pll'>pll</a>"},
+{"type": "Point", "coordinates": [-75.2949, 10.3881], "popupContent": "<a href='/cmu_multilingual_speech/lang/pln'>pln</a>"},
+{"type": "Point", "coordinates": [-94.8863, 17.8937], "popupContent": "<a href='/cmu_multilingual_speech/lang/plo'>plo</a>"},
+{"type": "Point", "coordinates": [83.3928, 27.8741], "popupContent": "<a href='/cmu_multilingual_speech/lang/plp'>plp</a>"},
+{"type": "Point", "coordinates": [33.499, 41.334], "popupContent": "<a href='/cmu_multilingual_speech/lang/plq'>plq</a>"},
+{"type": "Point", "coordinates": [-4.9271, 9.53815], "popupContent": "<a href='/cmu_multilingual_speech/lang/plr'>plr</a>"},
+{"type": "Point", "coordinates": [-97.5936, 18.74], "popupContent": "<a href='/cmu_multilingual_speech/lang/pls'>pls</a>"},
+{"type": "Point", "coordinates": [47.1211, -19.5907], "popupContent": "<a href='/cmu_multilingual_speech/lang/plt'>plt</a>"},
+{"type": "Point", "coordinates": [-51.6246, 3.63993], "popupContent": "<a href='/cmu_multilingual_speech/lang/plu'>plu</a>"},
+{"type": "Point", "coordinates": [117.36, 8.67624], "popupContent": "<a href='/cmu_multilingual_speech/lang/plv'>plv</a>"},
+{"type": "Point", "coordinates": [117.871, 8.83891], "popupContent": "<a href='/cmu_multilingual_speech/lang/plw'>plw</a>"},
+{"type": "Point", "coordinates": [104.955, 24.7013], "popupContent": "<a href='/cmu_multilingual_speech/lang/ply'>ply</a>"},
+{"type": "Point", "coordinates": [116.346, 5.02715], "popupContent": "<a href='/cmu_multilingual_speech/lang/plz'>plz</a>"},
+{"type": "Point", "coordinates": [168.23693, -16.47548], "popupContent": "<a href='/cmu_multilingual_speech/lang/pma'>pma</a>"},
+{"type": "Point", "coordinates": [26.61, 3.739], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmb'>pmb</a>"},
+{"type": "Point", "coordinates": [128.762, -3.024], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmc'>pmc</a>"},
+{"type": "Point", "coordinates": [146.91, -36.08], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmd'>pmd</a>"},
+{"type": "Point", "coordinates": [164.77, -20.8442], "popupContent": "<a href='/cmu_multilingual_speech/lang/pme'>pme</a>"},
+{"type": "Point", "coordinates": [121.268, -1.62663], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmf'>pmf</a>"},
+{"type": "Point", "coordinates": [74.71, 19.18], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmh'>pmh</a>"},
+{"type": "Point", "coordinates": [101.305, 28.6626], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmi'>pmi</a>"},
+{"type": "Point", "coordinates": [100.622, 27.8408], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmj'>pmj</a>"},
+{"type": "Point", "coordinates": [10.8531, 33.8613], "popupContent": "<a href='/cmu_multilingual_speech/lang/pml'>pml</a>"},
+{"type": "Point", "coordinates": [13.446, 4.243], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmm'>pmm</a>"},
+{"type": "Point", "coordinates": [14.285, 7.97779], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmn'>pmn</a>"},
+{"type": "Point", "coordinates": [135.619, -1.64224], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmo'>pmo</a>"},
+{"type": "Point", "coordinates": [-99.6434, 22.0968], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmq'>pmq</a>"},
+{"type": "Point", "coordinates": [144.879, -4.94303], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmr'>pmr</a>"},
+{"type": "Point", "coordinates": [8.32366, 45.4633], "popupContent": "<a href='/cmu_multilingual_speech/lang/pms'>pms</a>"},
+{"type": "Point", "coordinates": [-146.321755, -16.17259], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmt'>pmt</a>"},
+{"type": "Point", "coordinates": [74.3713, 33.5582], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmu'>pmu</a>"},
+{"type": "Point", "coordinates": [-121.653344, 38.39772], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmw'>pmw</a>"},
+{"type": "Point", "coordinates": [94.4618, 25.1944], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmx'>pmx</a>"},
+{"type": "Point", "coordinates": [139.651, -2.53482], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmy'>pmy</a>"},
+{"type": "Point", "coordinates": [-99.334, 20.966], "popupContent": "<a href='/cmu_multilingual_speech/lang/pmz'>pmz</a>"},
+{"type": "Point", "coordinates": [113.156, 2.27377], "popupContent": "<a href='/cmu_multilingual_speech/lang/pna'>pna</a>"},
+{"type": "Point", "coordinates": [75.3474, 30.0948], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnb'>pnb</a>"},
+{"type": "Point", "coordinates": [119.191, -3.21973], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnc'>pnc</a>"},
+{"type": "Point", "coordinates": [13.72, -10.76], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnd'>pnd</a>"},
+{"type": "Point", "coordinates": [114.523, 3.4667], "popupContent": "<a href='/cmu_multilingual_speech/lang/pne'>pne</a>"},
+{"type": "Point", "coordinates": [6.3745, 10.0823], "popupContent": "<a href='/cmu_multilingual_speech/lang/png'>png</a>"},
+{"type": "Point", "coordinates": [-157.922908, -9.082238], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnh'>pnh</a>"},
+{"type": "Point", "coordinates": [114.127, 0.87404], "popupContent": "<a href='/cmu_multilingual_speech/lang/pni'>pni</a>"},
+{"type": "Point", "coordinates": [115.7, -32.7], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnj'>pnj</a>"},
+{"type": "Point", "coordinates": [-63.086994, -14.353747], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnk'>pnk</a>"},
+{"type": "Point", "coordinates": [-5.3591, 10.6201], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnl'>pnl</a>"},
+{"type": "Point", "coordinates": [113.93, 2.65327], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnm'>pnm</a>"},
+{"type": "Point", "coordinates": [144.137, -5.12624], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnn'>pnn</a>"},
+{"type": "Point", "coordinates": [-75.0, -7.16666], "popupContent": "<a href='/cmu_multilingual_speech/lang/pno'>pno</a>"},
+{"type": "Point", "coordinates": [122.968, -5.29587], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnp'>pnp</a>"},
+{"type": "Point", "coordinates": [-3.36685, 13.3501], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnq'>pnq</a>"},
+{"type": "Point", "coordinates": [145.752, -5.21388], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnr'>pnr</a>"},
+{"type": "Point", "coordinates": [124.712, 0.91716], "popupContent": "<a href='/cmu_multilingual_speech/lang/pns'>pns</a>"},
+{"type": "Point", "coordinates": [36.097421, 41.266015], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnt'>pnt</a>"},
+{"type": "Point", "coordinates": [110.007, 23.8692], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnu'>pnu</a>"},
+{"type": "Point", "coordinates": [116.538, -22.4729], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnv'>pnv</a>"},
+{"type": "Point", "coordinates": [118.723, -22.7816], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnw'>pnw</a>"},
+{"type": "Point", "coordinates": [104.088, 19.9622], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnx'>pnx</a>"},
+{"type": "Point", "coordinates": [10.0682, 5.7991], "popupContent": "<a href='/cmu_multilingual_speech/lang/pny'>pny</a>"},
+{"type": "Point", "coordinates": [13.6009, 8.71518], "popupContent": "<a href='/cmu_multilingual_speech/lang/pnz'>pnz</a>"},
+{"type": "Point", "coordinates": [-90.58, 15.36], "popupContent": "<a href='/cmu_multilingual_speech/lang/pob'>pob</a>"},
+{"type": "Point", "coordinates": [-89.73796, 14.73252], "popupContent": "<a href='/cmu_multilingual_speech/lang/poc'>poc</a>"},
+{"type": "Point", "coordinates": [-71.5, 4.83332], "popupContent": "<a href='/cmu_multilingual_speech/lang/pod'>pod</a>"},
+{"type": "Point", "coordinates": [-97.37923, 18.22245], "popupContent": "<a href='/cmu_multilingual_speech/lang/poe'>poe</a>"},
+{"type": "Point", "coordinates": [23.8972, 0.73538], "popupContent": "<a href='/cmu_multilingual_speech/lang/pof'>pof</a>"},
+{"type": "Point", "coordinates": [-38.0, -7.01666], "popupContent": "<a href='/cmu_multilingual_speech/lang/pog'>pog</a>"},
+{"type": "Point", "coordinates": [-90.5813, 15.3586], "popupContent": "<a href='/cmu_multilingual_speech/lang/poh'>poh</a>"},
+{"type": "Point", "coordinates": [-94.9109, 18.198], "popupContent": "<a href='/cmu_multilingual_speech/lang/poi'>poi</a>"},
+{"type": "Point", "coordinates": [-69.5607, 0.35794], "popupContent": "<a href='/cmu_multilingual_speech/lang/pok'>pok</a>"},
+{"type": "Point", "coordinates": [18.6255, 51.8439], "popupContent": "<a href='/cmu_multilingual_speech/lang/pol'>pol</a>"},
+{"type": "Point", "coordinates": [-122.599, 38.9354], "popupContent": "<a href='/cmu_multilingual_speech/lang/pom'>pom</a>"},
+{"type": "Point", "coordinates": [158.223, 6.87212], "popupContent": "<a href='/cmu_multilingual_speech/lang/pon'>pon</a>"},
+{"type": "Point", "coordinates": [-123.66393, 38.90547], "popupContent": "<a href='/cmu_multilingual_speech/lang/poo'>poo</a>"},
+{"type": "Point", "coordinates": [164.556, -20.8133], "popupContent": "<a href='/cmu_multilingual_speech/lang/pop'>pop</a>"},
+{"type": "Point", "coordinates": [-94.8076, 17.8926], "popupContent": "<a href='/cmu_multilingual_speech/lang/poq'>poq</a>"},
+{"type": "Point", "coordinates": [-8.1, 39.91], "popupContent": "<a href='/cmu_multilingual_speech/lang/por'>por</a>"},
+{"type": "Point", "coordinates": [-94.9531, 17.8606], "popupContent": "<a href='/cmu_multilingual_speech/lang/pos'>pos</a>"},
+{"type": "Point", "coordinates": [-89.1881, 40.955], "popupContent": "<a href='/cmu_multilingual_speech/lang/pot'>pot</a>"},
+{"type": "Point", "coordinates": [-15.33254, 13.2335066667], "popupContent": "<a href='/cmu_multilingual_speech/lang/pov'>pov</a>"},
+{"type": "Point", "coordinates": [-97.7432, 18.3594], "popupContent": "<a href='/cmu_multilingual_speech/lang/pow'>pow</a>"},
+{"type": "Point", "coordinates": [14.0, 52.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/pox'>pox</a>"},
+{"type": "Point", "coordinates": [36.4148, -8.72283], "popupContent": "<a href='/cmu_multilingual_speech/lang/poy'>poy</a>"},
+{"type": "Point", "coordinates": [80.9619, 24.0622], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppa'>ppa</a>"},
+{"type": "Point", "coordinates": [142.011, -4.4725], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppe'>ppe</a>"},
+{"type": "Point", "coordinates": [-115.871, 31.6063], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppi'>ppi</a>"},
+{"type": "Point", "coordinates": [119.968, -1.70416], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppk'>ppk</a>"},
+{"type": "Point", "coordinates": [-89.443, 13.8931], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppl'>ppl</a>"},
+{"type": "Point", "coordinates": [135.907, -1.77301], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppm'>ppm</a>"},
+{"type": "Point", "coordinates": [155.289, -5.92283], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppn'>ppn</a>"},
+{"type": "Point", "coordinates": [144.458, -6.86321], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppo'>ppo</a>"},
+{"type": "Point", "coordinates": [17.3142, -4.90877], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppp'>ppp</a>"},
+{"type": "Point", "coordinates": [142.247, -4.43974], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppq'>ppq</a>"},
+{"type": "Point", "coordinates": [128.197, -3.05368], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppr'>ppr</a>"},
+{"type": "Point", "coordinates": [-97.5459, 18.6812], "popupContent": "<a href='/cmu_multilingual_speech/lang/pps'>pps</a>"},
+{"type": "Point", "coordinates": [141.658, -6.46878], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppt'>ppt</a>"},
+{"type": "Point", "coordinates": [120.577, 24.324], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppu'>ppu</a>"},
+{"type": "Point", "coordinates": [-72.0, -9.5], "popupContent": "<a href='/cmu_multilingual_speech/lang/ppv'>ppv</a>"},
+{"type": "Point", "coordinates": [9.30091, 11.0175], "popupContent": "<a href='/cmu_multilingual_speech/lang/pqa'>pqa</a>"},
+{"type": "Point", "coordinates": [-67.40805, 45.494475], "popupContent": "<a href='/cmu_multilingual_speech/lang/pqm'>pqm</a>"},
+{"type": "Point", "coordinates": [101.217, 19.1198], "popupContent": "<a href='/cmu_multilingual_speech/lang/prb'>prb</a>"},
+{"type": "Point", "coordinates": [70.8805, 36.0432], "popupContent": "<a href='/cmu_multilingual_speech/lang/prc'>prc</a>"},
+{"type": "Point", "coordinates": [58.624, 32.994], "popupContent": "<a href='/cmu_multilingual_speech/lang/prd'>prd</a>"},
+{"type": "Point", "coordinates": [7.392, 1.614], "popupContent": "<a href='/cmu_multilingual_speech/lang/pre'>pre</a>"},
+{"type": "Point", "coordinates": [122.372, 17.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/prf'>prf</a>"},
+{"type": "Point", "coordinates": [14.757, 52.394], "popupContent": "<a href='/cmu_multilingual_speech/lang/prg'>prg</a>"},
+{"type": "Point", "coordinates": [124.454, 10.6726], "popupContent": "<a href='/cmu_multilingual_speech/lang/prh'>prh</a>"},
+{"type": "Point", "coordinates": [165.15, -21.096], "popupContent": "<a href='/cmu_multilingual_speech/lang/pri'>pri</a>"},
+{"type": "Point", "coordinates": [99.375, 22.8658], "popupContent": "<a href='/cmu_multilingual_speech/lang/prk'>prk</a>"},
+{"type": "Point", "coordinates": [-76.8213, -11.9008], "popupContent": "<a href='/cmu_multilingual_speech/lang/prl'>prl</a>"},
+{"type": "Point", "coordinates": [144.296, -7.45276], "popupContent": "<a href='/cmu_multilingual_speech/lang/prm'>prm</a>"},
+{"type": "Point", "coordinates": [70.922783, 35.420531], "popupContent": "<a href='/cmu_multilingual_speech/lang/prn'>prn</a>"},
+{"type": "Point", "coordinates": [0.6, 43.5], "popupContent": "<a href='/cmu_multilingual_speech/lang/pro'>pro</a>"},
+{"type": "Point", "coordinates": [74.438, 20.625], "popupContent": "<a href='/cmu_multilingual_speech/lang/prp'>prp</a>"},
+{"type": "Point", "coordinates": [-74.9153, -10.9777], "popupContent": "<a href='/cmu_multilingual_speech/lang/prq'>prq</a>"},
+{"type": "Point", "coordinates": [-44.711336, -22.175627], "popupContent": "<a href='/cmu_multilingual_speech/lang/prr'>prr</a>"},
+{"type": "Point", "coordinates": [67.3593, 31.0405], "popupContent": "<a href='/cmu_multilingual_speech/lang/prs'>prs</a>"},
+{"type": "Point", "coordinates": [101.218, 19.0383], "popupContent": "<a href='/cmu_multilingual_speech/lang/prt'>prt</a>"},
+{"type": "Point", "coordinates": [132.304, -2.05779], "popupContent": "<a href='/cmu_multilingual_speech/lang/pru'>pru</a>"},
+{"type": "Point", "coordinates": [145.418, -5.0112], "popupContent": "<a href='/cmu_multilingual_speech/lang/prw'>prw</a>"},
+{"type": "Point", "coordinates": [76.0127, 34.3386], "popupContent": "<a href='/cmu_multilingual_speech/lang/prx'>prx</a>"},
+{"type": "Point", "coordinates": [101.021, 19.4306], "popupContent": "<a href='/cmu_multilingual_speech/lang/pry'>pry</a>"},
+{"type": "Point", "coordinates": [-81.373888, 13.348416], "popupContent": "<a href='/cmu_multilingual_speech/lang/prz'>prz</a>"},
+{"type": "Point", "coordinates": [139.123, -5.98341], "popupContent": "<a href='/cmu_multilingual_speech/lang/psa'>psa</a>"},
+{"type": "Point", "coordinates": [51.0996, 35.6922], "popupContent": "<a href='/cmu_multilingual_speech/lang/psc'>psc</a>"},
+{"type": "Point", "coordinates": [-99.2499, 38.3941], "popupContent": "<a href='/cmu_multilingual_speech/lang/psd'>psd</a>"},
+{"type": "Point", "coordinates": [103.137, -3.79673], "popupContent": "<a href='/cmu_multilingual_speech/lang/pse'>pse</a>"},
+{"type": "Point", "coordinates": [100.254, 5.375], "popupContent": "<a href='/cmu_multilingual_speech/lang/psg'>psg</a>"},
+{"type": "Point", "coordinates": [69.8734, 34.8478], "popupContent": "<a href='/cmu_multilingual_speech/lang/psh'>psh</a>"},
+{"type": "Point", "coordinates": [70.592042, 34.66597], "popupContent": "<a href='/cmu_multilingual_speech/lang/psi'>psi</a>"},
+{"type": "Point", "coordinates": [-66.0919, 18.4592], "popupContent": "<a href='/cmu_multilingual_speech/lang/psl'>psl</a>"},
+{"type": "Point", "coordinates": [-63.1903, -12.8553], "popupContent": "<a href='/cmu_multilingual_speech/lang/psm'>psm</a>"},
+{"type": "Point", "coordinates": [119.65, -2.24049], "popupContent": "<a href='/cmu_multilingual_speech/lang/psn'>psn</a>"},
+{"type": "Point", "coordinates": [20.761, 52.0041], "popupContent": "<a href='/cmu_multilingual_speech/lang/pso'>pso</a>"},
+{"type": "Point", "coordinates": [121.512, 16.916], "popupContent": "<a href='/cmu_multilingual_speech/lang/psp'>psp</a>"},
+{"type": "Point", "coordinates": [142.307, -3.95195], "popupContent": "<a href='/cmu_multilingual_speech/lang/psq'>psq</a>"},
+{"type": "Point", "coordinates": [-8.53355, 38.5474], "popupContent": "<a href='/cmu_multilingual_speech/lang/psr'>psr</a>"},
+{"type": "Point", "coordinates": [149.696, -6.08192], "popupContent": "<a href='/cmu_multilingual_speech/lang/pss'>pss</a>"},
+{"type": "Point", "coordinates": [69.4529, 31.9153], "popupContent": "<a href='/cmu_multilingual_speech/lang/pst'>pst</a>"},
+{"type": "Point", "coordinates": [77.56, 27.46], "popupContent": "<a href='/cmu_multilingual_speech/lang/psu'>psu</a>"},
+{"type": "Point", "coordinates": [167.78, -16.4952], "popupContent": "<a href='/cmu_multilingual_speech/lang/psw'>psw</a>"},
+{"type": "Point", "coordinates": [-76.803, 39.073], "popupContent": "<a href='/cmu_multilingual_speech/lang/psy'>psy</a>"},
+{"type": "Point", "coordinates": [-56.11758, -23.15945], "popupContent": "<a href='/cmu_multilingual_speech/lang/pta'>pta</a>"},
+{"type": "Point", "coordinates": [-40.0333, -15.9167], "popupContent": "<a href='/cmu_multilingual_speech/lang/pth'>pth</a>"},
+{"type": "Point", "coordinates": [127.632, -29.806], "popupContent": "<a href='/cmu_multilingual_speech/lang/pti'>pti</a>"},
+{"type": "Point", "coordinates": [128.634, 0.34096], "popupContent": "<a href='/cmu_multilingual_speech/lang/ptn'>ptn</a>"},
+{"type": "Point", "coordinates": [-55.50746, -1.77208], "popupContent": "<a href='/cmu_multilingual_speech/lang/pto'>pto</a>"},
+{"type": "Point", "coordinates": [146.639, -6.91988], "popupContent": "<a href='/cmu_multilingual_speech/lang/ptp'>ptp</a>"},
+{"type": "Point", "coordinates": [166.738, -14.9959], "popupContent": "<a href='/cmu_multilingual_speech/lang/ptr'>ptr</a>"},
+{"type": "Point", "coordinates": [119.66, -3.53848], "popupContent": "<a href='/cmu_multilingual_speech/lang/ptt'>ptt</a>"},
+{"type": "Point", "coordinates": [119.201, -3.02759], "popupContent": "<a href='/cmu_multilingual_speech/lang/ptu'>ptu</a>"},
+{"type": "Point", "coordinates": [168.046, -16.3083], "popupContent": "<a href='/cmu_multilingual_speech/lang/ptv'>ptv</a>"},
+{"type": "Point", "coordinates": [-124.689, 49.1936], "popupContent": "<a href='/cmu_multilingual_speech/lang/ptw'>ptw</a>"},
+{"type": "Point", "coordinates": [76.3397, 11.6368], "popupContent": "<a href='/cmu_multilingual_speech/lang/pty'>pty</a>"},
+{"type": "Point", "coordinates": [-102.154, 19.5392], "popupContent": "<a href='/cmu_multilingual_speech/lang/pua'>pua</a>"},
+{"type": "Point", "coordinates": [95.0935, 25.3887], "popupContent": "<a href='/cmu_multilingual_speech/lang/pub'>pub</a>"},
+{"type": "Point", "coordinates": [116.251, 3.10143], "popupContent": "<a href='/cmu_multilingual_speech/lang/puc'>puc</a>"},
+{"type": "Point", "coordinates": [116.089, 1.38035], "popupContent": "<a href='/cmu_multilingual_speech/lang/pud'>pud</a>"},
+{"type": "Point", "coordinates": [-68.666, -42.223], "popupContent": "<a href='/cmu_multilingual_speech/lang/pue'>pue</a>"},
+{"type": "Point", "coordinates": [115.588, 0.50763], "popupContent": "<a href='/cmu_multilingual_speech/lang/puf'>puf</a>"},
+{"type": "Point", "coordinates": [-3.47165, 11.02348], "popupContent": "<a href='/cmu_multilingual_speech/lang/pug'>pug</a>"},
+{"type": "Point", "coordinates": [-67.6886, 3.92974], "popupContent": "<a href='/cmu_multilingual_speech/lang/pui'>pui</a>"},
+{"type": "Point", "coordinates": [116.26, 2.86972], "popupContent": "<a href='/cmu_multilingual_speech/lang/puj'>puj</a>"},
+{"type": "Point", "coordinates": [101.731, 20.2551], "popupContent": "<a href='/cmu_multilingual_speech/lang/puk'>puk</a>"},
+{"type": "Point", "coordinates": [86.838, 27.0774], "popupContent": "<a href='/cmu_multilingual_speech/lang/pum'>pum</a>"},
+{"type": "Point", "coordinates": [103.931, 20.8862], "popupContent": "<a href='/cmu_multilingual_speech/lang/puo'>puo</a>"},
+{"type": "Point", "coordinates": [145.738, -5.59558], "popupContent": "<a href='/cmu_multilingual_speech/lang/pup'>pup</a>"},
+{"type": "Point", "coordinates": [-69.9611, -15.8992], "popupContent": "<a href='/cmu_multilingual_speech/lang/puq'>puq</a>"},
+{"type": "Point", "coordinates": [-62.4358, -11.4226], "popupContent": "<a href='/cmu_multilingual_speech/lang/pur'>pur</a>"},
+{"type": "Point", "coordinates": [116.443, 3.42467], "popupContent": "<a href='/cmu_multilingual_speech/lang/put'>put</a>"},
+{"type": "Point", "coordinates": [11.6714, -2.67362], "popupContent": "<a href='/cmu_multilingual_speech/lang/puu'>puu</a>"},
+{"type": "Point", "coordinates": [149.2005, 7.35695], "popupContent": "<a href='/cmu_multilingual_speech/lang/puw'>puw</a>"},
+{"type": "Point", "coordinates": [141.715, -2.90121], "popupContent": "<a href='/cmu_multilingual_speech/lang/pux'>pux</a>"},
+{"type": "Point", "coordinates": [-120.431, 34.6866], "popupContent": "<a href='/cmu_multilingual_speech/lang/puy'>puy</a>"},
+{"type": "Point", "coordinates": [93.982, 24.662], "popupContent": "<a href='/cmu_multilingual_speech/lang/puz'>puz</a>"},
+{"type": "Point", "coordinates": [145.081, -6.88021], "popupContent": "<a href='/cmu_multilingual_speech/lang/pwa'>pwa</a>"},
+{"type": "Point", "coordinates": [8.986221, 10.008075], "popupContent": "<a href='/cmu_multilingual_speech/lang/pwb'>pwb</a>"},
+{"type": "Point", "coordinates": [149.854, -9.73317], "popupContent": "<a href='/cmu_multilingual_speech/lang/pwg'>pwg</a>"},
+{"type": "Point", "coordinates": [-122.0094, 39.2143], "popupContent": "<a href='/cmu_multilingual_speech/lang/pwi'>pwi</a>"},
+{"type": "Point", "coordinates": [117.030502, 7.956663], "popupContent": "<a href='/cmu_multilingual_speech/lang/pwm'>pwm</a>"},
+{"type": "Point", "coordinates": [120.806, 22.3271], "popupContent": "<a href='/cmu_multilingual_speech/lang/pwn'>pwn</a>"},
+{"type": "Point", "coordinates": [97.7044, 17.3622], "popupContent": "<a href='/cmu_multilingual_speech/lang/pwo'>pwo</a>"},
+{"type": "Point", "coordinates": [79.239, 21.797], "popupContent": "<a href='/cmu_multilingual_speech/lang/pwr'>pwr</a>"},
+{"type": "Point", "coordinates": [98.2709, 18.016], "popupContent": "<a href='/cmu_multilingual_speech/lang/pww'>pww</a>"},
+{"type": "Point", "coordinates": [-95.67269, 16.92147], "popupContent": "<a href='/cmu_multilingual_speech/lang/pxm'>pxm</a>"},
+{"type": "Point", "coordinates": [-7.01481, 5.00716], "popupContent": "<a href='/cmu_multilingual_speech/lang/pye'>pye</a>"},
+{"type": "Point", "coordinates": [9.22293, 9.59006], "popupContent": "<a href='/cmu_multilingual_speech/lang/pym'>pym</a>"},
+{"type": "Point", "coordinates": [-73.0758, -7.46909], "popupContent": "<a href='/cmu_multilingual_speech/lang/pyn'>pyn</a>"},
+{"type": "Point", "coordinates": [-57.666667, -25.266667], "popupContent": "<a href='/cmu_multilingual_speech/lang/pys'>pys</a>"},
+{"type": "Point", "coordinates": [120.996, 22.643], "popupContent": "<a href='/cmu_multilingual_speech/lang/pyu'>pyu</a>"},
+{"type": "Point", "coordinates": [95.897864, 21.31928], "popupContent": "<a href='/cmu_multilingual_speech/lang/pyx'>pyx</a>"},
+{"type": "Point", "coordinates": [100.029, 20.759], "popupContent": "<a href='/cmu_multilingual_speech/lang/pyy'>pyy</a>"},
+{"type": "Point", "coordinates": [95.1618, 26.2072], "popupContent": "<a href='/cmu_multilingual_speech/lang/pzn'>pzn</a>"},
+];
+</script>
+
+<table>
+<thead>
+<tr>
+<th>Language Id</th>
+<th>Language Name</th>
+<th>Corpus</th>
+<th>Recipe</th>
+<th>Model</th>
+<th>Inventory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pab">pab</a></td>
+<td>Parecís</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pac">pac</a></td>
+<td>Pacoh</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pad">pad</a></td>
+<td>Paumari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pae">pae</a></td>
+<td>Pagibete</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/paf">paf</a></td>
+<td>Paranawát</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pag">pag</a></td>
+<td>Pangasinan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pah">pah</a></td>
+<td>Tenharim-Parintintin-Diahoi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pai">pai</a></td>
+<td>Pye</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/paj">paj</a></td>
+<td>Ipeka-Tapuia</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pak">pak</a></td>
+<td>Parakanã</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pal">pal</a></td>
+<td>Pahlavi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pam">pam</a></td>
+<td>Pampanga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pan">pan</a></td>
+<td>Eastern Panjabi</td>
+<td><a href="/cmu_multilingual_speech/lang/pan/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/pan/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pan/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pao">pao</a></td>
+<td>Northern Paiute</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pap">pap</a></td>
+<td>Papiamento</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/paq">paq</a></td>
+<td>Parya</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/par">par</a></td>
+<td>Panamint</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pas">pas</a></td>
+<td>Papasena</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pat">pat</a></td>
+<td>Papitalai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pau">pau</a></td>
+<td>Palauan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pav">pav</a></td>
+<td>Wari'</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/paw">paw</a></td>
+<td>Pawnee</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pax">pax</a></td>
+<td>Pankararé</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pay">pay</a></td>
+<td>Pech</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/paz">paz</a></td>
+<td>Pankararú</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbb">pbb</a></td>
+<td>Páez</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbc">pbc</a></td>
+<td>Patamona</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbe">pbe</a></td>
+<td>Mezontla Popoloca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbf">pbf</a></td>
+<td>Coyotepec Popoloca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbg">pbg</a></td>
+<td>Paraujano</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbh">pbh</a></td>
+<td>Panare</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbi">pbi</a></td>
+<td>Parkwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbl">pbl</a></td>
+<td>Mak (Nigeria)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbm">pbm</a></td>
+<td>Puebla and Northeastern Mazatec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbn">pbn</a></td>
+<td>Kpasam</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbo">pbo</a></td>
+<td>Papel</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbp">pbp</a></td>
+<td>Jaad-Badyara</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbr">pbr</a></td>
+<td>Pangwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbs">pbs</a></td>
+<td>Central Pame</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbt">pbt</a></td>
+<td>Southern Pashto</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbu">pbu</a></td>
+<td>Northern Pashto</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbv">pbv</a></td>
+<td>Pnar</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pby">pby</a></td>
+<td>Pyu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pbz">pbz</a></td>
+<td>Palu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pca">pca</a></td>
+<td>Santa Inés Ahuatempan Popoloca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pcb">pcb</a></td>
+<td>Pear</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pcc">pcc</a></td>
+<td>Bouyei</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pcd">pcd</a></td>
+<td>Picard</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pce">pce</a></td>
+<td>Ruching Palaung</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pcf">pcf</a></td>
+<td>Paliyan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pcg">pcg</a></td>
+<td>Paniya</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pch">pch</a></td>
+<td>Pardhan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pci">pci</a></td>
+<td>Duruwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pcj">pcj</a></td>
+<td>Gorum-Parenga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pck">pck</a></td>
+<td>Paite Chin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pcl">pcl</a></td>
+<td>Pardhi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pcm">pcm</a></td>
+<td>Nigerian Pidgin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pcn">pcn</a></td>
+<td>Piti</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pcp">pcp</a></td>
+<td>Pacahuara</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pcr">pcr</a></td>
+<td>Panang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pcw">pcw</a></td>
+<td>Pyapun</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pda">pda</a></td>
+<td>Anam</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pdc">pdc</a></td>
+<td>Pennsylvania German</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pdi">pdi</a></td>
+<td>Pa Di</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pdn">pdn</a></td>
+<td>Podena</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pdo">pdo</a></td>
+<td>Padoe</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pdt">pdt</a></td>
+<td>Plautdietsch</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pdu">pdu</a></td>
+<td>Kayan Lahwi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pea">pea</a></td>
+<td>Peranakan Indonesian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/peb">peb</a></td>
+<td>Eastern Pomo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pec">pec</a></td>
+<td>Southern Pesisir</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ped">ped</a></td>
+<td>Mala (Papua New Guinea)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pee">pee</a></td>
+<td>Taje</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pef">pef</a></td>
+<td>Northeastern Russian River Pomo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/peg">peg</a></td>
+<td>Pengo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/peh">peh</a></td>
+<td>Bonan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pei">pei</a></td>
+<td>Chichimeca-Jonaz</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pej">pej</a></td>
+<td>Northern Pomo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pek">pek</a></td>
+<td>Penchal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pel">pel</a></td>
+<td>Pekal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pem">pem</a></td>
+<td>Phende</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pen">pen</a></td>
+<td>Penesak</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/peo">peo</a></td>
+<td>Old Persian (ca. 600-400 B.C.)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pep">pep</a></td>
+<td>Kánchá</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/peq">peq</a></td>
+<td>Southern Pomo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pes">pes</a></td>
+<td>Western Farsi</td>
+<td><a href="/cmu_multilingual_speech/lang/pes/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/pes/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pes/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pev">pev</a></td>
+<td>Pémono</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pex">pex</a></td>
+<td>Petats</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pey">pey</a></td>
+<td>Petjo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pez">pez</a></td>
+<td>Eastern Penan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pfa">pfa</a></td>
+<td>Pááfang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pfe">pfe</a></td>
+<td>Peere</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pfl">pfl</a></td>
+<td>Pfaelzisch-Lothringisch</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pga">pga</a></td>
+<td>South Sudanese Creole Arabic</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pgg">pgg</a></td>
+<td>Pangwali</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pgi">pgi</a></td>
+<td>Pagi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pgk">pgk</a></td>
+<td>Rerep</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pgs">pgs</a></td>
+<td>Pangseng</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pgu">pgu</a></td>
+<td>Pagu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pgy">pgy</a></td>
+<td>Pongyong</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pgz">pgz</a></td>
+<td>Papua New Guinean Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pha">pha</a></td>
+<td>Pa-Hng</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/phd">phd</a></td>
+<td>Phudagi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/phg">phg</a></td>
+<td>Phuong</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/phh">phh</a></td>
+<td>Phukha</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/phk">phk</a></td>
+<td>Phake</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/phl">phl</a></td>
+<td>Palula</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/phm">phm</a></td>
+<td>Phimbi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/phn">phn</a></td>
+<td>Phoenician</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pho">pho</a></td>
+<td>Phunoi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/phq">phq</a></td>
+<td>Phana'</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/phr">phr</a></td>
+<td>Pahari Potwari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pht">pht</a></td>
+<td>Phu Thai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/phu">phu</a></td>
+<td>Phuan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/phv">phv</a></td>
+<td>Pahlavani</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/phw">phw</a></td>
+<td>Phangduwali</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pia">pia</a></td>
+<td>Pima Bajo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pib">pib</a></td>
+<td>Yine</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pic">pic</a></td>
+<td>Pinji</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pid">pid</a></td>
+<td>Piaroa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pie">pie</a></td>
+<td>Piro</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pif">pif</a></td>
+<td>Pingelapese</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pig">pig</a></td>
+<td>Pisabo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pih">pih</a></td>
+<td>Pitcairn-Norfolk</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pii">pii</a></td>
+<td>Lake Carnegie Western Desert</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pij">pij</a></td>
+<td>Pijao</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pil">pil</a></td>
+<td>Yom</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pim">pim</a></td>
+<td>Powhatan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pin">pin</a></td>
+<td>Piame</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pio">pio</a></td>
+<td>Piapoco</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pip">pip</a></td>
+<td>Pero</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pir">pir</a></td>
+<td>Wa'ikhana</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pis">pis</a></td>
+<td>Pijin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pit">pit</a></td>
+<td>Pitta Pitta</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/piu">piu</a></td>
+<td>Pintupi-Luritja</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/piv">piv</a></td>
+<td>Vaeakau-Taumako</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/piw">piw</a></td>
+<td>Pimbwe</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pix">pix</a></td>
+<td>Piu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/piy">piy</a></td>
+<td>Piya-Kwonci</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/piz">piz</a></td>
+<td>Pije</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pjt">pjt</a></td>
+<td>Pitjantjatjara</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pkb">pkb</a></td>
+<td>Pokomo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pkc">pkc</a></td>
+<td>Paekche</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pkg">pkg</a></td>
+<td>Pak-Tong</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pkh">pkh</a></td>
+<td>Pangkhua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pkn">pkn</a></td>
+<td>Pakanha</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pko">pko</a></td>
+<td>Pökoot</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pkp">pkp</a></td>
+<td>Pukapuka</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pkr">pkr</a></td>
+<td>Attapady Kurumba</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pks">pks</a></td>
+<td>Pakistan Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pkt">pkt</a></td>
+<td>Maleng</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pku">pku</a></td>
+<td>Paku</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pla">pla</a></td>
+<td>Miani</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plb">plb</a></td>
+<td>Polonombauk</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plc">plc</a></td>
+<td>Central Palawano</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pld">pld</a></td>
+<td>Polari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ple">ple</a></td>
+<td>Palu'e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plg">plg</a></td>
+<td>Pilagá</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plh">plh</a></td>
+<td>Paulohi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pli">pli</a></td>
+<td>Pali</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plj">plj</a></td>
+<td>Polci</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plk">plk</a></td>
+<td>Kohistani Shina</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pll">pll</a></td>
+<td>Shwe Palaung</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plm">plm</a></td>
+<td>Palembang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pln">pln</a></td>
+<td>Palenquero</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plo">plo</a></td>
+<td>Oluta Popoluca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plp">plp</a></td>
+<td>Palpa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plq">plq</a></td>
+<td>Palaic</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plr">plr</a></td>
+<td>Palaka Senoufo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pls">pls</a></td>
+<td>San Marcos Tlalcoyalco Popoloca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plt">plt</a></td>
+<td>Plateau Malagasy</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plu">plu</a></td>
+<td>Palikúr</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plv">plv</a></td>
+<td>Southwest Palawano</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plw">plw</a></td>
+<td>Brooke's Point Palawano</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ply">ply</a></td>
+<td>Bolyu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/plz">plz</a></td>
+<td>Paluan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pma">pma</a></td>
+<td>Paama</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmb">pmb</a></td>
+<td>Pambia</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmc">pmc</a></td>
+<td>Palumata</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmd">pmd</a></td>
+<td>Pallanganmiddang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pme">pme</a></td>
+<td>Pwaamei</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmf">pmf</a></td>
+<td>Pamona</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmh">pmh</a></td>
+<td>Maharastri Prakrit</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmi">pmi</a></td>
+<td>Northern Pumi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmj">pmj</a></td>
+<td>Southern Pumi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pml">pml</a></td>
+<td>Mediterranean Lingua Franca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmm">pmm</a></td>
+<td>Pol</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmn">pmn</a></td>
+<td>Pam (Cameroon)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmo">pmo</a></td>
+<td>Pom</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmq">pmq</a></td>
+<td>Northern Pame</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmr">pmr</a></td>
+<td>Manat</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pms">pms</a></td>
+<td>Piemontese</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmt">pmt</a></td>
+<td>Tuamotuan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmu">pmu</a></td>
+<td>Mirpur Panjabi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmw">pmw</a></td>
+<td>Plains Miwok</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmx">pmx</a></td>
+<td>Poumei Naga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmy">pmy</a></td>
+<td>Papuan Malay</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pmz">pmz</a></td>
+<td>Southern Pame</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pna">pna</a></td>
+<td>Punan Bah-Biau</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnb">pnb</a></td>
+<td>Western Panjabi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnc">pnc</a></td>
+<td>Pannei</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnd">pnd</a></td>
+<td>Mpinda</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pne">pne</a></td>
+<td>Western Penan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/png">png</a></td>
+<td>Pongu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnh">pnh</a></td>
+<td>Māngarongaro</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pni">pni</a></td>
+<td>Aoheng-Seputan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnj">pnj</a></td>
+<td>Pinjarup</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnk">pnk</a></td>
+<td>Paunaka</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnl">pnl</a></td>
+<td>Palen</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnm">pnm</a></td>
+<td>Punan Batu 1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnn">pnn</a></td>
+<td>Pinai-Hagahai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pno">pno</a></td>
+<td>Panobo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnp">pnp</a></td>
+<td>Pancana</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnq">pnq</a></td>
+<td>Pana (Burkina Faso)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnr">pnr</a></td>
+<td>Panim</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pns">pns</a></td>
+<td>Ponosakan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnt">pnt</a></td>
+<td>Pontic</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnu">pnu</a></td>
+<td>Jiongnai Bunu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnv">pnv</a></td>
+<td>Pinigura</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnw">pnw</a></td>
+<td>Panytyima</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnx">pnx</a></td>
+<td>Phong-Kniang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pny">pny</a></td>
+<td>Pinyin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pnz">pnz</a></td>
+<td>Pana (Central African Republic)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/poa">poa</a></td>
+<td>Poqomam, Eastern</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pob">pob</a></td>
+<td>Poqomchi', Western</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/poc">poc</a></td>
+<td>Poqomam</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pod">pod</a></td>
+<td>Ponares</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/poe">poe</a></td>
+<td>San Juan Atzingo Popoloca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pof">pof</a></td>
+<td>Poke</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pog">pog</a></td>
+<td>Potiguára</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/poh">poh</a></td>
+<td>Poqomchi'</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/poi">poi</a></td>
+<td>Highland Popoluca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/poj">poj</a></td>
+<td>Lower Pokomo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pok">pok</a></td>
+<td>Pokangá</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pol">pol</a></td>
+<td>Polish</td>
+<td><a href="/cmu_multilingual_speech/lang/pol/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/pol/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pol/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pom">pom</a></td>
+<td>Southeastern Pomo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pon">pon</a></td>
+<td>Pohnpeian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/poo">poo</a></td>
+<td>Central Pomo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pop">pop</a></td>
+<td>Pwapwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/poq">poq</a></td>
+<td>Texistepec Popoluca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/por">por</a></td>
+<td>Portuguese</td>
+<td><a href="/cmu_multilingual_speech/lang/por/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/por/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/por/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pos">pos</a></td>
+<td>Sayula Popoluca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pot">pot</a></td>
+<td>Potawatomi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pou">pou</a></td>
+<td>Poqomam, Southern</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pov">pov</a></td>
+<td>Upper Guinea Crioulo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pow">pow</a></td>
+<td>San Felipe Otlaltepec Popoloca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pox">pox</a></td>
+<td>Polabian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/poy">poy</a></td>
+<td>Pogolo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppa">ppa</a></td>
+<td>Pao</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppe">ppe</a></td>
+<td>Papi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppi">ppi</a></td>
+<td>Paipai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppk">ppk</a></td>
+<td>Uma</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppl">ppl</a></td>
+<td>Pipil</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppm">ppm</a></td>
+<td>Papuma</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppn">ppn</a></td>
+<td>Papapana</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppo">ppo</a></td>
+<td>Folopa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppp">ppp</a></td>
+<td>Pelende</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppq">ppq</a></td>
+<td>Pei</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppr">ppr</a></td>
+<td>Piru</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pps">pps</a></td>
+<td>San Luís Temalacayuca Popoloca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppt">ppt</a></td>
+<td>Pare</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppu">ppu</a></td>
+<td>Papora-Hoanya</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ppv">ppv</a></td>
+<td>Papavô</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pqa">pqa</a></td>
+<td>Pa'a</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pqm">pqm</a></td>
+<td>Malecite-Passamaquoddy</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prb">prb</a></td>
+<td>Lua'</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prc">prc</a></td>
+<td>Parachi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prd">prd</a></td>
+<td>Parsi-Dari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pre">pre</a></td>
+<td>Principense</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prf">prf</a></td>
+<td>Paranan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prg">prg</a></td>
+<td>Old Prussian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prh">prh</a></td>
+<td>Porohanon</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pri">pri</a></td>
+<td>Paicî</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prk">prk</a></td>
+<td>South Wa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prl">prl</a></td>
+<td>Peruvian Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prm">prm</a></td>
+<td>Kibiri</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prn">prn</a></td>
+<td>Prasun</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pro">pro</a></td>
+<td>Old Provençal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prp">prp</a></td>
+<td>Parsi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prq">prq</a></td>
+<td>Ashéninka Perené</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prr">prr</a></td>
+<td>Puri</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prs">prs</a></td>
+<td>Dari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prt">prt</a></td>
+<td>Prai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pru">pru</a></td>
+<td>Puragi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prv">prv</a></td>
+<td>Provençal (Retired)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prw">prw</a></td>
+<td>Parawen</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prx">prx</a></td>
+<td>Purik-Sham-Nubra</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pry">pry</a></td>
+<td>Pray 3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/prz">prz</a></td>
+<td>Providencia Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psa">psa</a></td>
+<td>Asue Awyu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psc">psc</a></td>
+<td>Zaban Eshareh Irani</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psd">psd</a></td>
+<td>Plains Indian Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pse">pse</a></td>
+<td>South Barisan Malay</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psg">psg</a></td>
+<td>Penang Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psh">psh</a></td>
+<td>Southwest Pashayi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psi">psi</a></td>
+<td>Southeast Pashayi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psl">psl</a></td>
+<td>Puerto Rican Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psm">psm</a></td>
+<td>Warázu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psn">psn</a></td>
+<td>Panasuan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pso">pso</a></td>
+<td>Polish Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psp">psp</a></td>
+<td>Philippine Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psq">psq</a></td>
+<td>Pasi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psr">psr</a></td>
+<td>Portuguese Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pss">pss</a></td>
+<td>Kaulong</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pst">pst</a></td>
+<td>Central Pashto</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psu">psu</a></td>
+<td>Sauraseni Prakrit</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psw">psw</a></td>
+<td>Port Sandwich</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/psy">psy</a></td>
+<td>Piscataway</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pta">pta</a></td>
+<td>Pai Tavytera</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pth">pth</a></td>
+<td>Pataxó Hã-Ha-Hãe</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pti">pti</a></td>
+<td>Pintiini</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ptn">ptn</a></td>
+<td>Patani</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pto">pto</a></td>
+<td>Zo'é</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ptp">ptp</a></td>
+<td>Patep</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ptr">ptr</a></td>
+<td>Piamatsina</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ptt">ptt</a></td>
+<td>Enrekang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ptu">ptu</a></td>
+<td>Bambam</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ptv">ptv</a></td>
+<td>Daakie</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ptw">ptw</a></td>
+<td>Pentlatch</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pty">pty</a></td>
+<td>Pathiya</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pua">pua</a></td>
+<td>Western Highland Purepecha</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pub">pub</a></td>
+<td>Purum</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/puc">puc</a></td>
+<td>Punan Merap</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pud">pud</a></td>
+<td>Punan Aput</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pue">pue</a></td>
+<td>Puelche</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/puf">puf</a></td>
+<td>Punan Merah</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pug">pug</a></td>
+<td>Phuie</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pui">pui</a></td>
+<td>Puinave</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/puj">puj</a></td>
+<td>Punan Tubu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/puk">puk</a></td>
+<td>Pu Ko</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pum">pum</a></td>
+<td>Puma</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pun">pun</a></td>
+<td>Pubian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/puo">puo</a></td>
+<td>Ksingmul</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pup">pup</a></td>
+<td>Pulabu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/puq">puq</a></td>
+<td>Puquina</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pur">pur</a></td>
+<td>Puruborá</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pus">pus</a></td>
+<td>Nuclear Pashto</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/put">put</a></td>
+<td>Putoh</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/puu">puu</a></td>
+<td>Punu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/puw">puw</a></td>
+<td>Puluwatese</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pux">pux</a></td>
+<td>Puare</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/puy">puy</a></td>
+<td>Purisimeño</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/puz">puz</a></td>
+<td>Purum (Retired)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pwa">pwa</a></td>
+<td>Pawaia</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pwb">pwb</a></td>
+<td>Panawa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pwg">pwg</a></td>
+<td>Gapapaiwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pwi">pwi</a></td>
+<td>Patwin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pwm">pwm</a></td>
+<td>Molbog</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pwn">pwn</a></td>
+<td>Paiwan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pwo">pwo</a></td>
+<td>Pwo Western Karen</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pwr">pwr</a></td>
+<td>Powari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pww">pww</a></td>
+<td>Pwo Northern Karen</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pxm">pxm</a></td>
+<td>Quetzaltepec Mixe</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pye">pye</a></td>
+<td>Pye Krumen</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pym">pym</a></td>
+<td>Fyam</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pyn">pyn</a></td>
+<td>Poyanáwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pys">pys</a></td>
+<td>Paraguayan Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pyu">pyu</a></td>
+<td>Puyuma</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pyx">pyx</a></td>
+<td>Burma Pyu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pyy">pyy</a></td>
+<td>Pyen</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pzn">pzn</a></td>
+<td>Para Naga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.tabs", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+        <script src="../../javascripts/leaflet.js"></script>
+      
+        <script src="../../javascripts/build_map.js"></script>
+      
+    
+  </body>
+</html>

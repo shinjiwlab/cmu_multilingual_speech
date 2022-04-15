@@ -1,0 +1,883 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>Model - CMU Multilingual Speech DB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/leaflet.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CMU Multilingual Speech DB" class="md-header__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CMU Multilingual Speech DB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../corpus/" class="md-tabs__link">
+      Corpus
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Model
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../recipe/" class="md-tabs__link">
+      Recipe
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index/" class="md-tabs__link">
+      Language
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CMU Multilingual Speech DB" class="md-nav__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CMU Multilingual Speech DB
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../corpus/" class="md-nav__link">
+        Corpus
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Model
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recipe/" class="md-nav__link">
+        Recipe
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index/" class="md-nav__link">
+        Language
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="model">Model</h1>
+<div id='map' style='height: 640px'></div>
+<script>var langs = [{"type": "Point", "coordinates": [43.8525, 27.9625], "popupContent": "<a href='/cmu_multilingual_speech/lang/arb'>arb</a>"},
+{"type": "Point", "coordinates": [91.2932, 26.0876], "popupContent": "<a href='/cmu_multilingual_speech/lang/asm'>asm</a>"},
+{"type": "Point", "coordinates": [-3.78934, 48.2452], "popupContent": "<a href='/cmu_multilingual_speech/lang/bre'>bre</a>"},
+{"type": "Point", "coordinates": [1.569, 41.453], "popupContent": "<a href='/cmu_multilingual_speech/lang/cat'>cat</a>"},
+{"type": "Point", "coordinates": [15.10437, 49.873398], "popupContent": "<a href='/cmu_multilingual_speech/lang/ces'>ces</a>"},
+{"type": "Point", "coordinates": [47.16298, 55.48701], "popupContent": "<a href='/cmu_multilingual_speech/lang/chv'>chv</a>"},
+{"type": "Point", "coordinates": [116.228, 40.0209], "popupContent": "<a href='/cmu_multilingual_speech/lang/cmn'>cmn</a>"},
+{"type": "Point", "coordinates": [-4.0, 52.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/cym'>cym</a>"},
+{"type": "Point", "coordinates": [12.4676, 48.649], "popupContent": "<a href='/cmu_multilingual_speech/lang/deu'>deu</a>"},
+{"type": "Point", "coordinates": [73.54433, 1.928498], "popupContent": "<a href='/cmu_multilingual_speech/lang/div'>div</a>"},
+{"type": "Point", "coordinates": [25.82, 58.55], "popupContent": "<a href='/cmu_multilingual_speech/lang/ekk'>ekk</a>"},
+{"type": "Point", "coordinates": [23.13, 38.36], "popupContent": "<a href='/cmu_multilingual_speech/lang/ell'>ell</a>"},
+{"type": "Point", "coordinates": [-1.0, 53.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/eng'>eng</a>"},
+{"type": "Point", "coordinates": [2.81045, 49.3273], "popupContent": "<a href='/cmu_multilingual_speech/lang/epo'>epo</a>"},
+{"type": "Point", "coordinates": [-1.31622, 43.2787], "popupContent": "<a href='/cmu_multilingual_speech/lang/eus'>eus</a>"},
+{"type": "Point", "coordinates": [2.0, 48.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/fra'>fra</a>"},
+{"type": "Point", "coordinates": [5.86091, 53.143], "popupContent": "<a href='/cmu_multilingual_speech/lang/fry'>fry</a>"},
+{"type": "Point", "coordinates": [-7.61509, 53.2186], "popupContent": "<a href='/cmu_multilingual_speech/lang/gle'>gle</a>"},
+{"type": "Point", "coordinates": [2.615, 48.203], "popupContent": "<a href='/cmu_multilingual_speech/lang/ina'>ina</a>"},
+{"type": "Point", "coordinates": [109.716, -7.33458], "popupContent": "<a href='/cmu_multilingual_speech/lang/ind'>ind</a>"},
+{"type": "Point", "coordinates": [12.6489, 43.0464], "popupContent": "<a href='/cmu_multilingual_speech/lang/ita'>ita</a>"},
+{"type": "Point", "coordinates": [109.287, -7.001], "popupContent": "<a href='/cmu_multilingual_speech/lang/jav'>jav</a>"},
+{"type": "Point", "coordinates": [135.0, 35.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/jpn'>jpn</a>"},
+{"type": "Point", "coordinates": [43.78613, 41.850397], "popupContent": "<a href='/cmu_multilingual_speech/lang/kat'>kat</a>"},
+{"type": "Point", "coordinates": [29.6441, -1.56771], "popupContent": "<a href='/cmu_multilingual_speech/lang/kin'>kin</a>"},
+{"type": "Point", "coordinates": [74.0, 42.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/kir'>kir</a>"},
+{"type": "Point", "coordinates": [126.98, 37.54], "popupContent": "<a href='/cmu_multilingual_speech/lang/kor'>kor</a>"},
+{"type": "Point", "coordinates": [24.309118, 56.826108], "popupContent": "<a href='/cmu_multilingual_speech/lang/lav'>lav</a>"},
+{"type": "Point", "coordinates": [14.4508, 35.8884], "popupContent": "<a href='/cmu_multilingual_speech/lang/mlt'>mlt</a>"},
+{"type": "Point", "coordinates": [5.0, 52.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/nld'>nld</a>"},
+{"type": "Point", "coordinates": [75.6702, 30.0368], "popupContent": "<a href='/cmu_multilingual_speech/lang/pan'>pan</a>"},
+{"type": "Point", "coordinates": [53.3, 32.9], "popupContent": "<a href='/cmu_multilingual_speech/lang/pes'>pes</a>"},
+{"type": "Point", "coordinates": [18.6255, 51.8439], "popupContent": "<a href='/cmu_multilingual_speech/lang/pol'>pol</a>"},
+{"type": "Point", "coordinates": [-8.1, 39.91], "popupContent": "<a href='/cmu_multilingual_speech/lang/por'>por</a>"},
+{"type": "Point", "coordinates": [9.92812, 46.5538], "popupContent": "<a href='/cmu_multilingual_speech/lang/roh'>roh</a>"},
+{"type": "Point", "coordinates": [24.2256, 46.3913], "popupContent": "<a href='/cmu_multilingual_speech/lang/ron'>ron</a>"},
+{"type": "Point", "coordinates": [50.0, 59.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/rus'>rus</a>"},
+{"type": "Point", "coordinates": [14.7766, 46.2543], "popupContent": "<a href='/cmu_multilingual_speech/lang/slv'>slv</a>"},
+{"type": "Point", "coordinates": [-1.11788, 40.4414], "popupContent": "<a href='/cmu_multilingual_speech/lang/spa'>spa</a>"},
+{"type": "Point", "coordinates": [107.106, -6.89708], "popupContent": "<a href='/cmu_multilingual_speech/lang/sun'>sun</a>"},
+{"type": "Point", "coordinates": [17.389526, 59.800634], "popupContent": "<a href='/cmu_multilingual_speech/lang/swe'>swe</a>"},
+{"type": "Point", "coordinates": [78.825989, 10.520219], "popupContent": "<a href='/cmu_multilingual_speech/lang/tam'>tam</a>"},
+{"type": "Point", "coordinates": [49.11577, 55.79592], "popupContent": "<a href='/cmu_multilingual_speech/lang/tat'>tat</a>"},
+{"type": "Point", "coordinates": [32.8667, 39.8667], "popupContent": "<a href='/cmu_multilingual_speech/lang/tur'>tur</a>"},
+{"type": "Point", "coordinates": [29.945, 49.796], "popupContent": "<a href='/cmu_multilingual_speech/lang/ukr'>ukr</a>"},
+{"type": "Point", "coordinates": [105.774071, 20.681188], "popupContent": "<a href='/cmu_multilingual_speech/lang/vie'>vie</a>"},
+];
+</script>
+
+<p>
+<div class="progress progress-0plus">
+<div class="progress-bar" style="width:0.59%">
+<p class="progress-label">0.59% available </p>
+</div>
+</div>
+</p>
+<table>
+<thead>
+<tr>
+<th>Language Id</th>
+<th>Language Name</th>
+<th>Corpus</th>
+<th>Recipe</th>
+<th>Model</th>
+<th>Inventory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/arb">arb</a></td>
+<td>Standard Arabic</td>
+<td><a href="/cmu_multilingual_speech/lang/arb/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/arb/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/arb/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/asm">asm</a></td>
+<td>Assamese</td>
+<td><a href="/cmu_multilingual_speech/lang/asm/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/asm/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/asm/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/bre">bre</a></td>
+<td>Breton</td>
+<td><a href="/cmu_multilingual_speech/lang/bre/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/bre/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/bre/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/cat">cat</a></td>
+<td>Catalan</td>
+<td><a href="/cmu_multilingual_speech/lang/cat/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/cat/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/cat/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ces">ces</a></td>
+<td>Czech</td>
+<td><a href="/cmu_multilingual_speech/lang/ces/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/ces/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ces/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/chv">chv</a></td>
+<td>Chuvash</td>
+<td><a href="/cmu_multilingual_speech/lang/chv/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/chv/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/chv/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/cmn">cmn</a></td>
+<td>Mandarin Chinese</td>
+<td><a href="/cmu_multilingual_speech/lang/cmn/corpus">yes</a></td>
+<td><a href="/cmu_multilingual_speech/lang/cmn/recipe">yes</a></td>
+<td><a href="/cmu_multilingual_speech/lang/cmn/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/cmn/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/cym">cym</a></td>
+<td>Welsh</td>
+<td><a href="/cmu_multilingual_speech/lang/cym/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/cym/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/cym/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/deu">deu</a></td>
+<td>German</td>
+<td><a href="/cmu_multilingual_speech/lang/deu/corpus">yes</a></td>
+<td><a href="/cmu_multilingual_speech/lang/deu/recipe">yes</a></td>
+<td><a href="/cmu_multilingual_speech/lang/deu/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/deu/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/div">div</a></td>
+<td>Dhivehi</td>
+<td><a href="/cmu_multilingual_speech/lang/div/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/div/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/div/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ekk">ekk</a></td>
+<td>Estonian</td>
+<td><a href="/cmu_multilingual_speech/lang/ekk/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/ekk/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ekk/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ell">ell</a></td>
+<td>Modern Greek</td>
+<td><a href="/cmu_multilingual_speech/lang/ell/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/ell/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ell/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/eng">eng</a></td>
+<td>English</td>
+<td><a href="/cmu_multilingual_speech/lang/eng/corpus">yes</a></td>
+<td><a href="/cmu_multilingual_speech/lang/eng/recipe">yes</a></td>
+<td><a href="/cmu_multilingual_speech/lang/eng/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/eng/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/epo">epo</a></td>
+<td>Esperanto</td>
+<td><a href="/cmu_multilingual_speech/lang/epo/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/epo/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/epo/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/eus">eus</a></td>
+<td>Basque</td>
+<td><a href="/cmu_multilingual_speech/lang/eus/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/eus/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/eus/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/fra">fra</a></td>
+<td>French</td>
+<td><a href="/cmu_multilingual_speech/lang/fra/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/fra/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/fra/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/fry">fry</a></td>
+<td>Western Frisian</td>
+<td><a href="/cmu_multilingual_speech/lang/fry/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/fry/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/fry/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/gle">gle</a></td>
+<td>Irish</td>
+<td><a href="/cmu_multilingual_speech/lang/gle/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/gle/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/gle/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ina">ina</a></td>
+<td>Interlingua (International Auxiliary Language Association)</td>
+<td><a href="/cmu_multilingual_speech/lang/ina/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/ina/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ina/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ind">ind</a></td>
+<td>Standard Indonesian</td>
+<td><a href="/cmu_multilingual_speech/lang/ind/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/ind/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ind/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ita">ita</a></td>
+<td>Italian</td>
+<td><a href="/cmu_multilingual_speech/lang/ita/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/ita/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ita/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/jav">jav</a></td>
+<td>Javanese</td>
+<td></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/jav/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/jav/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/jpn">jpn</a></td>
+<td>Japanese</td>
+<td><a href="/cmu_multilingual_speech/lang/jpn/corpus">yes</a></td>
+<td><a href="/cmu_multilingual_speech/lang/jpn/recipe">yes</a></td>
+<td><a href="/cmu_multilingual_speech/lang/jpn/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/jpn/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/kat">kat</a></td>
+<td>Georgian</td>
+<td><a href="/cmu_multilingual_speech/lang/kat/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/kat/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/kat/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/kin">kin</a></td>
+<td>Kinyarwanda</td>
+<td><a href="/cmu_multilingual_speech/lang/kin/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/kin/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/kin/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/kir">kir</a></td>
+<td>Kirghiz</td>
+<td><a href="/cmu_multilingual_speech/lang/kir/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/kir/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/kir/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/kor">kor</a></td>
+<td>Korean</td>
+<td></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/kor/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/kor/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/lav">lav</a></td>
+<td>Latvian</td>
+<td><a href="/cmu_multilingual_speech/lang/lav/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/lav/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/lav/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/mlt">mlt</a></td>
+<td>Maltese</td>
+<td><a href="/cmu_multilingual_speech/lang/mlt/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/mlt/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/mlt/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/mon">mon</a></td>
+<td>Mongolian</td>
+<td><a href="/cmu_multilingual_speech/lang/mon/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/mon/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/mon/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/nld">nld</a></td>
+<td>Dutch</td>
+<td><a href="/cmu_multilingual_speech/lang/nld/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/nld/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/nld/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ori">ori</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/ori/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/ori/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ori/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pan">pan</a></td>
+<td>Eastern Panjabi</td>
+<td><a href="/cmu_multilingual_speech/lang/pan/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/pan/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pan/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pes">pes</a></td>
+<td>Western Farsi</td>
+<td><a href="/cmu_multilingual_speech/lang/pes/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/pes/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pes/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pol">pol</a></td>
+<td>Polish</td>
+<td><a href="/cmu_multilingual_speech/lang/pol/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/pol/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/pol/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/por">por</a></td>
+<td>Portuguese</td>
+<td><a href="/cmu_multilingual_speech/lang/por/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/por/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/por/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/roh">roh</a></td>
+<td>Romansh</td>
+<td></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/roh/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/roh/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ron">ron</a></td>
+<td>Romanian</td>
+<td><a href="/cmu_multilingual_speech/lang/ron/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/ron/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ron/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/rus">rus</a></td>
+<td>Russian</td>
+<td><a href="/cmu_multilingual_speech/lang/rus/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/rus/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/rus/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/slv">slv</a></td>
+<td>Slovenian</td>
+<td><a href="/cmu_multilingual_speech/lang/slv/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/slv/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/slv/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/spa">spa</a></td>
+<td>Spanish</td>
+<td><a href="/cmu_multilingual_speech/lang/spa/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/spa/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/spa/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/sun">sun</a></td>
+<td>Sundanese</td>
+<td></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/sun/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/sun/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/swe">swe</a></td>
+<td>Swedish</td>
+<td><a href="/cmu_multilingual_speech/lang/swe/corpus">yes</a></td>
+<td><a href="/cmu_multilingual_speech/lang/swe/recipe">yes</a></td>
+<td><a href="/cmu_multilingual_speech/lang/swe/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/swe/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tam">tam</a></td>
+<td>Tamil</td>
+<td><a href="/cmu_multilingual_speech/lang/tam/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/tam/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tam/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tat">tat</a></td>
+<td>Tatar</td>
+<td><a href="/cmu_multilingual_speech/lang/tat/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/tat/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tat/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tur">tur</a></td>
+<td>Turkish</td>
+<td><a href="/cmu_multilingual_speech/lang/tur/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/tur/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tur/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ukr">ukr</a></td>
+<td>Ukrainian</td>
+<td><a href="/cmu_multilingual_speech/lang/ukr/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/ukr/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ukr/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/vie">vie</a></td>
+<td>Vietnamese</td>
+<td><a href="/cmu_multilingual_speech/lang/vie/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/vie/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/vie/phoible.txt">yes</a></td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../corpus/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Corpus" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Corpus
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../recipe/" class="md-footer__link md-footer__link--next" aria-label="Next: Recipe" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Recipe
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.tabs", "navigation.sections"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+        <script src="../javascripts/leaflet.js"></script>
+      
+        <script src="../javascripts/build_map.js"></script>
+      
+    
+  </body>
+</html>

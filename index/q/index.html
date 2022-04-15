@@ -1,0 +1,1031 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>Language Q - CMU Multilingual Speech DB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/leaflet.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#language-q" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CMU Multilingual Speech DB" class="md-header__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CMU Multilingual Speech DB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Language Q
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../corpus/" class="md-tabs__link">
+      Corpus
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../model/" class="md-tabs__link">
+      Model
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../recipe/" class="md-tabs__link">
+      Recipe
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../" class="md-tabs__link">
+      Language
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CMU Multilingual Speech DB" class="md-nav__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CMU Multilingual Speech DB
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../corpus/" class="md-nav__link">
+        Corpus
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/" class="md-nav__link">
+        Model
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipe/" class="md-nav__link">
+        Recipe
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Language
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="language-q">Language Q</h1>
+<div id='map' style='height: 640px'></div>
+<script>var langs = [{"type": "Point", "coordinates": [12.488333, 41.901111], "popupContent": "<a href='/cmu_multilingual_speech/lang/qbb'>qbb</a>"},
+{"type": "Point", "coordinates": [-92.28, 14.9], "popupContent": "<a href='/cmu_multilingual_speech/lang/qcs'>qcs</a>"},
+{"type": "Point", "coordinates": [13.830399, 61.291358], "popupContent": "<a href='/cmu_multilingual_speech/lang/qer'>qer</a>"},
+{"type": "Point", "coordinates": [146.3453957, -19.85103121], "popupContent": "<a href='/cmu_multilingual_speech/lang/qgu'>qgu</a>"},
+{"type": "Point", "coordinates": [13.463, 43.538], "popupContent": "<a href='/cmu_multilingual_speech/lang/qhr'>qhr</a>"},
+{"type": "Point", "coordinates": [75.82, 13.244], "popupContent": "<a href='/cmu_multilingual_speech/lang/qkn'>qkn</a>"},
+{"type": "Point", "coordinates": [-83.0905, 9.957414], "popupContent": "<a href='/cmu_multilingual_speech/lang/qlm'>qlm</a>"},
+{"type": "Point", "coordinates": [103.866667, 13.4125], "popupContent": "<a href='/cmu_multilingual_speech/lang/qok'>qok</a>"},
+{"type": "Point", "coordinates": [75.38, 19.48], "popupContent": "<a href='/cmu_multilingual_speech/lang/qpp'>qpp</a>"},
+{"type": "Point", "coordinates": [-92.0, 34.15], "popupContent": "<a href='/cmu_multilingual_speech/lang/qua'>qua</a>"},
+{"type": "Point", "coordinates": [-75.594, -9.57135], "popupContent": "<a href='/cmu_multilingual_speech/lang/qub'>qub</a>"},
+{"type": "Point", "coordinates": [-91.1696, 14.5278], "popupContent": "<a href='/cmu_multilingual_speech/lang/quc'>quc</a>"},
+{"type": "Point", "coordinates": [-78.2587, -0.36205], "popupContent": "<a href='/cmu_multilingual_speech/lang/qud'>qud</a>"},
+{"type": "Point", "coordinates": [-79.468, -6.1715], "popupContent": "<a href='/cmu_multilingual_speech/lang/quf'>quf</a>"},
+{"type": "Point", "coordinates": [-78.8521, -1.36727], "popupContent": "<a href='/cmu_multilingual_speech/lang/qug'>qug</a>"},
+{"type": "Point", "coordinates": [-66.3331, -20.9201], "popupContent": "<a href='/cmu_multilingual_speech/lang/quh'>quh</a>"},
+{"type": "Point", "coordinates": [-124.603, 47.9106], "popupContent": "<a href='/cmu_multilingual_speech/lang/qui'>qui</a>"},
+{"type": "Point", "coordinates": [-77.6615, -6.27021], "popupContent": "<a href='/cmu_multilingual_speech/lang/quk'>quk</a>"},
+{"type": "Point", "coordinates": [-68.7894, -14.4014], "popupContent": "<a href='/cmu_multilingual_speech/lang/qul'>qul</a>"},
+{"type": "Point", "coordinates": [-91.7041, 15.23054], "popupContent": "<a href='/cmu_multilingual_speech/lang/qum'>qum</a>"},
+{"type": "Point", "coordinates": [-124.16, 47.4214], "popupContent": "<a href='/cmu_multilingual_speech/lang/qun'>qun</a>"},
+{"type": "Point", "coordinates": [-76.527, -3.32733], "popupContent": "<a href='/cmu_multilingual_speech/lang/qup'>qup</a>"},
+{"type": "Point", "coordinates": [-3.68704, 40.2638], "popupContent": "<a href='/cmu_multilingual_speech/lang/quq'>quq</a>"},
+{"type": "Point", "coordinates": [-76.5314, -10.4929], "popupContent": "<a href='/cmu_multilingual_speech/lang/qur'>qur</a>"},
+{"type": "Point", "coordinates": [-63.2466, -27.821], "popupContent": "<a href='/cmu_multilingual_speech/lang/qus'>qus</a>"},
+{"type": "Point", "coordinates": [-91.109, 15.274], "popupContent": "<a href='/cmu_multilingual_speech/lang/quv'>quv</a>"},
+{"type": "Point", "coordinates": [-77.5404, -0.76271], "popupContent": "<a href='/cmu_multilingual_speech/lang/quw'>quw</a>"},
+{"type": "Point", "coordinates": [-75.7659, -13.1144], "popupContent": "<a href='/cmu_multilingual_speech/lang/qux'>qux</a>"},
+{"type": "Point", "coordinates": [-74.32246, -13.84714], "popupContent": "<a href='/cmu_multilingual_speech/lang/quy'>quy</a>"},
+{"type": "Point", "coordinates": [-71.7663, -14.0853], "popupContent": "<a href='/cmu_multilingual_speech/lang/quz'>quz</a>"},
+{"type": "Point", "coordinates": [-76.1135, -10.5138], "popupContent": "<a href='/cmu_multilingual_speech/lang/qva'>qva</a>"},
+{"type": "Point", "coordinates": [-78.3214, -7.09314], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvc'>qvc</a>"},
+{"type": "Point", "coordinates": [-72.6686, -14.1754], "popupContent": "<a href='/cmu_multilingual_speech/lang/qve'>qve</a>"},
+{"type": "Point", "coordinates": [-76.3372, -9.15718], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvh'>qvh</a>"},
+{"type": "Point", "coordinates": [-78.3729, 0.31776], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvi'>qvi</a>"},
+{"type": "Point", "coordinates": [-79.29151, -3.69352], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvj'>qvj</a>"},
+{"type": "Point", "coordinates": [-76.9602, -10.4126], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvl'>qvl</a>"},
+{"type": "Point", "coordinates": [-76.4981, -9.84463], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvm'>qvm</a>"},
+{"type": "Point", "coordinates": [-75.8128, -11.2132], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvn'>qvn</a>"},
+{"type": "Point", "coordinates": [-76.3889, -0.072525], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvo'>qvo</a>"},
+{"type": "Point", "coordinates": [-76.73046, -11.14278], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvp'>qvp</a>"},
+{"type": "Point", "coordinates": [-76.6608, -6.9582], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvs'>qvs</a>"},
+{"type": "Point", "coordinates": [-75.2055, -12.1809], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvw'>qvw</a>"},
+{"type": "Point", "coordinates": [100.813, 30.3113], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvy'>qvy</a>"},
+{"type": "Point", "coordinates": [-76.0389, -1.88573], "popupContent": "<a href='/cmu_multilingual_speech/lang/qvz'>qvz</a>"},
+{"type": "Point", "coordinates": [-77.9864, -8.57647], "popupContent": "<a href='/cmu_multilingual_speech/lang/qwa'>qwa</a>"},
+{"type": "Point", "coordinates": [-76.5, -9.99999], "popupContent": "<a href='/cmu_multilingual_speech/lang/qwc'>qwc</a>"},
+{"type": "Point", "coordinates": [-77.7768, -9.38709], "popupContent": "<a href='/cmu_multilingual_speech/lang/qwh'>qwh</a>"},
+{"type": "Point", "coordinates": [-77.5319, -8.49346], "popupContent": "<a href='/cmu_multilingual_speech/lang/qws'>qws</a>"},
+{"type": "Point", "coordinates": [-123.209332, 46.111979], "popupContent": "<a href='/cmu_multilingual_speech/lang/qwt'>qwt</a>"},
+{"type": "Point", "coordinates": [-77.4152, -10.1831], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxa'>qxa</a>"},
+{"type": "Point", "coordinates": [-75.649, -12.85], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxc'>qxc</a>"},
+{"type": "Point", "coordinates": [-75.4382, -9.85887], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxh'>qxh</a>"},
+{"type": "Point", "coordinates": [-78.3953, -1.35447], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxl'>qxl</a>"},
+{"type": "Point", "coordinates": [-77.4146, -8.97356], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxn'>qxn</a>"},
+{"type": "Point", "coordinates": [-76.9854, -9.30995], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxo'>qxo</a>"},
+{"type": "Point", "coordinates": [-70.2084, -14.608], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxp'>qxp</a>"},
+{"type": "Point", "coordinates": [52.83349, 28.25931], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxq'>qxq</a>"},
+{"type": "Point", "coordinates": [-78.9672, -2.48314], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxr'>qxr</a>"},
+{"type": "Point", "coordinates": [103.384, 31.5392], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxs'>qxs</a>"},
+{"type": "Point", "coordinates": [-76.2753, -10.3302], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxt'>qxt</a>"},
+{"type": "Point", "coordinates": [-72.6333, -15.1806], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxu'>qxu</a>"},
+{"type": "Point", "coordinates": [-75.2786, -11.6747], "popupContent": "<a href='/cmu_multilingual_speech/lang/qxw'>qxw</a>"},
+{"type": "Point", "coordinates": [-73.3798, 41.2021], "popupContent": "<a href='/cmu_multilingual_speech/lang/qyp'>qyp</a>"},
+];
+</script>
+
+<table>
+<thead>
+<tr>
+<th>Language Id</th>
+<th>Language Name</th>
+<th>Corpus</th>
+<th>Recipe</th>
+<th>Model</th>
+<th>Inventory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qbb">qbb</a></td>
+<td>Old Latin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qcs">qcs</a></td>
+<td>Tapachultec</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qer">qer</a></td>
+<td>Dalecarlian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qgg">qgg</a></td>
+<td>Ammonite</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qgu">qgu</a></td>
+<td>Wulguru</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qhr">qhr</a></td>
+<td>Old Sabellic</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qkn">qkn</a></td>
+<td>Old Kannada</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qlm">qlm</a></td>
+<td>Limonese Creole</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qmx">qmx</a></td>
+<td>Old Indic</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qok">qok</a></td>
+<td>Old Khmer</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qpp">qpp</a></td>
+<td>Paisaci Prakrit</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qua">qua</a></td>
+<td>Quapaw</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qub">qub</a></td>
+<td>Huallaga Huánuco Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/quc">quc</a></td>
+<td>K'iche'</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qud">qud</a></td>
+<td>Calderón Highland Quichua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/quf">quf</a></td>
+<td>Lambayeque Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qug">qug</a></td>
+<td>Bolivar-North Chimborazo Highland Quichua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/quh">quh</a></td>
+<td>South Bolivian Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qui">qui</a></td>
+<td>Quileute</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/quj">quj</a></td>
+<td>K'iche', Joyabaj</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/quk">quk</a></td>
+<td>Chachapoyas Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qul">qul</a></td>
+<td>North Bolivian Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qum">qum</a></td>
+<td>Sipacapense</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qun">qun</a></td>
+<td>Quinault</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qup">qup</a></td>
+<td>Southern Pastaza Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/quq">quq</a></td>
+<td>Quinqui</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qur">qur</a></td>
+<td>Yanahuanca Pasco Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qus">qus</a></td>
+<td>Santiago del Estero Quichua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qut">qut</a></td>
+<td>K'iche', West Central</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/quu">quu</a></td>
+<td>K'iche', Eastern</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/quv">quv</a></td>
+<td>Sacapulteco</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/quw">quw</a></td>
+<td>Tena Lowland Quichua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qux">qux</a></td>
+<td>Huangascar-Topara-Yauyos Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/quy">quy</a></td>
+<td>Ayacucho Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/quz">quz</a></td>
+<td>Cusco Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qva">qva</a></td>
+<td>Ambo-Pasco Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvc">qvc</a></td>
+<td>Cajamarca Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qve">qve</a></td>
+<td>Eastern Apurímac Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvh">qvh</a></td>
+<td>Huamalíes-Dos de Mayo Huánuco Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvi">qvi</a></td>
+<td>Imbabura Highland Quichua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvj">qvj</a></td>
+<td>Loja Highland Quichua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvl">qvl</a></td>
+<td>Cajatambo North Lima Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvm">qvm</a></td>
+<td>Margos-Yarowilca-Lauricocha Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvn">qvn</a></td>
+<td>North Junín Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvo">qvo</a></td>
+<td>Napo Lowland Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvp">qvp</a></td>
+<td>Pacaraos Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvs">qvs</a></td>
+<td>San Martín Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvw">qvw</a></td>
+<td>Huaylla Wanca Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvy">qvy</a></td>
+<td>Queyu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qvz">qvz</a></td>
+<td>Northern Pastaza Quichua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qwa">qwa</a></td>
+<td>Corongo Ancash Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qwc">qwc</a></td>
+<td>Classical Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qwh">qwh</a></td>
+<td>Huaylas Ancash Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qws">qws</a></td>
+<td>Sihuas Ancash Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qwt">qwt</a></td>
+<td>Kwalhioqua-Clatskanie</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxa">qxa</a></td>
+<td>Chiquián Ancash Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxc">qxc</a></td>
+<td>Chincha Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxh">qxh</a></td>
+<td>Panao Huánuco Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxi">qxi</a></td>
+<td>K'iche', San Andrés</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxl">qxl</a></td>
+<td>Tungurahua Highland Quichua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxn">qxn</a></td>
+<td>Northern Conchucos Ancash Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxo">qxo</a></td>
+<td>Southern Conchucos Ancash Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxp">qxp</a></td>
+<td>Puno Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxq">qxq</a></td>
+<td>Qashqa'i</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxr">qxr</a></td>
+<td>Cañar-Azuay-South Chimborazo Highland Quichua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxs">qxs</a></td>
+<td>Southern Qiang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxt">qxt</a></td>
+<td>Santa Ana de Tusi Pasco Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxu">qxu</a></td>
+<td>Arequipa-La Unión Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qxw">qxw</a></td>
+<td>Jauja Wanca Quechua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qya">qya</a></td>
+<td>Quenya</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/qyp">qyp</a></td>
+<td>Wampano</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.tabs", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+        <script src="../../javascripts/leaflet.js"></script>
+      
+        <script src="../../javascripts/build_map.js"></script>
+      
+    
+  </body>
+</html>

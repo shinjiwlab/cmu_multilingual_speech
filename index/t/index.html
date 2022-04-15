@@ -1,0 +1,5325 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>Language T - CMU Multilingual Speech DB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/leaflet.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#language-t" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CMU Multilingual Speech DB" class="md-header__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CMU Multilingual Speech DB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Language T
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../corpus/" class="md-tabs__link">
+      Corpus
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../model/" class="md-tabs__link">
+      Model
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../recipe/" class="md-tabs__link">
+      Recipe
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../" class="md-tabs__link">
+      Language
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CMU Multilingual Speech DB" class="md-nav__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CMU Multilingual Speech DB
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../corpus/" class="md-nav__link">
+        Corpus
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/" class="md-nav__link">
+        Model
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipe/" class="md-nav__link">
+        Recipe
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Language
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="language-t">Language T</h1>
+<div id='map' style='height: 640px'></div>
+<script>var langs = [{"type": "Point", "coordinates": [-149.451, 64.8834], "popupContent": "<a href='/cmu_multilingual_speech/lang/taa'>taa</a>"},
+{"type": "Point", "coordinates": [47.8379, 42.0198], "popupContent": "<a href='/cmu_multilingual_speech/lang/tab'>tab</a>"},
+{"type": "Point", "coordinates": [-107.854, 27.4623], "popupContent": "<a href='/cmu_multilingual_speech/lang/tac'>tac</a>"},
+{"type": "Point", "coordinates": [136.899, -2.8406], "popupContent": "<a href='/cmu_multilingual_speech/lang/tad'>tad</a>"},
+{"type": "Point", "coordinates": [-68.9042, 0.440205], "popupContent": "<a href='/cmu_multilingual_speech/lang/tae'>tae</a>"},
+{"type": "Point", "coordinates": [-50.5438, -10.5373], "popupContent": "<a href='/cmu_multilingual_speech/lang/taf'>taf</a>"},
+{"type": "Point", "coordinates": [30.9306, 12.0346], "popupContent": "<a href='/cmu_multilingual_speech/lang/tag'>tag</a>"},
+{"type": "Point", "coordinates": [-149.45, -17.6485], "popupContent": "<a href='/cmu_multilingual_speech/lang/tah'>tah</a>"},
+{"type": "Point", "coordinates": [87.0832, 27.3239], "popupContent": "<a href='/cmu_multilingual_speech/lang/taj'>taj</a>"},
+{"type": "Point", "coordinates": [9.85457, 10.233], "popupContent": "<a href='/cmu_multilingual_speech/lang/tak'>tak</a>"},
+{"type": "Point", "coordinates": [9.50774, 9.15354], "popupContent": "<a href='/cmu_multilingual_speech/lang/tal'>tal</a>"},
+{"type": "Point", "coordinates": [78.825989, 10.520219], "popupContent": "<a href='/cmu_multilingual_speech/lang/tam'>tam</a>"},
+{"type": "Point", "coordinates": [11.3228, 9.75444], "popupContent": "<a href='/cmu_multilingual_speech/lang/tan'>tan</a>"},
+{"type": "Point", "coordinates": [121.544, 22.055], "popupContent": "<a href='/cmu_multilingual_speech/lang/tao'>tao</a>"},
+{"type": "Point", "coordinates": [29.5238, -7.91416], "popupContent": "<a href='/cmu_multilingual_speech/lang/tap'>tap</a>"},
+{"type": "Point", "coordinates": [-2.41269, 14.2038], "popupContent": "<a href='/cmu_multilingual_speech/lang/taq'>taq</a>"},
+{"type": "Point", "coordinates": [-107.154, 27.5648], "popupContent": "<a href='/cmu_multilingual_speech/lang/tar'>tar</a>"},
+{"type": "Point", "coordinates": [108.257, 13.8962], "popupContent": "<a href='/cmu_multilingual_speech/lang/tas'>tas</a>"},
+{"type": "Point", "coordinates": [49.11577, 55.79592], "popupContent": "<a href='/cmu_multilingual_speech/lang/tat'>tat</a>"},
+{"type": "Point", "coordinates": [-141.37, 62.6867], "popupContent": "<a href='/cmu_multilingual_speech/lang/tau'>tau</a>"},
+{"type": "Point", "coordinates": [-70.5327, 0.55582], "popupContent": "<a href='/cmu_multilingual_speech/lang/tav'>tav</a>"},
+{"type": "Point", "coordinates": [144.66, -5.29223], "popupContent": "<a href='/cmu_multilingual_speech/lang/taw'>taw</a>"},
+{"type": "Point", "coordinates": [18.2295, 11.4926], "popupContent": "<a href='/cmu_multilingual_speech/lang/tax'>tax</a>"},
+{"type": "Point", "coordinates": [121.388, 24.5209], "popupContent": "<a href='/cmu_multilingual_speech/lang/tay'>tay</a>"},
+{"type": "Point", "coordinates": [30.1567, 10.8828], "popupContent": "<a href='/cmu_multilingual_speech/lang/taz'>taz</a>"},
+{"type": "Point", "coordinates": [-60.5353, -12.6695], "popupContent": "<a href='/cmu_multilingual_speech/lang/tba'>tba</a>"},
+{"type": "Point", "coordinates": [-40.3333, -4.99999], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbb'>tbb</a>"},
+{"type": "Point", "coordinates": [145.975, -4.69057], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbc'>tbc</a>"},
+{"type": "Point", "coordinates": [145.816, -7.9946], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbd'>tbd</a>"},
+{"type": "Point", "coordinates": [166.507, -11.2975], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbe'>tbe</a>"},
+{"type": "Point", "coordinates": [151.956, -2.7828], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbf'>tbf</a>"},
+{"type": "Point", "coordinates": [145.959, -6.51563], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbg'>tbg</a>"},
+{"type": "Point", "coordinates": [150.721, -34.634], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbh'>tbh</a>"},
+{"type": "Point", "coordinates": [33.9797, 11.4674], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbi'>tbi</a>"},
+{"type": "Point", "coordinates": [150.935, -2.95505], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbj'>tbj</a>"},
+{"type": "Point", "coordinates": [120.094, 12.0716], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbk'>tbk</a>"},
+{"type": "Point", "coordinates": [124.538, 6.20377], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbl'>tbl</a>"},
+{"type": "Point", "coordinates": [27.71, 7.76], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbm'>tbm</a>"},
+{"type": "Point", "coordinates": [-72.044, 6.12622], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbn'>tbn</a>"},
+{"type": "Point", "coordinates": [150.644, -10.3115], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbo'>tbo</a>"},
+{"type": "Point", "coordinates": [139.061, -3.43455], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbp'>tbp</a>"},
+{"type": "Point", "coordinates": [30.4128, 10.6378], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbr'>tbr</a>"},
+{"type": "Point", "coordinates": [144.927, -4.57282], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbs'>tbs</a>"},
+{"type": "Point", "coordinates": [28.5778, -1.91863], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbt'>tbt</a>"},
+{"type": "Point", "coordinates": [-111.0, 30.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbu'>tbu</a>"},
+{"type": "Point", "coordinates": [147.376, -6.36263], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbv'>tbv</a>"},
+{"type": "Point", "coordinates": [118.497, 9.54263], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbw'>tbw</a>"},
+{"type": "Point", "coordinates": [146.529, -7.05732], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbx'>tbx</a>"},
+{"type": "Point", "coordinates": [127.633, 1.46563], "popupContent": "<a href='/cmu_multilingual_speech/lang/tby'>tby</a>"},
+{"type": "Point", "coordinates": [1.18045, 10.1614], "popupContent": "<a href='/cmu_multilingual_speech/lang/tbz'>tbz</a>"},
+{"type": "Point", "coordinates": [-69.8723, -3.66289], "popupContent": "<a href='/cmu_multilingual_speech/lang/tca'>tca</a>"},
+{"type": "Point", "coordinates": [-143.338, 63.4046], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcb'>tcb</a>"},
+{"type": "Point", "coordinates": [35.2321, -4.4131], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcc'>tcc</a>"},
+{"type": "Point", "coordinates": [0.39875, 6.79522], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcd'>tcd</a>"},
+{"type": "Point", "coordinates": [-136.573, 60.7823], "popupContent": "<a href='/cmu_multilingual_speech/lang/tce'>tce</a>"},
+{"type": "Point", "coordinates": [-98.6322, 17.2122], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcf'>tcf</a>"},
+{"type": "Point", "coordinates": [138.892, -6.64493], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcg'>tcg</a>"},
+{"type": "Point", "coordinates": [-71.7451, 21.8078], "popupContent": "<a href='/cmu_multilingual_speech/lang/tch'>tch</a>"},
+{"type": "Point", "coordinates": [141.52, -8.64917], "popupContent": "<a href='/cmu_multilingual_speech/lang/tci'>tci</a>"},
+{"type": "Point", "coordinates": [13.6001, -2.03393], "popupContent": "<a href='/cmu_multilingual_speech/lang/tck'>tck</a>"},
+{"type": "Point", "coordinates": [95.1171, 25.1566], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcl'>tcl</a>"},
+{"type": "Point", "coordinates": [133.18, -2.5523], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcm'>tcm</a>"},
+{"type": "Point", "coordinates": [83.4672, 28.9506], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcn'>tcn</a>"},
+{"type": "Point", "coordinates": [96.7401, 20.4104], "popupContent": "<a href='/cmu_multilingual_speech/lang/tco'>tco</a>"},
+{"type": "Point", "coordinates": [94.0957, 22.4996], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcp'>tcp</a>"},
+{"type": "Point", "coordinates": [138.161, -2.94448], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcq'>tcq</a>"},
+{"type": "Point", "coordinates": [142.692, -11.066], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcs'>tcs</a>"},
+{"type": "Point", "coordinates": [107.309, 25.6717], "popupContent": "<a href='/cmu_multilingual_speech/lang/tct'>tct</a>"},
+{"type": "Point", "coordinates": [-106.706, 26.7282], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcu'>tcu</a>"},
+{"type": "Point", "coordinates": [-97.8675, 20.2394], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcw'>tcw</a>"},
+{"type": "Point", "coordinates": [77.0168, 11.4184], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcx'>tcx</a>"},
+{"type": "Point", "coordinates": [75.2651, 12.8114], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcy'>tcy</a>"},
+{"type": "Point", "coordinates": [93.722, 24.096], "popupContent": "<a href='/cmu_multilingual_speech/lang/tcz'>tcz</a>"},
+{"type": "Point", "coordinates": [6.83992, 16.1908], "popupContent": "<a href='/cmu_multilingual_speech/lang/tda'>tda</a>"},
+{"type": "Point", "coordinates": [85.7966, 23.447], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdb'>tdb</a>"},
+{"type": "Point", "coordinates": [-77.1533, 5.23658], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdc'>tdc</a>"},
+{"type": "Point", "coordinates": [99.722, 21.7837], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdd'>tdd</a>"},
+{"type": "Point", "coordinates": [-3.7, 14.76], "popupContent": "<a href='/cmu_multilingual_speech/lang/tde'>tde</a>"},
+{"type": "Point", "coordinates": [106.102, 16.5287], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdf'>tdf</a>"},
+{"type": "Point", "coordinates": [85.0563, 28.0239], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdg'>tdg</a>"},
+{"type": "Point", "coordinates": [87.6063, 27.5389], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdh'>tdh</a>"},
+{"type": "Point", "coordinates": [121.944, -2.56493], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdi'>tdi</a>"},
+{"type": "Point", "coordinates": [120.01, -0.31553], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdj'>tdj</a>"},
+{"type": "Point", "coordinates": [9.32836, 9.36039], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdk'>tdk</a>"},
+{"type": "Point", "coordinates": [9.49007, 9.47958], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdl'>tdl</a>"},
+{"type": "Point", "coordinates": [-59.904786, -0.90963], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdm'>tdm</a>"},
+{"type": "Point", "coordinates": [124.964, 1.28024], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdn'>tdn</a>"},
+{"type": "Point", "coordinates": [11.3894, 8.74437], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdo'>tdo</a>"},
+{"type": "Point", "coordinates": [10.1272, 8.19382], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdq'>tdq</a>"},
+{"type": "Point", "coordinates": [108.114, 14.5672], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdr'>tdr</a>"},
+{"type": "Point", "coordinates": [138.22, -3.24832], "popupContent": "<a href='/cmu_multilingual_speech/lang/tds'>tds</a>"},
+{"type": "Point", "coordinates": [125.583, -8.58405], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdt'>tdt</a>"},
+{"type": "Point", "coordinates": [116.545, 6.36389], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdu'>tdu</a>"},
+{"type": "Point", "coordinates": [8.58194, 9.09143], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdv'>tdv</a>"},
+{"type": "Point", "coordinates": [45.9, -24.80155], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdx'>tdx</a>"},
+{"type": "Point", "coordinates": [121.305, 13.0211], "popupContent": "<a href='/cmu_multilingual_speech/lang/tdy'>tdy</a>"},
+{"type": "Point", "coordinates": [101.438, 4.974], "popupContent": "<a href='/cmu_multilingual_speech/lang/tea'>tea</a>"},
+{"type": "Point", "coordinates": [-76.5761, -0.02668], "popupContent": "<a href='/cmu_multilingual_speech/lang/teb'>teb</a>"},
+{"type": "Point", "coordinates": [35.0, 0.6], "popupContent": "<a href='/cmu_multilingual_speech/lang/tec'>tec</a>"},
+{"type": "Point", "coordinates": [-7.66346, 5.16267], "popupContent": "<a href='/cmu_multilingual_speech/lang/ted'>ted</a>"},
+{"type": "Point", "coordinates": [-97.9347, 20.6189], "popupContent": "<a href='/cmu_multilingual_speech/lang/tee'>tee</a>"},
+{"type": "Point", "coordinates": [93.1297, 8.23716], "popupContent": "<a href='/cmu_multilingual_speech/lang/tef'>tef</a>"},
+{"type": "Point", "coordinates": [14.8664, -1.61688], "popupContent": "<a href='/cmu_multilingual_speech/lang/teg'>teg</a>"},
+{"type": "Point", "coordinates": [-68.3235, -47.5796], "popupContent": "<a href='/cmu_multilingual_speech/lang/teh'>teh</a>"},
+{"type": "Point", "coordinates": [142.622, -3.45292], "popupContent": "<a href='/cmu_multilingual_speech/lang/tei'>tei</a>"},
+{"type": "Point", "coordinates": [15.3893, -4.20697], "popupContent": "<a href='/cmu_multilingual_speech/lang/tek'>tek</a>"},
+{"type": "Point", "coordinates": [78.7024, 16.4529], "popupContent": "<a href='/cmu_multilingual_speech/lang/tel'>tel</a>"},
+{"type": "Point", "coordinates": [-12.3331, 8.90294], "popupContent": "<a href='/cmu_multilingual_speech/lang/tem'>tem</a>"},
+{"type": "Point", "coordinates": [-75.25, 1.03332], "popupContent": "<a href='/cmu_multilingual_speech/lang/ten'>ten</a>"},
+{"type": "Point", "coordinates": [33.9394, 1.18321], "popupContent": "<a href='/cmu_multilingual_speech/lang/teo'>teo</a>"},
+{"type": "Point", "coordinates": [-101.729, 19.2343], "popupContent": "<a href='/cmu_multilingual_speech/lang/tep'>tep</a>"},
+{"type": "Point", "coordinates": [29.3898, 11.8275], "popupContent": "<a href='/cmu_multilingual_speech/lang/teq'>teq</a>"},
+{"type": "Point", "coordinates": [-56.0329, -20.6614], "popupContent": "<a href='/cmu_multilingual_speech/lang/ter'>ter</a>"},
+{"type": "Point", "coordinates": [113.037, -7.89069], "popupContent": "<a href='/cmu_multilingual_speech/lang/tes'>tes</a>"},
+{"type": "Point", "coordinates": [125.528, -9.11217], "popupContent": "<a href='/cmu_multilingual_speech/lang/tet'>tet</a>"},
+{"type": "Point", "coordinates": [34.7595, 2.58367], "popupContent": "<a href='/cmu_multilingual_speech/lang/teu'>teu</a>"},
+{"type": "Point", "coordinates": [131.737, -4.74159], "popupContent": "<a href='/cmu_multilingual_speech/lang/tev'>tev</a>"},
+{"type": "Point", "coordinates": [-106.124, 35.9053], "popupContent": "<a href='/cmu_multilingual_speech/lang/tew'>tew</a>"},
+{"type": "Point", "coordinates": [32.6307, 4.91107], "popupContent": "<a href='/cmu_multilingual_speech/lang/tex'>tex</a>"},
+{"type": "Point", "coordinates": [29.108, 11.4507], "popupContent": "<a href='/cmu_multilingual_speech/lang/tey'>tey</a>"},
+{"type": "Point", "coordinates": [5.699722, 14.973333], "popupContent": "<a href='/cmu_multilingual_speech/lang/tez'>tez</a>"},
+{"type": "Point", "coordinates": [2.43226, 6.51774], "popupContent": "<a href='/cmu_multilingual_speech/lang/tfi'>tfi</a>"},
+{"type": "Point", "coordinates": [-150.759, 60.4712], "popupContent": "<a href='/cmu_multilingual_speech/lang/tfn'>tfn</a>"},
+{"type": "Point", "coordinates": [136.753, -2.35042], "popupContent": "<a href='/cmu_multilingual_speech/lang/tfo'>tfo</a>"},
+{"type": "Point", "coordinates": [-82.9631, 9.067], "popupContent": "<a href='/cmu_multilingual_speech/lang/tfr'>tfr</a>"},
+{"type": "Point", "coordinates": [127.333, 0.80562], "popupContent": "<a href='/cmu_multilingual_speech/lang/tft'>tft</a>"},
+{"type": "Point", "coordinates": [38.5037, -3.60164], "popupContent": "<a href='/cmu_multilingual_speech/lang/tga'>tga</a>"},
+{"type": "Point", "coordinates": [116.67, 6.56097], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgb'>tgb</a>"},
+{"type": "Point", "coordinates": [150.893, -2.70951], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgc'>tgc</a>"},
+{"type": "Point", "coordinates": [9.88558, 10.8881], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgd'>tgd</a>"},
+{"type": "Point", "coordinates": [84.9451, 28.2213], "popupContent": "<a href='/cmu_multilingual_speech/lang/tge'>tge</a>"},
+{"type": "Point", "coordinates": [91.262, 27.3231], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgf'>tgf</a>"},
+{"type": "Point", "coordinates": [153.611, -4.08824], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgg'>tgg</a>"},
+{"type": "Point", "coordinates": [-60.6791, 11.2388], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgh'>tgh</a>"},
+{"type": "Point", "coordinates": [155.129, -6.15201], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgi'>tgi</a>"},
+{"type": "Point", "coordinates": [94.221711, 27.986064], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgj'>tgj</a>"},
+{"type": "Point", "coordinates": [68.5549, 38.8213], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgk'>tgk</a>"},
+{"type": "Point", "coordinates": [121.747, 14.06], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgl'>tgl</a>"},
+{"type": "Point", "coordinates": [126.186, 8.9815], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgn'>tgn</a>"},
+{"type": "Point", "coordinates": [153.488, -11.5229], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgo'>tgo</a>"},
+{"type": "Point", "coordinates": [166.958, -15.5643], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgp'>tgp</a>"},
+{"type": "Point", "coordinates": [110.036, 1.335], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgq'>tgq</a>"},
+{"type": "Point", "coordinates": [107.296, 15.4928], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgr'>tgr</a>"},
+{"type": "Point", "coordinates": [167.593474, -14.230149], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgs'>tgs</a>"},
+{"type": "Point", "coordinates": [119.338, 10.6519], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgt'>tgt</a>"},
+{"type": "Point", "coordinates": [144.916, -4.4621], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgu'>tgu</a>"},
+{"type": "Point", "coordinates": [-37.538, -11.5816], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgv'>tgv</a>"},
+{"type": "Point", "coordinates": [-5.17372, 8.67053], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgw'>tgw</a>"},
+{"type": "Point", "coordinates": [-134.799, 60.242], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgx'>tgx</a>"},
+{"type": "Point", "coordinates": [25.9756, 8.6629], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgy'>tgy</a>"},
+{"type": "Point", "coordinates": [142.96122717197, -18.1973276258], "popupContent": "<a href='/cmu_multilingual_speech/lang/tgz'>tgz</a>"},
+{"type": "Point", "coordinates": [100.671, 14.192], "popupContent": "<a href='/cmu_multilingual_speech/lang/tha'>tha</a>"},
+{"type": "Point", "coordinates": [104.225, 19.1282], "popupContent": "<a href='/cmu_multilingual_speech/lang/thc'>thc</a>"},
+{"type": "Point", "coordinates": [142.034, -14.8159], "popupContent": "<a href='/cmu_multilingual_speech/lang/thd'>thd</a>"},
+{"type": "Point", "coordinates": [84.4082, 27.5825], "popupContent": "<a href='/cmu_multilingual_speech/lang/the'>the</a>"},
+{"type": "Point", "coordinates": [85.7657, 28.7554], "popupContent": "<a href='/cmu_multilingual_speech/lang/thf'>thf</a>"},
+{"type": "Point", "coordinates": [-107.658, 28.6077], "popupContent": "<a href='/cmu_multilingual_speech/lang/thh'>thh</a>"},
+{"type": "Point", "coordinates": [102.407, 20.045], "popupContent": "<a href='/cmu_multilingual_speech/lang/thi'>thi</a>"},
+{"type": "Point", "coordinates": [38.073, -0.13221], "popupContent": "<a href='/cmu_multilingual_speech/lang/thk'>thk</a>"},
+{"type": "Point", "coordinates": [81.7761, 27.8834], "popupContent": "<a href='/cmu_multilingual_speech/lang/thl'>thl</a>"},
+{"type": "Point", "coordinates": [104.229, 17.7655], "popupContent": "<a href='/cmu_multilingual_speech/lang/thm'>thm</a>"},
+{"type": "Point", "coordinates": [76.3642, 11.2651], "popupContent": "<a href='/cmu_multilingual_speech/lang/thn'>thn</a>"},
+{"type": "Point", "coordinates": [-120.193, 50.1668], "popupContent": "<a href='/cmu_multilingual_speech/lang/thp'>thp</a>"},
+{"type": "Point", "coordinates": [84.6301, 26.7251], "popupContent": "<a href='/cmu_multilingual_speech/lang/thq'>thq</a>"},
+{"type": "Point", "coordinates": [80.4419, 28.6483], "popupContent": "<a href='/cmu_multilingual_speech/lang/thr'>thr</a>"},
+{"type": "Point", "coordinates": [83.6466, 28.7014], "popupContent": "<a href='/cmu_multilingual_speech/lang/ths'>ths</a>"},
+{"type": "Point", "coordinates": [-130.052, 58.4498], "popupContent": "<a href='/cmu_multilingual_speech/lang/tht'>tht</a>"},
+{"type": "Point", "coordinates": [26.4858, 8.72567], "popupContent": "<a href='/cmu_multilingual_speech/lang/thu'>thu</a>"},
+{"type": "Point", "coordinates": [8.73169, 22.5908], "popupContent": "<a href='/cmu_multilingual_speech/lang/thv'>thv</a>"},
+{"type": "Point", "coordinates": [87.6189, 27.7678], "popupContent": "<a href='/cmu_multilingual_speech/lang/thw'>thw</a>"},
+{"type": "Point", "coordinates": [106.667, 14.6733], "popupContent": "<a href='/cmu_multilingual_speech/lang/thx'>thx</a>"},
+{"type": "Point", "coordinates": [11.1751, 9.21338], "popupContent": "<a href='/cmu_multilingual_speech/lang/thy'>thy</a>"},
+{"type": "Point", "coordinates": [7.6743, 16.9232], "popupContent": "<a href='/cmu_multilingual_speech/lang/thz'>thz</a>"},
+{"type": "Point", "coordinates": [1.86218, 27.019], "popupContent": "<a href='/cmu_multilingual_speech/lang/tia'>tia</a>"},
+{"type": "Point", "coordinates": [30.8092, 11.0963], "popupContent": "<a href='/cmu_multilingual_speech/lang/tic'>tic</a>"},
+{"type": "Point", "coordinates": [117.55143, 3.937955], "popupContent": "<a href='/cmu_multilingual_speech/lang/tid'>tid</a>"},
+{"type": "Point", "coordinates": [31.1244, 12.1797], "popupContent": "<a href='/cmu_multilingual_speech/lang/tie'>tie</a>"},
+{"type": "Point", "coordinates": [141.293, -5.03899], "popupContent": "<a href='/cmu_multilingual_speech/lang/tif'>tif</a>"},
+{"type": "Point", "coordinates": [38.2233, 17.3494], "popupContent": "<a href='/cmu_multilingual_speech/lang/tig'>tig</a>"},
+{"type": "Point", "coordinates": [115.826, 5.1796], "popupContent": "<a href='/cmu_multilingual_speech/lang/tih'>tih</a>"},
+{"type": "Point", "coordinates": [16.4765, -2.84694], "popupContent": "<a href='/cmu_multilingual_speech/lang/tii'>tii</a>"},
+{"type": "Point", "coordinates": [86.4694, 27.2203], "popupContent": "<a href='/cmu_multilingual_speech/lang/tij'>tij</a>"},
+{"type": "Point", "coordinates": [11.6104, 5.87004], "popupContent": "<a href='/cmu_multilingual_speech/lang/tik'>tik</a>"},
+{"type": "Point", "coordinates": [-123.83, 45.5], "popupContent": "<a href='/cmu_multilingual_speech/lang/til'>til</a>"},
+{"type": "Point", "coordinates": [147.057, -6.06875], "popupContent": "<a href='/cmu_multilingual_speech/lang/tim'>tim</a>"},
+{"type": "Point", "coordinates": [45.9227, 42.3316], "popupContent": "<a href='/cmu_multilingual_speech/lang/tin'>tin</a>"},
+{"type": "Point", "coordinates": [154.971, -5.67474], "popupContent": "<a href='/cmu_multilingual_speech/lang/tio'>tio</a>"},
+{"type": "Point", "coordinates": [138.027, -2.15863], "popupContent": "<a href='/cmu_multilingual_speech/lang/tip'>tip</a>"},
+{"type": "Point", "coordinates": [-4.52619, 10.7184], "popupContent": "<a href='/cmu_multilingual_speech/lang/tiq'>tiq</a>"},
+{"type": "Point", "coordinates": [38.9266, 15.3359], "popupContent": "<a href='/cmu_multilingual_speech/lang/tir'>tir</a>"},
+{"type": "Point", "coordinates": [120.829, 17.4501], "popupContent": "<a href='/cmu_multilingual_speech/lang/tis'>tis</a>"},
+{"type": "Point", "coordinates": [-73.768, 2.716], "popupContent": "<a href='/cmu_multilingual_speech/lang/tit'>tit</a>"},
+{"type": "Point", "coordinates": [120.905, 17.8187], "popupContent": "<a href='/cmu_multilingual_speech/lang/tiu'>tiu</a>"},
+{"type": "Point", "coordinates": [9.26287, 6.88039], "popupContent": "<a href='/cmu_multilingual_speech/lang/tiv'>tiv</a>"},
+{"type": "Point", "coordinates": [130.949, -11.6308], "popupContent": "<a href='/cmu_multilingual_speech/lang/tiw'>tiw</a>"},
+{"type": "Point", "coordinates": [-106.661, 34.7873], "popupContent": "<a href='/cmu_multilingual_speech/lang/tix'>tix</a>"},
+{"type": "Point", "coordinates": [124.127, 6.77321], "popupContent": "<a href='/cmu_multilingual_speech/lang/tiy'>tiy</a>"},
+{"type": "Point", "coordinates": [102.586, 23.3088], "popupContent": "<a href='/cmu_multilingual_speech/lang/tiz'>tiz</a>"},
+{"type": "Point", "coordinates": [-8.98904, 5.50685], "popupContent": "<a href='/cmu_multilingual_speech/lang/tja'>tja</a>"},
+{"type": "Point", "coordinates": [115.883, -0.29048], "popupContent": "<a href='/cmu_multilingual_speech/lang/tjg'>tjg</a>"},
+{"type": "Point", "coordinates": [109.759, 29.3016], "popupContent": "<a href='/cmu_multilingual_speech/lang/tji'>tji</a>"},
+{"type": "Point", "coordinates": [141.846, -12.032], "popupContent": "<a href='/cmu_multilingual_speech/lang/tjj'>tjj</a>"},
+{"type": "Point", "coordinates": [95.0772, 24.9041], "popupContent": "<a href='/cmu_multilingual_speech/lang/tjl'>tjl</a>"},
+{"type": "Point", "coordinates": [-82.3132, 30.3027], "popupContent": "<a href='/cmu_multilingual_speech/lang/tjm'>tjm</a>"},
+{"type": "Point", "coordinates": [-4.40666, 8.357], "popupContent": "<a href='/cmu_multilingual_speech/lang/tjn'>tjn</a>"},
+{"type": "Point", "coordinates": [6.06562, 33.3489], "popupContent": "<a href='/cmu_multilingual_speech/lang/tjo'>tjo</a>"},
+{"type": "Point", "coordinates": [110.022, 28.2368], "popupContent": "<a href='/cmu_multilingual_speech/lang/tjs'>tjs</a>"},
+{"type": "Point", "coordinates": [118.267, -22.842], "popupContent": "<a href='/cmu_multilingual_speech/lang/tju'>tju</a>"},
+{"type": "Point", "coordinates": [-39.0, -8.49999], "popupContent": "<a href='/cmu_multilingual_speech/lang/tka'>tka</a>"},
+{"type": "Point", "coordinates": [79.4233, 29.0853], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkb'>tkb</a>"},
+{"type": "Point", "coordinates": [125.283, -8.6788], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkd'>tkd</a>"},
+{"type": "Point", "coordinates": [36.249, -16.2276], "popupContent": "<a href='/cmu_multilingual_speech/lang/tke'>tke</a>"},
+{"type": "Point", "coordinates": [-61.42, -11.518], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkf'>tkf</a>"},
+{"type": "Point", "coordinates": [47.33, -23.3], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkg'>tkg</a>"},
+{"type": "Point", "coordinates": [88.4254, 28.1652], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkk'>tkk</a>"},
+{"type": "Point", "coordinates": [-171.780833, -9.227642], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkl'>tkl</a>"},
+{"type": "Point", "coordinates": [-123.452, 42.423], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkm'>tkm</a>"},
+{"type": "Point", "coordinates": [128.961, 27.7736], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkn'>tkn</a>"},
+{"type": "Point", "coordinates": [168.822, -12.2766], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkp'>tkp</a>"},
+{"type": "Point", "coordinates": [7.37553, 4.73213], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkq'>tkq</a>"},
+{"type": "Point", "coordinates": [46.8858, 41.5916], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkr'>tkr</a>"},
+{"type": "Point", "coordinates": [49.688542, 36.065077], "popupContent": "<a href='/cmu_multilingual_speech/lang/tks'>tks</a>"},
+{"type": "Point", "coordinates": [80.8931, 28.5867], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkt'>tkt</a>"},
+{"type": "Point", "coordinates": [-97.81, 20.236], "popupContent": "<a href='/cmu_multilingual_speech/lang/tku'>tku</a>"},
+{"type": "Point", "coordinates": [146.522, -5.6642], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkv'>tkv</a>"},
+{"type": "Point", "coordinates": [166.868, -11.6752], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkw'>tkw</a>"},
+{"type": "Point", "coordinates": [140.269, -5.13343], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkx'>tkx</a>"},
+{"type": "Point", "coordinates": [108.046, 15.4299], "popupContent": "<a href='/cmu_multilingual_speech/lang/tkz'>tkz</a>"},
+{"type": "Point", "coordinates": [-104.688, 23.2553], "popupContent": "<a href='/cmu_multilingual_speech/lang/tla'>tla</a>"},
+{"type": "Point", "coordinates": [128.154, 1.0946], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlb'>tlb</a>"},
+{"type": "Point", "coordinates": [-96.8741, 20.1765], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlc'>tlc</a>"},
+{"type": "Point", "coordinates": [126.795, 4.11846], "popupContent": "<a href='/cmu_multilingual_speech/lang/tld'>tld</a>"},
+{"type": "Point", "coordinates": [141.731, -5.07444], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlf'>tlf</a>"},
+{"type": "Point", "coordinates": [140.591, -3.74322], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlg'>tlg</a>"},
+{"type": "Point", "coordinates": [-135.29, 59.4447], "popupContent": "<a href='/cmu_multilingual_speech/lang/tli'>tli</a>"},
+{"type": "Point", "coordinates": [29.9494, 0.676185], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlj'>tlj</a>"},
+{"type": "Point", "coordinates": [122.872, -4.6478], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlk'>tlk</a>"},
+{"type": "Point", "coordinates": [24.546, -4.29314], "popupContent": "<a href='/cmu_multilingual_speech/lang/tll'>tll</a>"},
+{"type": "Point", "coordinates": [166.772, -15.1569], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlm'>tlm</a>"},
+{"type": "Point", "coordinates": [119.35, -2.4525], "popupContent": "<a href='/cmu_multilingual_speech/lang/tln'>tln</a>"},
+{"type": "Point", "coordinates": [30.4815, 10.6453], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlo'>tlo</a>"},
+{"type": "Point", "coordinates": [-97.5931, 20.1415], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlp'>tlp</a>"},
+{"type": "Point", "coordinates": [100.985, 21.4293], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlq'>tlq</a>"},
+{"type": "Point", "coordinates": [160.231, -9.76764], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlr'>tlr</a>"},
+{"type": "Point", "coordinates": [167.139, -15.5004], "popupContent": "<a href='/cmu_multilingual_speech/lang/tls'>tls</a>"},
+{"type": "Point", "coordinates": [129.663, -3.2969], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlt'>tlt</a>"},
+{"type": "Point", "coordinates": [128.31, -3.57785], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlu'>tlu</a>"},
+{"type": "Point", "coordinates": [124.869, -1.79516], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlv'>tlv</a>"},
+{"type": "Point", "coordinates": [128.547, -3.29102], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlw'>tlw</a>"},
+{"type": "Point", "coordinates": [146.746, -2.06626], "popupContent": "<a href='/cmu_multilingual_speech/lang/tlx'>tlx</a>"},
+{"type": "Point", "coordinates": [48.6349, 38.4552], "popupContent": "<a href='/cmu_multilingual_speech/lang/tly'>tly</a>"},
+{"type": "Point", "coordinates": [21.9951, 14.332], "popupContent": "<a href='/cmu_multilingual_speech/lang/tma'>tma</a>"},
+{"type": "Point", "coordinates": [167.484, -16.2701], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmb'>tmb</a>"},
+{"type": "Point", "coordinates": [17.4216, 9.43747], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmc'>tmc</a>"},
+{"type": "Point", "coordinates": [144.3375, -5.09522], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmd'>tmd</a>"},
+{"type": "Point", "coordinates": [-40.204, -3.09359], "popupContent": "<a href='/cmu_multilingual_speech/lang/tme'>tme</a>"},
+{"type": "Point", "coordinates": [-58.0158, -21.5474], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmf'>tmf</a>"},
+{"type": "Point", "coordinates": [120.72, 14.28], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmg'>tmg</a>"},
+{"type": "Point", "coordinates": [167.268889, -15.580667], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmi'>tmi</a>"},
+{"type": "Point", "coordinates": [138.34, -1.84878], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmj'>tmj</a>"},
+{"type": "Point", "coordinates": [85.1648, 27.9087], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmk'>tmk</a>"},
+{"type": "Point", "coordinates": [139.233, -5.57962], "popupContent": "<a href='/cmu_multilingual_speech/lang/tml'>tml</a>"},
+{"type": "Point", "coordinates": [104.933, 19.66], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmm'>tmm</a>"},
+{"type": "Point", "coordinates": [112.975, 1.00003], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmn'>tmn</a>"},
+{"type": "Point", "coordinates": [102.916, 3.11331], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmo'>tmo</a>"},
+{"type": "Point", "coordinates": [104.729, 18.34], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmp'>tmp</a>"},
+{"type": "Point", "coordinates": [142.346, -3.14955], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmq'>tmq</a>"},
+{"type": "Point", "coordinates": [44.245, 32.273], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmr'>tmr</a>"},
+{"type": "Point", "coordinates": [29.1632, 11.7176], "popupContent": "<a href='/cmu_multilingual_speech/lang/tms'>tms</a>"},
+{"type": "Point", "coordinates": [166.664, -15.0792], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmt'>tmt</a>"},
+{"type": "Point", "coordinates": [137.69, -3.14537], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmu'>tmu</a>"},
+{"type": "Point", "coordinates": [20.36849, 2.0246], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmv'>tmv</a>"},
+{"type": "Point", "coordinates": [101.906, 2.78176], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmw'>tmw</a>"},
+{"type": "Point", "coordinates": [147.732, -6.70017], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmy'>tmy</a>"},
+{"type": "Point", "coordinates": [-65.883, 2.765], "popupContent": "<a href='/cmu_multilingual_speech/lang/tmz'>tmz</a>"},
+{"type": "Point", "coordinates": [-68.04056, -13.39249], "popupContent": "<a href='/cmu_multilingual_speech/lang/tna'>tna</a>"},
+{"type": "Point", "coordinates": [-72.6507, 6.90704], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnb'>tnb</a>"},
+{"type": "Point", "coordinates": [-70.3853, -0.59023], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnc'>tnc</a>"},
+{"type": "Point", "coordinates": [-71.9212, 6.54198], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnd'>tnd</a>"},
+{"type": "Point", "coordinates": [120.994, 16.7899], "popupContent": "<a href='/cmu_multilingual_speech/lang/tne'>tne</a>"},
+{"type": "Point", "coordinates": [71.2542, 38.2267], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnf'>tnf</a>"},
+{"type": "Point", "coordinates": [16.209, 9.8289], "popupContent": "<a href='/cmu_multilingual_speech/lang/tng'>tng</a>"},
+{"type": "Point", "coordinates": [145.239, -4.55066], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnh'>tnh</a>"},
+{"type": "Point", "coordinates": [134.532, -2.84228], "popupContent": "<a href='/cmu_multilingual_speech/lang/tni'>tni</a>"},
+{"type": "Point", "coordinates": [169.442, -19.5954], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnk'>tnk</a>"},
+{"type": "Point", "coordinates": [169.261, -19.4763], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnl'>tnl</a>"},
+{"type": "Point", "coordinates": [140.396, -2.45368], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnm'>tnm</a>"},
+{"type": "Point", "coordinates": [169.303, -19.3733], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnn'>tnn</a>"},
+{"type": "Point", "coordinates": [-67.3931, -13.3028], "popupContent": "<a href='/cmu_multilingual_speech/lang/tno'>tno</a>"},
+{"type": "Point", "coordinates": [169.381, -19.5019], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnp'>tnp</a>"},
+{"type": "Point", "coordinates": [-66.8042, 18.2836], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnq'>tnq</a>"},
+{"type": "Point", "coordinates": [-12.4796, 12.7531], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnr'>tnr</a>"},
+{"type": "Point", "coordinates": [150.672, -1.65074], "popupContent": "<a href='/cmu_multilingual_speech/lang/tns'>tns</a>"},
+{"type": "Point", "coordinates": [124.654, 1.24813], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnt'>tnt</a>"},
+{"type": "Point", "coordinates": [104.367, 18.6624], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnu'>tnu</a>"},
+{"type": "Point", "coordinates": [92.5073, 22.3185], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnv'>tnv</a>"},
+{"type": "Point", "coordinates": [124.652, 1.0539], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnw'>tnw</a>"},
+{"type": "Point", "coordinates": [166.97, -11.68], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnx'>tnx</a>"},
+{"type": "Point", "coordinates": [30.0807, -6.43051], "popupContent": "<a href='/cmu_multilingual_speech/lang/tny'>tny</a>"},
+{"type": "Point", "coordinates": [100.102, 6.88137], "popupContent": "<a href='/cmu_multilingual_speech/lang/tnz'>tnz</a>"},
+{"type": "Point", "coordinates": [-61.96, -23.77], "popupContent": "<a href='/cmu_multilingual_speech/lang/tob'>tob</a>"},
+{"type": "Point", "coordinates": [-97.6852, 20.5447], "popupContent": "<a href='/cmu_multilingual_speech/lang/toc'>toc</a>"},
+{"type": "Point", "coordinates": [-9.23439, 8.20383], "popupContent": "<a href='/cmu_multilingual_speech/lang/tod'>tod</a>"},
+{"type": "Point", "coordinates": [-69.6666, 3.24999], "popupContent": "<a href='/cmu_multilingual_speech/lang/toe'>toe</a>"},
+{"type": "Point", "coordinates": [142.804, -9.183], "popupContent": "<a href='/cmu_multilingual_speech/lang/tof'>tof</a>"},
+{"type": "Point", "coordinates": [34.0613, -12.0816], "popupContent": "<a href='/cmu_multilingual_speech/lang/tog'>tog</a>"},
+{"type": "Point", "coordinates": [35.1577, -23.7964], "popupContent": "<a href='/cmu_multilingual_speech/lang/toh'>toh</a>"},
+{"type": "Point", "coordinates": [27.103495, -17.422325], "popupContent": "<a href='/cmu_multilingual_speech/lang/toi'>toi</a>"},
+{"type": "Point", "coordinates": [-91.7825, 16.2572], "popupContent": "<a href='/cmu_multilingual_speech/lang/toj'>toj</a>"},
+{"type": "Point", "coordinates": [-124.1, 41.9192], "popupContent": "<a href='/cmu_multilingual_speech/lang/tol'>tol</a>"},
+{"type": "Point", "coordinates": [124.754, 1.39715], "popupContent": "<a href='/cmu_multilingual_speech/lang/tom'>tom</a>"},
+{"type": "Point", "coordinates": [-175.25, -21.17], "popupContent": "<a href='/cmu_multilingual_speech/lang/ton'>ton</a>"},
+{"type": "Point", "coordinates": [-97.7463, 20.6532], "popupContent": "<a href='/cmu_multilingual_speech/lang/too'>too</a>"},
+{"type": "Point", "coordinates": [-97.2554, 20.5671], "popupContent": "<a href='/cmu_multilingual_speech/lang/top'>top</a>"},
+{"type": "Point", "coordinates": [34.2159, 5.15904], "popupContent": "<a href='/cmu_multilingual_speech/lang/toq'>toq</a>"},
+{"type": "Point", "coordinates": [22.7362, 6.35815], "popupContent": "<a href='/cmu_multilingual_speech/lang/tor'>tor</a>"},
+{"type": "Point", "coordinates": [-97.6159, 20.3798], "popupContent": "<a href='/cmu_multilingual_speech/lang/tos'>tos</a>"},
+{"type": "Point", "coordinates": [105.363, 19.3563], "popupContent": "<a href='/cmu_multilingual_speech/lang/tou'>tou</a>"},
+{"type": "Point", "coordinates": [48.7301, 36.5998], "popupContent": "<a href='/cmu_multilingual_speech/lang/tov'>tov</a>"},
+{"type": "Point", "coordinates": [-106.766, 35.5994], "popupContent": "<a href='/cmu_multilingual_speech/lang/tow'>tow</a>"},
+{"type": "Point", "coordinates": [131.171295, 3.004528], "popupContent": "<a href='/cmu_multilingual_speech/lang/tox'>tox</a>"},
+{"type": "Point", "coordinates": [119.314, -2.06702], "popupContent": "<a href='/cmu_multilingual_speech/lang/toy'>toy</a>"},
+{"type": "Point", "coordinates": [15.2819, 7.25936], "popupContent": "<a href='/cmu_multilingual_speech/lang/toz'>toz</a>"},
+{"type": "Point", "coordinates": [150.373, -10.2275], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpa'>tpa</a>"},
+{"type": "Point", "coordinates": [-98.5241, 16.7584], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpc'>tpc</a>"},
+{"type": "Point", "coordinates": [92.0747, 23.5864], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpe'>tpe</a>"},
+{"type": "Point", "coordinates": [140.115497, -2.322279], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpf'>tpf</a>"},
+{"type": "Point", "coordinates": [125.004, -8.2384], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpg'>tpg</a>"},
+{"type": "Point", "coordinates": [147.303, -9.41971], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpi'>tpi</a>"},
+{"type": "Point", "coordinates": [-62.684, -21.4169], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpj'>tpj</a>"},
+{"type": "Point", "coordinates": [-40.4167, -19.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpk'>tpk</a>"},
+{"type": "Point", "coordinates": [-98.8013, 17.3262], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpl'>tpl</a>"},
+{"type": "Point", "coordinates": [-1.35467, 9.75577], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpm'>tpm</a>"},
+{"type": "Point", "coordinates": [-42.106389, -22.807778], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpn'>tpn</a>"},
+{"type": "Point", "coordinates": [104.658, 18.5562], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpo'>tpo</a>"},
+{"type": "Point", "coordinates": [-98.0305, 20.7039], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpp'>tpp</a>"},
+{"type": "Point", "coordinates": [78.56049, 31.46703], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpq'>tpq</a>"},
+{"type": "Point", "coordinates": [-62.2544, -11.8884], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpr'>tpr</a>"},
+{"type": "Point", "coordinates": [-98.1947, 20.704], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpt'>tpt</a>"},
+{"type": "Point", "coordinates": [107.24544, 13.56447], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpu'>tpu</a>"},
+{"type": "Point", "coordinates": [145.757, 15.237], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpv'>tpv</a>"},
+{"type": "Point", "coordinates": [-46.38, -23.95], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpw'>tpw</a>"},
+{"type": "Point", "coordinates": [-99.0602, 17.1034], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpx'>tpx</a>"},
+{"type": "Point", "coordinates": [-53.5717, -11.8119], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpy'>tpy</a>"},
+{"type": "Point", "coordinates": [154.972, -5.58358], "popupContent": "<a href='/cmu_multilingual_speech/lang/tpz'>tpz</a>"},
+{"type": "Point", "coordinates": [-48.2359, -2.6123], "popupContent": "<a href='/cmu_multilingual_speech/lang/tqb'>tqb</a>"},
+{"type": "Point", "coordinates": [167.332, -13.5043], "popupContent": "<a href='/cmu_multilingual_speech/lang/tql'>tql</a>"},
+{"type": "Point", "coordinates": [142.568, -7.93238], "popupContent": "<a href='/cmu_multilingual_speech/lang/tqm'>tqm</a>"},
+{"type": "Point", "coordinates": [-121.44, 44.7985], "popupContent": "<a href='/cmu_multilingual_speech/lang/tqn'>tqn</a>"},
+{"type": "Point", "coordinates": [146.206, -8.07231], "popupContent": "<a href='/cmu_multilingual_speech/lang/tqo'>tqo</a>"},
+{"type": "Point", "coordinates": [151.828, -5.30721], "popupContent": "<a href='/cmu_multilingual_speech/lang/tqp'>tqp</a>"},
+{"type": "Point", "coordinates": [43.6847, 1.06167], "popupContent": "<a href='/cmu_multilingual_speech/lang/tqq'>tqq</a>"},
+{"type": "Point", "coordinates": [30.341, 11.1254], "popupContent": "<a href='/cmu_multilingual_speech/lang/tqr'>tqr</a>"},
+{"type": "Point", "coordinates": [-97.9486, 20.4574], "popupContent": "<a href='/cmu_multilingual_speech/lang/tqt'>tqt</a>"},
+{"type": "Point", "coordinates": [157.296, -8.58405], "popupContent": "<a href='/cmu_multilingual_speech/lang/tqu'>tqu</a>"},
+{"type": "Point", "coordinates": [-96.75, 30.25], "popupContent": "<a href='/cmu_multilingual_speech/lang/tqw'>tqw</a>"},
+{"type": "Point", "coordinates": [69.5901, 34.1792], "popupContent": "<a href='/cmu_multilingual_speech/lang/tra'>tra</a>"},
+{"type": "Point", "coordinates": [143.835, -3.68721], "popupContent": "<a href='/cmu_multilingual_speech/lang/trb'>trb</a>"},
+{"type": "Point", "coordinates": [-97.9826, 17.1541], "popupContent": "<a href='/cmu_multilingual_speech/lang/trc'>trc</a>"},
+{"type": "Point", "coordinates": [84.4712, 22.0122], "popupContent": "<a href='/cmu_multilingual_speech/lang/trd'>trd</a>"},
+{"type": "Point", "coordinates": [134.288, -6.76213], "popupContent": "<a href='/cmu_multilingual_speech/lang/tre'>tre</a>"},
+{"type": "Point", "coordinates": [-61.4171, 10.4208], "popupContent": "<a href='/cmu_multilingual_speech/lang/trf'>trf</a>"},
+{"type": "Point", "coordinates": [44.37, 36.23], "popupContent": "<a href='/cmu_multilingual_speech/lang/trg'>trg</a>"},
+{"type": "Point", "coordinates": [149.567, -9.83576], "popupContent": "<a href='/cmu_multilingual_speech/lang/trh'>trh</a>"},
+{"type": "Point", "coordinates": [-55.7599, 2.53616], "popupContent": "<a href='/cmu_multilingual_speech/lang/tri'>tri</a>"},
+{"type": "Point", "coordinates": [19.5254, 11.2027], "popupContent": "<a href='/cmu_multilingual_speech/lang/trj'>trj</a>"},
+{"type": "Point", "coordinates": [-4.38593, 55.9829], "popupContent": "<a href='/cmu_multilingual_speech/lang/trl'>trl</a>"},
+{"type": "Point", "coordinates": [71.099792, 34.998117], "popupContent": "<a href='/cmu_multilingual_speech/lang/trm'>trm</a>"},
+{"type": "Point", "coordinates": [-65.4096, -15.3331], "popupContent": "<a href='/cmu_multilingual_speech/lang/trn'>trn</a>"},
+{"type": "Point", "coordinates": [94.1703, 24.4003], "popupContent": "<a href='/cmu_multilingual_speech/lang/tro'>tro</a>"},
+{"type": "Point", "coordinates": [91.4673, 23.1916], "popupContent": "<a href='/cmu_multilingual_speech/lang/trp'>trp</a>"},
+{"type": "Point", "coordinates": [-97.9202, 17.2428], "popupContent": "<a href='/cmu_multilingual_speech/lang/trq'>trq</a>"},
+{"type": "Point", "coordinates": [-75.5603, -3.22497], "popupContent": "<a href='/cmu_multilingual_speech/lang/trr'>trr</a>"},
+{"type": "Point", "coordinates": [-97.8547, 17.1628], "popupContent": "<a href='/cmu_multilingual_speech/lang/trs'>trs</a>"},
+{"type": "Point", "coordinates": [135.551, -3.37462], "popupContent": "<a href='/cmu_multilingual_speech/lang/trt'>trt</a>"},
+{"type": "Point", "coordinates": [42.1451, 37.2275], "popupContent": "<a href='/cmu_multilingual_speech/lang/tru'>tru</a>"},
+{"type": "Point", "coordinates": [121.358, 23.9032], "popupContent": "<a href='/cmu_multilingual_speech/lang/trv'>trv</a>"},
+{"type": "Point", "coordinates": [72.5316, 35.3101], "popupContent": "<a href='/cmu_multilingual_speech/lang/trw'>trw</a>"},
+{"type": "Point", "coordinates": [109.95, 1.4313], "popupContent": "<a href='/cmu_multilingual_speech/lang/trx'>trx</a>"},
+{"type": "Point", "coordinates": [92.2676, 26.3441], "popupContent": "<a href='/cmu_multilingual_speech/lang/try'>try</a>"},
+{"type": "Point", "coordinates": [-61.7416, -6.19532], "popupContent": "<a href='/cmu_multilingual_speech/lang/trz'>trz</a>"},
+{"type": "Point", "coordinates": [12.7581, -2.29245], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsa'>tsa</a>"},
+{"type": "Point", "coordinates": [36.9139, 5.3097], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsb'>tsb</a>"},
+{"type": "Point", "coordinates": [32.4287, -22.9891], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsc'>tsc</a>"},
+{"type": "Point", "coordinates": [22.7341, 37.1405], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsd'>tsd</a>"},
+{"type": "Point", "coordinates": [10.03348, 36.49562], "popupContent": "<a href='/cmu_multilingual_speech/lang/tse'>tse</a>"},
+{"type": "Point", "coordinates": [84.9036, 27.5722], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsf'>tsf</a>"},
+{"type": "Point", "coordinates": [118.88, 5.12236], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsg'>tsg</a>"},
+{"type": "Point", "coordinates": [13.628, 10.1551], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsh'>tsh</a>"},
+{"type": "Point", "coordinates": [-128.544545, 52.59103], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsi'>tsi</a>"},
+{"type": "Point", "coordinates": [91.7741, 27.3694], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsj'>tsj</a>"},
+{"type": "Point", "coordinates": [89.1931, 27.8046], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsk'>tsk</a>"},
+{"type": "Point", "coordinates": [102.926, 21.3616], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsl'>tsl</a>"},
+{"type": "Point", "coordinates": [28.85551, 41.02675], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsm'>tsm</a>"},
+{"type": "Point", "coordinates": [24.7587, -24.368], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsn'>tsn</a>"},
+{"type": "Point", "coordinates": [31.8105, -23.5754], "popupContent": "<a href='/cmu_multilingual_speech/lang/tso'>tso</a>"},
+{"type": "Point", "coordinates": [-4.88274, 11.133], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsp'>tsp</a>"},
+{"type": "Point", "coordinates": [100.445, 13.7837], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsq'>tsq</a>"},
+{"type": "Point", "coordinates": [166.767, -15.6377], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsr'>tsr</a>"},
+{"type": "Point", "coordinates": [121.305, 25.0206], "popupContent": "<a href='/cmu_multilingual_speech/lang/tss'>tss</a>"},
+{"type": "Point", "coordinates": [-2.816163, 15.262989], "popupContent": "<a href='/cmu_multilingual_speech/lang/tst'>tst</a>"},
+{"type": "Point", "coordinates": [120.787, 23.216], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsu'>tsu</a>"},
+{"type": "Point", "coordinates": [11.1359, -1.55469], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsv'>tsv</a>"},
+{"type": "Point", "coordinates": [5.11073, 10.2882], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsw'>tsw</a>"},
+{"type": "Point", "coordinates": [142.998, -7.5501], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsx'>tsx</a>"},
+{"type": "Point", "coordinates": [-3.499957, 14.499995], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsy'>tsy</a>"},
+{"type": "Point", "coordinates": [-101.631, 19.2467], "popupContent": "<a href='/cmu_multilingual_speech/lang/tsz'>tsz</a>"},
+{"type": "Point", "coordinates": [-78.75, 37.67], "popupContent": "<a href='/cmu_multilingual_speech/lang/tta'>tta</a>"},
+{"type": "Point", "coordinates": [11.9603, 8.4809], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttb'>ttb</a>"},
+{"type": "Point", "coordinates": [-92.1136, 15.4599], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttc'>ttc</a>"},
+{"type": "Point", "coordinates": [147.094, -8.3486], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttd'>ttd</a>"},
+{"type": "Point", "coordinates": [151.034, -10.6599], "popupContent": "<a href='/cmu_multilingual_speech/lang/tte'>tte</a>"},
+{"type": "Point", "coordinates": [10.6592, 4.65626], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttf'>ttf</a>"},
+{"type": "Point", "coordinates": [114.638, 4.74327], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttg'>ttg</a>"},
+{"type": "Point", "coordinates": [107.056135, 16.186515], "popupContent": "<a href='/cmu_multilingual_speech/lang/tth'>tth</a>"},
+{"type": "Point", "coordinates": [140.71, -2.56434], "popupContent": "<a href='/cmu_multilingual_speech/lang/tti'>tti</a>"},
+{"type": "Point", "coordinates": [30.6389, 0.57291], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttj'>ttj</a>"},
+{"type": "Point", "coordinates": [-76.6379, 2.55149], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttk'>ttk</a>"},
+{"type": "Point", "coordinates": [24.3751, -16.9575], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttl'>ttl</a>"},
+{"type": "Point", "coordinates": [-136.644, 62.8235], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttm'>ttm</a>"},
+{"type": "Point", "coordinates": [140.803, -3.87428], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttn'>ttn</a>"},
+{"type": "Point", "coordinates": [106.873, 15.9083], "popupContent": "<a href='/cmu_multilingual_speech/lang/tto'>tto</a>"},
+{"type": "Point", "coordinates": [121.915, -2.50998], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttp'>ttp</a>"},
+{"type": "Point", "coordinates": [4.47692, 13.9878], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttq'>ttq</a>"},
+{"type": "Point", "coordinates": [11.80953, 11.0376], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttr'>ttr</a>"},
+{"type": "Point", "coordinates": [103.67, 16.03], "popupContent": "<a href='/cmu_multilingual_speech/lang/tts'>tts</a>"},
+{"type": "Point", "coordinates": [46.645589, 41.425062], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttt'>ttt</a>"},
+{"type": "Point", "coordinates": [155.496, -6.19922], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttu'>ttu</a>"},
+{"type": "Point", "coordinates": [146.888, -2.18168], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttv'>ttv</a>"},
+{"type": "Point", "coordinates": [114.82, 3.85226], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttw'>ttw</a>"},
+{"type": "Point", "coordinates": [138.287, -2.80285], "popupContent": "<a href='/cmu_multilingual_speech/lang/tty'>tty</a>"},
+{"type": "Point", "coordinates": [85.0817, 28.4719], "popupContent": "<a href='/cmu_multilingual_speech/lang/ttz'>ttz</a>"},
+{"type": "Point", "coordinates": [143.756, -3.63409], "popupContent": "<a href='/cmu_multilingual_speech/lang/tua'>tua</a>"},
+{"type": "Point", "coordinates": [-117.163, 35.327], "popupContent": "<a href='/cmu_multilingual_speech/lang/tub'>tub</a>"},
+{"type": "Point", "coordinates": [148.014, -5.79405], "popupContent": "<a href='/cmu_multilingual_speech/lang/tuc'>tuc</a>"},
+{"type": "Point", "coordinates": [-38.2742287, -8.953642], "popupContent": "<a href='/cmu_multilingual_speech/lang/tud'>tud</a>"},
+{"type": "Point", "coordinates": [-70.043515, 0.39441], "popupContent": "<a href='/cmu_multilingual_speech/lang/tue'>tue</a>"},
+{"type": "Point", "coordinates": [-72.097, 6.8867], "popupContent": "<a href='/cmu_multilingual_speech/lang/tuf'>tuf</a>"},
+{"type": "Point", "coordinates": [18.2059, 9.42506], "popupContent": "<a href='/cmu_multilingual_speech/lang/tug'>tug</a>"},
+{"type": "Point", "coordinates": [152.095, -4.44425], "popupContent": "<a href='/cmu_multilingual_speech/lang/tuh'>tuh</a>"},
+{"type": "Point", "coordinates": [14.8697, 10.0144], "popupContent": "<a href='/cmu_multilingual_speech/lang/tui'>tui</a>"},
+{"type": "Point", "coordinates": [128.223, 0.5806], "popupContent": "<a href='/cmu_multilingual_speech/lang/tuj'>tuj</a>"},
+{"type": "Point", "coordinates": [59.17574, 37.08719], "popupContent": "<a href='/cmu_multilingual_speech/lang/tuk'>tuk</a>"},
+{"type": "Point", "coordinates": [11.52551, 9.84629], "popupContent": "<a href='/cmu_multilingual_speech/lang/tul'>tul</a>"},
+{"type": "Point", "coordinates": [33.3738, -11.3297], "popupContent": "<a href='/cmu_multilingual_speech/lang/tum'>tum</a>"},
+{"type": "Point", "coordinates": [-92.5403, 30.9888], "popupContent": "<a href='/cmu_multilingual_speech/lang/tun'>tun</a>"},
+{"type": "Point", "coordinates": [-69.5763, 0.579755], "popupContent": "<a href='/cmu_multilingual_speech/lang/tuo'>tuo</a>"},
+{"type": "Point", "coordinates": [14.7717, 18.0426], "popupContent": "<a href='/cmu_multilingual_speech/lang/tuq'>tuq</a>"},
+{"type": "Point", "coordinates": [32.8667, 39.8667], "popupContent": "<a href='/cmu_multilingual_speech/lang/tur'>tur</a>"},
+{"type": "Point", "coordinates": [-79.4214, 43.1303], "popupContent": "<a href='/cmu_multilingual_speech/lang/tus'>tus</a>"},
+{"type": "Point", "coordinates": [-124.293, 42.5563], "popupContent": "<a href='/cmu_multilingual_speech/lang/tuu'>tuu</a>"},
+{"type": "Point", "coordinates": [35.7101, 4.30688], "popupContent": "<a href='/cmu_multilingual_speech/lang/tuv'>tuv</a>"},
+{"type": "Point", "coordinates": [-69.0167, -9.74999], "popupContent": "<a href='/cmu_multilingual_speech/lang/tux'>tux</a>"},
+{"type": "Point", "coordinates": [35.8499, 0.66573], "popupContent": "<a href='/cmu_multilingual_speech/lang/tuy'>tuy</a>"},
+{"type": "Point", "coordinates": [-4.92082, 10.7114], "popupContent": "<a href='/cmu_multilingual_speech/lang/tuz'>tuz</a>"},
+{"type": "Point", "coordinates": [156.542, -6.68712], "popupContent": "<a href='/cmu_multilingual_speech/lang/tva'>tva</a>"},
+{"type": "Point", "coordinates": [5.22095, 10.8421], "popupContent": "<a href='/cmu_multilingual_speech/lang/tvd'>tvd</a>"},
+{"type": "Point", "coordinates": [129.143718, -6.97086], "popupContent": "<a href='/cmu_multilingual_speech/lang/tve'>tve</a>"},
+{"type": "Point", "coordinates": [168.211, -16.2975], "popupContent": "<a href='/cmu_multilingual_speech/lang/tvk'>tvk</a>"},
+{"type": "Point", "coordinates": [179.198088, -8.520813], "popupContent": "<a href='/cmu_multilingual_speech/lang/tvl'>tvl</a>"},
+{"type": "Point", "coordinates": [129.687, -8.01195], "popupContent": "<a href='/cmu_multilingual_speech/lang/tvm'>tvm</a>"},
+{"type": "Point", "coordinates": [98.194, 14.1078], "popupContent": "<a href='/cmu_multilingual_speech/lang/tvn'>tvn</a>"},
+{"type": "Point", "coordinates": [127.746, 0.02461], "popupContent": "<a href='/cmu_multilingual_speech/lang/tvo'>tvo</a>"},
+{"type": "Point", "coordinates": [37.7061, -3.41822], "popupContent": "<a href='/cmu_multilingual_speech/lang/tvs'>tvs</a>"},
+{"type": "Point", "coordinates": [95.8, 27.161], "popupContent": "<a href='/cmu_multilingual_speech/lang/tvt'>tvt</a>"},
+{"type": "Point", "coordinates": [10.67, 4.75], "popupContent": "<a href='/cmu_multilingual_speech/lang/tvu'>tvu</a>"},
+{"type": "Point", "coordinates": [120.378, -1.37295], "popupContent": "<a href='/cmu_multilingual_speech/lang/tvw'>tvw</a>"},
+{"type": "Point", "coordinates": [125.59, -8.65995], "popupContent": "<a href='/cmu_multilingual_speech/lang/tvy'>tvy</a>"},
+{"type": "Point", "coordinates": [-123.21227, 47.48952], "popupContent": "<a href='/cmu_multilingual_speech/lang/twa'>twa</a>"},
+{"type": "Point", "coordinates": [121.026, 12.8227], "popupContent": "<a href='/cmu_multilingual_speech/lang/twb'>twb</a>"},
+{"type": "Point", "coordinates": [8.35594, 9.64189], "popupContent": "<a href='/cmu_multilingual_speech/lang/twc'>twc</a>"},
+{"type": "Point", "coordinates": [6.77085, 52.2926], "popupContent": "<a href='/cmu_multilingual_speech/lang/twd'>twd</a>"},
+{"type": "Point", "coordinates": [124.174, -8.37662], "popupContent": "<a href='/cmu_multilingual_speech/lang/twe'>twe</a>"},
+{"type": "Point", "coordinates": [-105.604, 36.4277], "popupContent": "<a href='/cmu_multilingual_speech/lang/twf'>twf</a>"},
+{"type": "Point", "coordinates": [124.271, -8.48063], "popupContent": "<a href='/cmu_multilingual_speech/lang/twg'>twg</a>"},
+{"type": "Point", "coordinates": [103.570496667, 21.84898], "popupContent": "<a href='/cmu_multilingual_speech/lang/twh'>twh</a>"},
+{"type": "Point", "coordinates": [31.621, -16.0167], "popupContent": "<a href='/cmu_multilingual_speech/lang/twl'>twl</a>"},
+{"type": "Point", "coordinates": [92.1838, 27.7686], "popupContent": "<a href='/cmu_multilingual_speech/lang/twm'>twm</a>"},
+{"type": "Point", "coordinates": [11.7002, 6.36656], "popupContent": "<a href='/cmu_multilingual_speech/lang/twn'>twn</a>"},
+{"type": "Point", "coordinates": [27.42009, -23.40552], "popupContent": "<a href='/cmu_multilingual_speech/lang/two'>two</a>"},
+{"type": "Point", "coordinates": [147.083, -2.15569], "popupContent": "<a href='/cmu_multilingual_speech/lang/twp'>twp</a>"},
+{"type": "Point", "coordinates": [6.92037, 16.7814], "popupContent": "<a href='/cmu_multilingual_speech/lang/twq'>twq</a>"},
+{"type": "Point", "coordinates": [-107.578, 27.0314], "popupContent": "<a href='/cmu_multilingual_speech/lang/twr'>twr</a>"},
+{"type": "Point", "coordinates": [-49.5, -2.0], "popupContent": "<a href='/cmu_multilingual_speech/lang/twt'>twt</a>"},
+{"type": "Point", "coordinates": [123.169, -10.7326], "popupContent": "<a href='/cmu_multilingual_speech/lang/twu'>twu</a>"},
+{"type": "Point", "coordinates": [142.095, -4.80315], "popupContent": "<a href='/cmu_multilingual_speech/lang/tww'>tww</a>"},
+{"type": "Point", "coordinates": [33.8246, -18.4459], "popupContent": "<a href='/cmu_multilingual_speech/lang/twx'>twx</a>"},
+{"type": "Point", "coordinates": [115.204, -1.30017], "popupContent": "<a href='/cmu_multilingual_speech/lang/twy'>twy</a>"},
+{"type": "Point", "coordinates": [117.322, 6.2892], "popupContent": "<a href='/cmu_multilingual_speech/lang/txa'>txa</a>"},
+{"type": "Point", "coordinates": [82.9, 41.65], "popupContent": "<a href='/cmu_multilingual_speech/lang/txb'>txb</a>"},
+{"type": "Point", "coordinates": [-130.08, 55.5], "popupContent": "<a href='/cmu_multilingual_speech/lang/txc'>txc</a>"},
+{"type": "Point", "coordinates": [120.875, 1.14995], "popupContent": "<a href='/cmu_multilingual_speech/lang/txe'>txe</a>"},
+{"type": "Point", "coordinates": [102.246464, 38.894904], "popupContent": "<a href='/cmu_multilingual_speech/lang/txg'>txg</a>"},
+{"type": "Point", "coordinates": [24.711977, 42.115469], "popupContent": "<a href='/cmu_multilingual_speech/lang/txh'>txh</a>"},
+{"type": "Point", "coordinates": [-53.49553, -11.37822], "popupContent": "<a href='/cmu_multilingual_speech/lang/txi'>txi</a>"},
+{"type": "Point", "coordinates": [13.157959, 11.852298], "popupContent": "<a href='/cmu_multilingual_speech/lang/txj'>txj</a>"},
+{"type": "Point", "coordinates": [120.89, 0.42569], "popupContent": "<a href='/cmu_multilingual_speech/lang/txm'>txm</a>"},
+{"type": "Point", "coordinates": [134.168, -6.62046], "popupContent": "<a href='/cmu_multilingual_speech/lang/txn'>txn</a>"},
+{"type": "Point", "coordinates": [88.975, 26.67], "popupContent": "<a href='/cmu_multilingual_speech/lang/txo'>txo</a>"},
+{"type": "Point", "coordinates": [122.963, -10.8425], "popupContent": "<a href='/cmu_multilingual_speech/lang/txq'>txq</a>"},
+{"type": "Point", "coordinates": [-8.12394, 37.23754], "popupContent": "<a href='/cmu_multilingual_speech/lang/txr'>txr</a>"},
+{"type": "Point", "coordinates": [125.052, 1.51393], "popupContent": "<a href='/cmu_multilingual_speech/lang/txs'>txs</a>"},
+{"type": "Point", "coordinates": [139.461, -5.58276], "popupContent": "<a href='/cmu_multilingual_speech/lang/txt'>txt</a>"},
+{"type": "Point", "coordinates": [-51.6737, -7.77352], "popupContent": "<a href='/cmu_multilingual_speech/lang/txu'>txu</a>"},
+{"type": "Point", "coordinates": [115.553, 5.49808], "popupContent": "<a href='/cmu_multilingual_speech/lang/txx'>txx</a>"},
+{"type": "Point", "coordinates": [47.1357, -24.9186], "popupContent": "<a href='/cmu_multilingual_speech/lang/txy'>txy</a>"},
+{"type": "Point", "coordinates": [145.366, -5.74255], "popupContent": "<a href='/cmu_multilingual_speech/lang/tya'>tya</a>"},
+{"type": "Point", "coordinates": [3.58651, 11.5953], "popupContent": "<a href='/cmu_multilingual_speech/lang/tye'>tye</a>"},
+{"type": "Point", "coordinates": [104.106, 19.3497], "popupContent": "<a href='/cmu_multilingual_speech/lang/tyh'>tyh</a>"},
+{"type": "Point", "coordinates": [13.8603, -2.98028], "popupContent": "<a href='/cmu_multilingual_speech/lang/tyi'>tyi</a>"},
+{"type": "Point", "coordinates": [104.938, 19.1801], "popupContent": "<a href='/cmu_multilingual_speech/lang/tyj'>tyj</a>"},
+{"type": "Point", "coordinates": [104.251, 22.7528], "popupContent": "<a href='/cmu_multilingual_speech/lang/tyl'>tyl</a>"},
+{"type": "Point", "coordinates": [139.902, -5.54543], "popupContent": "<a href='/cmu_multilingual_speech/lang/tyn'>tyn</a>"},
+{"type": "Point", "coordinates": [143.324, -14.8292], "popupContent": "<a href='/cmu_multilingual_speech/lang/typ'>typ</a>"},
+{"type": "Point", "coordinates": [104.625, 20.4559], "popupContent": "<a href='/cmu_multilingual_speech/lang/tyr'>tyr</a>"},
+{"type": "Point", "coordinates": [103.805, 22.295], "popupContent": "<a href='/cmu_multilingual_speech/lang/tys'>tys</a>"},
+{"type": "Point", "coordinates": [104.008, 21.3831], "popupContent": "<a href='/cmu_multilingual_speech/lang/tyt'>tyt</a>"},
+{"type": "Point", "coordinates": [26.0158, -22.0237], "popupContent": "<a href='/cmu_multilingual_speech/lang/tyu'>tyu</a>"},
+{"type": "Point", "coordinates": [94.36667, 51.7], "popupContent": "<a href='/cmu_multilingual_speech/lang/tyv'>tyv</a>"},
+{"type": "Point", "coordinates": [13.8668, -3.50685], "popupContent": "<a href='/cmu_multilingual_speech/lang/tyx'>tyx</a>"},
+{"type": "Point", "coordinates": [106.167, 21.6448], "popupContent": "<a href='/cmu_multilingual_speech/lang/tyz'>tyz</a>"},
+{"type": "Point", "coordinates": [39.127, -6.82431], "popupContent": "<a href='/cmu_multilingual_speech/lang/tza'>tza</a>"},
+{"type": "Point", "coordinates": [-92.28, 16.64], "popupContent": "<a href='/cmu_multilingual_speech/lang/tzb'>tzb</a>"},
+{"type": "Point", "coordinates": [-92.74, 16.64], "popupContent": "<a href='/cmu_multilingual_speech/lang/tzc'>tzc</a>"},
+{"type": "Point", "coordinates": [-92.74, 16.64], "popupContent": "<a href='/cmu_multilingual_speech/lang/tze'>tze</a>"},
+{"type": "Point", "coordinates": [-92.2786, 16.6384], "popupContent": "<a href='/cmu_multilingual_speech/lang/tzh'>tzh</a>"},
+{"type": "Point", "coordinates": [-91.2012, 14.6351], "popupContent": "<a href='/cmu_multilingual_speech/lang/tzj'>tzj</a>"},
+{"type": "Point", "coordinates": [-2.40872, 32.7415], "popupContent": "<a href='/cmu_multilingual_speech/lang/tzm'>tzm</a>"},
+{"type": "Point", "coordinates": [126.7, -7.72555], "popupContent": "<a href='/cmu_multilingual_speech/lang/tzn'>tzn</a>"},
+{"type": "Point", "coordinates": [-92.7388, 16.6362], "popupContent": "<a href='/cmu_multilingual_speech/lang/tzo'>tzo</a>"},
+{"type": "Point", "coordinates": [-92.74, 16.64], "popupContent": "<a href='/cmu_multilingual_speech/lang/tzs'>tzs</a>"},
+{"type": "Point", "coordinates": [-92.74, 16.64], "popupContent": "<a href='/cmu_multilingual_speech/lang/tzu'>tzu</a>"},
+{"type": "Point", "coordinates": [143.593, -4.49162], "popupContent": "<a href='/cmu_multilingual_speech/lang/tzx'>tzx</a>"},
+{"type": "Point", "coordinates": [-92.74, 16.64], "popupContent": "<a href='/cmu_multilingual_speech/lang/tzz'>tzz</a>"},
+];
+</script>
+
+<table>
+<thead>
+<tr>
+<th>Language Id</th>
+<th>Language Name</th>
+<th>Corpus</th>
+<th>Recipe</th>
+<th>Model</th>
+<th>Inventory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/taa">taa</a></td>
+<td>Lower Tanana</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tab">tab</a></td>
+<td>Tabasaran</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tac">tac</a></td>
+<td>Lowland Tarahumara</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tad">tad</a></td>
+<td>Tause</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tae">tae</a></td>
+<td>Tariana</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/taf">taf</a></td>
+<td>Tapirapé</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tag">tag</a></td>
+<td>Tagoi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tah">tah</a></td>
+<td>Tahitian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/taj">taj</a></td>
+<td>Eastern Tamang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tak">tak</a></td>
+<td>Tala</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tal">tal</a></td>
+<td>Tal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tam">tam</a></td>
+<td>Tamil</td>
+<td><a href="/cmu_multilingual_speech/lang/tam/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/tam/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tam/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tan">tan</a></td>
+<td>Tangale</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tao">tao</a></td>
+<td>Yami</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tap">tap</a></td>
+<td>Taabwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/taq">taq</a></td>
+<td>Tamasheq</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tar">tar</a></td>
+<td>Central Tarahumara</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tas">tas</a></td>
+<td>Tay Boi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tat">tat</a></td>
+<td>Tatar</td>
+<td><a href="/cmu_multilingual_speech/lang/tat/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/tat/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tat/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tau">tau</a></td>
+<td>Upper Tanana</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tav">tav</a></td>
+<td>Tatuyo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/taw">taw</a></td>
+<td>Tai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tax">tax</a></td>
+<td>Tamki</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tay">tay</a></td>
+<td>Atayal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/taz">taz</a></td>
+<td>Tocho</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tba">tba</a></td>
+<td>Aikanã</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbb">tbb</a></td>
+<td>Tapeba</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbc">tbc</a></td>
+<td>Takia</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbd">tbd</a></td>
+<td>Kaki Ae</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbe">tbe</a></td>
+<td>Tanimbili</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbf">tbf</a></td>
+<td>Mandara</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbg">tbg</a></td>
+<td>North Tairora</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbh">tbh</a></td>
+<td>Thurawal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbi">tbi</a></td>
+<td>Gaam</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbj">tbj</a></td>
+<td>Tiang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbk">tbk</a></td>
+<td>Calamian Tagbanwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbl">tbl</a></td>
+<td>Tboli</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbm">tbm</a></td>
+<td>Tagbu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbn">tbn</a></td>
+<td>Barro Negro Tunebo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbo">tbo</a></td>
+<td>Tawala</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbp">tbp</a></td>
+<td>Taworta</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbr">tbr</a></td>
+<td>Tumtum</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbs">tbs</a></td>
+<td>Tanguat</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbt">tbt</a></td>
+<td>Tembo (Kitembo)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbu">tbu</a></td>
+<td>Tubar</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbv">tbv</a></td>
+<td>Tobo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbw">tbw</a></td>
+<td>Tagbanwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbx">tbx</a></td>
+<td>Kapin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tby">tby</a></td>
+<td>Tabaru</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tbz">tbz</a></td>
+<td>Ditammari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tca">tca</a></td>
+<td>Ticuna</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcb">tcb</a></td>
+<td>Tanacross</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcc">tcc</a></td>
+<td>Barabayiiga-Gisamjanga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcd">tcd</a></td>
+<td>Tafi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tce">tce</a></td>
+<td>Southern Tutchone</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcf">tcf</a></td>
+<td>Malinaltepec Me'phaa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcg">tcg</a></td>
+<td>Tamagario</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tch">tch</a></td>
+<td>Turks And Caicos Creole English</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tci">tci</a></td>
+<td>Anta-Komnzo-Wára-Wérè-Kémä</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tck">tck</a></td>
+<td>Tchitchege</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcl">tcl</a></td>
+<td>Taman (Myanmar)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcm">tcm</a></td>
+<td>Tanahmerah</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcn">tcn</a></td>
+<td>Tichurong</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tco">tco</a></td>
+<td>Taungyo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcp">tcp</a></td>
+<td>Laamtuk Thet</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcq">tcq</a></td>
+<td>Kaiy</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcs">tcs</a></td>
+<td>Torres Strait-Lockhart River Creole</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tct">tct</a></td>
+<td>T'en</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcu">tcu</a></td>
+<td>Southeastern Tarahumara</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcw">tcw</a></td>
+<td>Tecpatlán Totonac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcx">tcx</a></td>
+<td>Toda</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcy">tcy</a></td>
+<td>Tulu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tcz">tcz</a></td>
+<td>Thado Chin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tda">tda</a></td>
+<td>Tagdal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdb">tdb</a></td>
+<td>Panchpargania</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdc">tdc</a></td>
+<td>Emberá-Tadó</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdd">tdd</a></td>
+<td>Tai Nüa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tde">tde</a></td>
+<td>Tiranige Diga Dogon</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdf">tdf</a></td>
+<td>Talieng</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdg">tdg</a></td>
+<td>Western Tamang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdh">tdh</a></td>
+<td>Thulung</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdi">tdi</a></td>
+<td>Tomadino</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdj">tdj</a></td>
+<td>Tajio</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdk">tdk</a></td>
+<td>Tambas</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdl">tdl</a></td>
+<td>Sur</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdm">tdm</a></td>
+<td>Taruma</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdn">tdn</a></td>
+<td>Tondano</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdo">tdo</a></td>
+<td>Teme</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdq">tdq</a></td>
+<td>Tita</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdr">tdr</a></td>
+<td>Todrah</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tds">tds</a></td>
+<td>Doutai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdt">tdt</a></td>
+<td>Tetun Dili</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdu">tdu</a></td>
+<td>Tempasuk Dusun</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdv">tdv</a></td>
+<td>Toro</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdx">tdx</a></td>
+<td>Tandroy Malagasy</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tdy">tdy</a></td>
+<td>Tadyawan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tea">tea</a></td>
+<td>Temiar</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/teb">teb</a></td>
+<td>Tetete</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tec">tec</a></td>
+<td>Terik</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ted">ted</a></td>
+<td>Tepo Krumen</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tee">tee</a></td>
+<td>Huehuetla Tepehua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tef">tef</a></td>
+<td>Teressa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/teg">teg</a></td>
+<td>Latege</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/teh">teh</a></td>
+<td>Tehuelche</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tei">tei</a></td>
+<td>Aro</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tek">tek</a></td>
+<td>Kwa South</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tel">tel</a></td>
+<td>Telugu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tem">tem</a></td>
+<td>Timne</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ten">ten</a></td>
+<td>Tama (Colombia)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/teo">teo</a></td>
+<td>Teso</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tep">tep</a></td>
+<td>Tepecano</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/teq">teq</a></td>
+<td>Temein</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ter">ter</a></td>
+<td>Terena-Kinikinao-Chane</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tes">tes</a></td>
+<td>Tengger</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tet">tet</a></td>
+<td>Tetum</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/teu">teu</a></td>
+<td>Soo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tev">tev</a></td>
+<td>Teor</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tew">tew</a></td>
+<td>Rio Grande Tewa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tex">tex</a></td>
+<td>Tennet</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tey">tey</a></td>
+<td>Tulishi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tez">tez</a></td>
+<td>Tetserret</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tfi">tfi</a></td>
+<td>Tofin Gbe</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tfn">tfn</a></td>
+<td>Dena'ina</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tfo">tfo</a></td>
+<td>Tefaro</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tfr">tfr</a></td>
+<td>Teribe</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tft">tft</a></td>
+<td>Ternate</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tga">tga</a></td>
+<td>Sagalla</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgb">tgb</a></td>
+<td>Tobilung</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgc">tgc</a></td>
+<td>Tigak</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgd">tgd</a></td>
+<td>Ciwogai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tge">tge</a></td>
+<td>Eastern Gorkha Tamang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgf">tgf</a></td>
+<td>Chalikha</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgg">tgg</a></td>
+<td>Tangga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgh">tgh</a></td>
+<td>Tobagonian Creole English</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgi">tgi</a></td>
+<td>Lawunuia</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgj">tgj</a></td>
+<td>Tagin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgk">tgk</a></td>
+<td>Tajik</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgl">tgl</a></td>
+<td>Tagalog</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgn">tgn</a></td>
+<td>Tandaganon</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgo">tgo</a></td>
+<td>Sudest</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgp">tgp</a></td>
+<td>Movono</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgq">tgq</a></td>
+<td>Tring</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgr">tgr</a></td>
+<td>Tareng</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgs">tgs</a></td>
+<td>Nume</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgt">tgt</a></td>
+<td>Central Tagbanwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgu">tgu</a></td>
+<td>Tanggu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgv">tgv</a></td>
+<td>Tingui-Boto</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgw">tgw</a></td>
+<td>Tagwana Senoufo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgx">tgx</a></td>
+<td>Tagish</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgy">tgy</a></td>
+<td>Togoyo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tgz">tgz</a></td>
+<td>Tagalaka</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tha">tha</a></td>
+<td>Thai</td>
+<td><a href="/cmu_multilingual_speech/lang/tha/corpus">yes</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thc">thc</a></td>
+<td>Tai Pao (Retired)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thd">thd</a></td>
+<td>Thayore</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/the">the</a></td>
+<td>Chitwania Tharu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thf">thf</a></td>
+<td>Thangmi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thh">thh</a></td>
+<td>Northern Tarahumara</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thi">thi</a></td>
+<td>Tai Long</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thk">thk</a></td>
+<td>Tharaka</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thl">thl</a></td>
+<td>Dangaura Tharu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thm">thm</a></td>
+<td>Thavung</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thn">thn</a></td>
+<td>Thachanadan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thp">thp</a></td>
+<td>Thompson</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thq">thq</a></td>
+<td>Kochila Tharu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thr">thr</a></td>
+<td>Rana Tharu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ths">ths</a></td>
+<td>Thakali</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tht">tht</a></td>
+<td>Tahltan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thu">thu</a></td>
+<td>Thuri</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thv">thv</a></td>
+<td>Tahaggart Tamahaq</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thw">thw</a></td>
+<td>Thudam</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thx">thx</a></td>
+<td>The</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thy">thy</a></td>
+<td>Tha</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/thz">thz</a></td>
+<td>Tayart Tamajeq</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tia">tia</a></td>
+<td>Tidikelt-Tuat Tamazight</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tic">tic</a></td>
+<td>Tira</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tid">tid</a></td>
+<td>Tidung</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tie">tie</a></td>
+<td>Tingal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tif">tif</a></td>
+<td>Tifal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tig">tig</a></td>
+<td>Tigre</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tih">tih</a></td>
+<td>Timugon Murut</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tii">tii</a></td>
+<td>Tiene</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tij">tij</a></td>
+<td>Tilung</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tik">tik</a></td>
+<td>Tikar</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/til">til</a></td>
+<td>Tillamook</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tim">tim</a></td>
+<td>Timbe</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tin">tin</a></td>
+<td>Tindi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tio">tio</a></td>
+<td>Teop</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tip">tip</a></td>
+<td>Trimuris</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tiq">tiq</a></td>
+<td>Tiefo-Daramandugu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tir">tir</a></td>
+<td>Tigrinya</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tis">tis</a></td>
+<td>Masadiit Itneg</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tit">tit</a></td>
+<td>Tinigua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tiu">tiu</a></td>
+<td>Adasen</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tiv">tiv</a></td>
+<td>Tiv</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tiw">tiw</a></td>
+<td>Tiwi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tix">tix</a></td>
+<td>Southern Tiwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tiy">tiy</a></td>
+<td>Tiruray</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tiz">tiz</a></td>
+<td>Tai Hongjin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tja">tja</a></td>
+<td>Tajuasohn</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tjg">tjg</a></td>
+<td>Tunjung</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tji">tji</a></td>
+<td>Northern Tujia</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tjj">tjj</a></td>
+<td>Yangathimri</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tjl">tjl</a></td>
+<td>Tai Laing</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tjm">tjm</a></td>
+<td>Timucua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tjn">tjn</a></td>
+<td>Tonjon</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tjo">tjo</a></td>
+<td>Oued Righ</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tjp">tjp</a></td>
+<td>Tjupan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tjs">tjs</a></td>
+<td>Southern Tujia</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tju">tju</a></td>
+<td>Tjurruru</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tjw">tjw</a></td>
+<td>Djabwurrung</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tka">tka</a></td>
+<td>Truká</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkb">tkb</a></td>
+<td>Buksa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkd">tkd</a></td>
+<td>Tukudede</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tke">tke</a></td>
+<td>Takwane</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkf">tkf</a></td>
+<td>Tukumanféd</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkg">tkg</a></td>
+<td>Tesaka Malagasy</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkk">tkk</a></td>
+<td>Takpa (Retired)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkl">tkl</a></td>
+<td>Tokelau</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkm">tkm</a></td>
+<td>Takelma</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkn">tkn</a></td>
+<td>Toku-No-Shima</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkp">tkp</a></td>
+<td>Tikopia</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkq">tkq</a></td>
+<td>Tee</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkr">tkr</a></td>
+<td>Tsakhur</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tks">tks</a></td>
+<td>Takestani</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkt">tkt</a></td>
+<td>Kathoriya Tharu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tku">tku</a></td>
+<td>Upper Necaxa Totonac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkv">tkv</a></td>
+<td>Mur Pano</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkw">tkw</a></td>
+<td>Teanu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkx">tkx</a></td>
+<td>Tangko</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tkz">tkz</a></td>
+<td>Takua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tla">tla</a></td>
+<td>Southwestern Tepehuan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlb">tlb</a></td>
+<td>Tobelo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlc">tlc</a></td>
+<td>Yecuatla Totonac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tld">tld</a></td>
+<td>Talaud</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tle">tle</a></td>
+<td>Southern Marakwet</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlf">tlf</a></td>
+<td>Telefol</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlg">tlg</a></td>
+<td>Tofanma</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlh">tlh</a></td>
+<td>Klingon</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tli">tli</a></td>
+<td>Tlingit</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlj">tlj</a></td>
+<td>Talinga-Bwisi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlk">tlk</a></td>
+<td>Taloki</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tll">tll</a></td>
+<td>Tetela</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlm">tlm</a></td>
+<td>Tolomako</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tln">tln</a></td>
+<td>Talondo'</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlo">tlo</a></td>
+<td>Tasomi-Tata</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlp">tlp</a></td>
+<td>Filomeno Mata Totonac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlq">tlq</a></td>
+<td>Muak</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlr">tlr</a></td>
+<td>Talise</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tls">tls</a></td>
+<td>Tambotalo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlt">tlt</a></td>
+<td>Teluti</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlu">tlu</a></td>
+<td>Tulehu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlv">tlv</a></td>
+<td>Taliabu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlw">tlw</a></td>
+<td>South Wemale</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlx">tlx</a></td>
+<td>Khehek</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tly">tly</a></td>
+<td>North-Central Talysh</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tlz">tlz</a></td>
+<td>Toala'</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tma">tma</a></td>
+<td>Tama (Chad)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmb">tmb</a></td>
+<td>Avava</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmc">tmc</a></td>
+<td>Tumak</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmd">tmd</a></td>
+<td>Haruai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tme">tme</a></td>
+<td>Tremembé</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmf">tmf</a></td>
+<td>Toba-Enenlhet</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmg">tmg</a></td>
+<td>Ternateño</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmh">tmh</a></td>
+<td>Tuareg</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmi">tmi</a></td>
+<td>Tutuba</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmj">tmj</a></td>
+<td>Samarokena</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmk">tmk</a></td>
+<td>Northwestern Tamang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tml">tml</a></td>
+<td>Tamnim Citak</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmm">tmm</a></td>
+<td>Tai Thanh</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmn">tmn</a></td>
+<td>Taman (Indonesia)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmo">tmo</a></td>
+<td>Temoq</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmp">tmp</a></td>
+<td>Tai Mène</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmq">tmq</a></td>
+<td>Tumleo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmr">tmr</a></td>
+<td>Jewish Babylonian Aramaic (ca. 200-1200 CE)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tms">tms</a></td>
+<td>Tima</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmt">tmt</a></td>
+<td>Tasmate</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmu">tmu</a></td>
+<td>Iau</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmv">tmv</a></td>
+<td>Motembo-Kunda</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmw">tmw</a></td>
+<td>Temuan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmx">tmx</a></td>
+<td>Tomyang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmy">tmy</a></td>
+<td>Tami</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tmz">tmz</a></td>
+<td>Tamanaku</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tna">tna</a></td>
+<td>Tacana</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnb">tnb</a></td>
+<td>Western Tunebo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnc">tnc</a></td>
+<td>Tanimuca-Retuarã</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnd">tnd</a></td>
+<td>Angosturas Tunebo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tne">tne</a></td>
+<td>Tinoc Kallahan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnf">tnf</a></td>
+<td>Tangshewi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tng">tng</a></td>
+<td>Tobanga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnh">tnh</a></td>
+<td>Maiani</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tni">tni</a></td>
+<td>Tandia</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnj">tnj</a></td>
+<td>Tanjong</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnk">tnk</a></td>
+<td>Kwamera</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnl">tnl</a></td>
+<td>Lenakel</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnm">tnm</a></td>
+<td>Tabla</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnn">tnn</a></td>
+<td>North Tanna</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tno">tno</a></td>
+<td>Toromono</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnp">tnp</a></td>
+<td>Whitesands</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnq">tnq</a></td>
+<td>Taino</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnr">tnr</a></td>
+<td>Bedik</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tns">tns</a></td>
+<td>Tenis</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnt">tnt</a></td>
+<td>Tontemboan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnu">tnu</a></td>
+<td>Tay Khang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnv">tnv</a></td>
+<td>Tangchangya</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnw">tnw</a></td>
+<td>Tonsawang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnx">tnx</a></td>
+<td>Tanema</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tny">tny</a></td>
+<td>Tongwe</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tnz">tnz</a></td>
+<td>Maniq</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tob">tob</a></td>
+<td>Toba</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/toc">toc</a></td>
+<td>Coyutla Totonac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tod">tod</a></td>
+<td>Toma</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/toe">toe</a></td>
+<td>Tomedes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tof">tof</a></td>
+<td>Gizrra</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tog">tog</a></td>
+<td>Tonga (Nyasa)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/toh">toh</a></td>
+<td>Gitonga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/toi">toi</a></td>
+<td>Tonga (Zambia)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/toj">toj</a></td>
+<td>Tojolabal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tol">tol</a></td>
+<td>Tolowa-Chetco</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tom">tom</a></td>
+<td>Tombulu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ton">ton</a></td>
+<td>Tonga (Tonga Islands)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/too">too</a></td>
+<td>Xicotepec De Juárez Totonac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/top">top</a></td>
+<td>Papantla Totonac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/toq">toq</a></td>
+<td>Toposa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tor">tor</a></td>
+<td>Togbo-Vara Banda</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tos">tos</a></td>
+<td>Highland Totonac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tot">tot</a></td>
+<td>Patla-Chicontla Totonac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tou">tou</a></td>
+<td>Tho</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tov">tov</a></td>
+<td>Upper Taromi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tow">tow</a></td>
+<td>Towa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tox">tox</a></td>
+<td>Tobian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/toy">toy</a></td>
+<td>Topoiyo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/toz">toz</a></td>
+<td>To</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpa">tpa</a></td>
+<td>Taupota</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpc">tpc</a></td>
+<td>Azoyú Me'phaa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpe">tpe</a></td>
+<td>Tippera</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpf">tpf</a></td>
+<td>Tarpia</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpg">tpg</a></td>
+<td>Kula (Indonesia)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpi">tpi</a></td>
+<td>Tok Pisin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpj">tpj</a></td>
+<td>Tapieté</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpk">tpk</a></td>
+<td>Tupinikin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpl">tpl</a></td>
+<td>Tlacoapa Me'phaa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpm">tpm</a></td>
+<td>Tampulma</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpn">tpn</a></td>
+<td>Tupinambá</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpo">tpo</a></td>
+<td>Tai Pao</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpp">tpp</a></td>
+<td>Pisaflores Tepehua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpq">tpq</a></td>
+<td>Kuno-Charang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpr">tpr</a></td>
+<td>Tuparí</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpt">tpt</a></td>
+<td>Tlachichilco Tepehua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpu">tpu</a></td>
+<td>Tampuan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpv">tpv</a></td>
+<td>Tanapag</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpw">tpw</a></td>
+<td>Lingua Geral Paulista</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpx">tpx</a></td>
+<td>Acatepec Me'phaa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpy">tpy</a></td>
+<td>Trumai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tpz">tpz</a></td>
+<td>Tinputz</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tqb">tqb</a></td>
+<td>Tenetehara</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tql">tql</a></td>
+<td>Lehali</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tqm">tqm</a></td>
+<td>Turumsa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tqn">tqn</a></td>
+<td>Tenino</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tqo">tqo</a></td>
+<td>Toaripi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tqp">tqp</a></td>
+<td>Tomoip</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tqq">tqq</a></td>
+<td>Tunni</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tqr">tqr</a></td>
+<td>Torona</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tqt">tqt</a></td>
+<td>Ozumatlán Totonac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tqu">tqu</a></td>
+<td>Touo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tqw">tqw</a></td>
+<td>Tonkawa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tra">tra</a></td>
+<td>Tirahi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trb">trb</a></td>
+<td>Terebu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trc">trc</a></td>
+<td>Copala Triqui</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trd">trd</a></td>
+<td>Turi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tre">tre</a></td>
+<td>East Tarangan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trf">trf</a></td>
+<td>Trinidadian Creole English</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trg">trg</a></td>
+<td>Lishán Didán</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trh">trh</a></td>
+<td>Turaka</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tri">tri</a></td>
+<td>Trió</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trj">trj</a></td>
+<td>Toram</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trl">trl</a></td>
+<td>Traveller Scottish</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trm">trm</a></td>
+<td>Tregami</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trn">trn</a></td>
+<td>Trinitario-Javeriano-Loretano</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tro">tro</a></td>
+<td>Tarao</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trp">trp</a></td>
+<td>Kok Borok</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trq">trq</a></td>
+<td>San Martín Itunyoso Triqui</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trr">trr</a></td>
+<td>Taushiro</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trs">trs</a></td>
+<td>Chicahuaxtla Triqui</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trt">trt</a></td>
+<td>Tunggare</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tru">tru</a></td>
+<td>Turoyo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trv">trv</a></td>
+<td>Seediq</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trw">trw</a></td>
+<td>Torwali</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trx">trx</a></td>
+<td>Tringgus-Sembaan Bidayuh</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/try">try</a></td>
+<td>Turung</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/trz">trz</a></td>
+<td>Torá</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsa">tsa</a></td>
+<td>Tsaangi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsb">tsb</a></td>
+<td>Tsamai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsc">tsc</a></td>
+<td>Tswa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsd">tsd</a></td>
+<td>Tsakonian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tse">tse</a></td>
+<td>Tunisian Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsf">tsf</a></td>
+<td>Southwestern Tamang</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsg">tsg</a></td>
+<td>Tausug</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsh">tsh</a></td>
+<td>Tsuvan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsi">tsi</a></td>
+<td>Southern-Coastal Tsimshian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsj">tsj</a></td>
+<td>Tshangla</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsk">tsk</a></td>
+<td>Tseku</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsl">tsl</a></td>
+<td>Ts'ün-Lao</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsm">tsm</a></td>
+<td>Turkish Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsn">tsn</a></td>
+<td>Tswana</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tso">tso</a></td>
+<td>Tsonga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsp">tsp</a></td>
+<td>Northern Toussian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsq">tsq</a></td>
+<td>Thai Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsr">tsr</a></td>
+<td>Akei</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tss">tss</a></td>
+<td>Taiwan Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tst">tst</a></td>
+<td>Tondi Songway Kiini</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsu">tsu</a></td>
+<td>Tsou</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsv">tsv</a></td>
+<td>Tsogo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsw">tsw</a></td>
+<td>Salka-Tsishingini</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsx">tsx</a></td>
+<td>Mubami</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsy">tsy</a></td>
+<td>Tebul Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tsz">tsz</a></td>
+<td>Purepecha</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tta">tta</a></td>
+<td>Tutelo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttb">ttb</a></td>
+<td>Gaa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttc">ttc</a></td>
+<td>Tektiteko</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttd">ttd</a></td>
+<td>Tauade</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tte">tte</a></td>
+<td>Bwanabwana</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttf">ttf</a></td>
+<td>Tuotomb</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttg">ttg</a></td>
+<td>Tutong</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tth">tth</a></td>
+<td>Upper Ta'oih</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tti">tti</a></td>
+<td>Tobati</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttj">ttj</a></td>
+<td>Tooro</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttk">ttk</a></td>
+<td>Totoro</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttl">ttl</a></td>
+<td>Totela</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttm">ttm</a></td>
+<td>Northern Tutchone</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttn">ttn</a></td>
+<td>Towei</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tto">tto</a></td>
+<td>Lower Ta'oih</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttp">ttp</a></td>
+<td>Tombelala</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttq">ttq</a></td>
+<td>Tawallammat Tamajaq</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttr">ttr</a></td>
+<td>Tera</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tts">tts</a></td>
+<td>Northeastern Thai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttt">ttt</a></td>
+<td>Muslim Tat</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttu">ttu</a></td>
+<td>Torau</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttv">ttv</a></td>
+<td>Titan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttw">ttw</a></td>
+<td>Western Lowland Kenyah</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttx">ttx</a></td>
+<td>Tutong 1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tty">tty</a></td>
+<td>Sikaritai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/ttz">ttz</a></td>
+<td>Tsum</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tua">tua</a></td>
+<td>Wiarumus</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tub">tub</a></td>
+<td>Tübatulabal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tuc">tuc</a></td>
+<td>Mutu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tud">tud</a></td>
+<td>Tuxá</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tue">tue</a></td>
+<td>Tuyuca</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tuf">tuf</a></td>
+<td>Central Tunebo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tug">tug</a></td>
+<td>Tunia</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tuh">tuh</a></td>
+<td>Taulil</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tui">tui</a></td>
+<td>Tupuri</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tuj">tuj</a></td>
+<td>Tugutil</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tuk">tuk</a></td>
+<td>Turkmen</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tul">tul</a></td>
+<td>Tula</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tum">tum</a></td>
+<td>Tumbuka</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tun">tun</a></td>
+<td>Tunica</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tuo">tuo</a></td>
+<td>Tucano</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tuq">tuq</a></td>
+<td>Tedaga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tur">tur</a></td>
+<td>Turkish</td>
+<td><a href="/cmu_multilingual_speech/lang/tur/corpus">yes</a></td>
+<td></td>
+<td><a href="/cmu_multilingual_speech/lang/tur/model">yes</a></td>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tur/phoible.txt">yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tus">tus</a></td>
+<td>Tuscarora</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tuu">tuu</a></td>
+<td>Tututni</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tuv">tuv</a></td>
+<td>Turkana</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tux">tux</a></td>
+<td>Tuxináwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tuy">tuy</a></td>
+<td>Tugen</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tuz">tuz</a></td>
+<td>Turka</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tva">tva</a></td>
+<td>Vaghua</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tvd">tvd</a></td>
+<td>Tsuvadi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tve">tve</a></td>
+<td>Te'un</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tvk">tvk</a></td>
+<td>Southeast Ambrym</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tvl">tvl</a></td>
+<td>Tuvalu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tvm">tvm</a></td>
+<td>Tela-Masbuar</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tvn">tvn</a></td>
+<td>Tavoyan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tvo">tvo</a></td>
+<td>Tidore</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tvs">tvs</a></td>
+<td>Taveta</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tvt">tvt</a></td>
+<td>Tutsa Naga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tvu">tvu</a></td>
+<td>Tunen</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tvw">tvw</a></td>
+<td>Sedoa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tvx">tvx</a></td>
+<td>Taivoan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tvy">tvy</a></td>
+<td>Timor Pidgin</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twa">twa</a></td>
+<td>Twana</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twb">twb</a></td>
+<td>Western Tawbuid</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twc">twc</a></td>
+<td>Teshenawa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twd">twd</a></td>
+<td>Twents</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twe">twe</a></td>
+<td>Teiwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twf">twf</a></td>
+<td>Taos Northern Tiwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twg">twg</a></td>
+<td>Tereweng</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twh">twh</a></td>
+<td>Tai Dón</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twi">twi</a></td>
+<td>Twi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twl">twl</a></td>
+<td>Tawara</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twm">twm</a></td>
+<td>Tawang Monpa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twn">twn</a></td>
+<td>Cambap-Langa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/two">two</a></td>
+<td>Tswapong</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twp">twp</a></td>
+<td>Ere</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twq">twq</a></td>
+<td>Tasawaq</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twr">twr</a></td>
+<td>Southwestern Tarahumara</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twt">twt</a></td>
+<td>Turiwára</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twu">twu</a></td>
+<td>Termanu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tww">tww</a></td>
+<td>Tuwari</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twx">twx</a></td>
+<td>Tewe</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/twy">twy</a></td>
+<td>Tawoyan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txa">txa</a></td>
+<td>Tombonuo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txb">txb</a></td>
+<td>Tokharian B</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txc">txc</a></td>
+<td>Tsetsaut</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txe">txe</a></td>
+<td>Totoli</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txg">txg</a></td>
+<td>Tangut</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txh">txh</a></td>
+<td>Thracian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txi">txi</a></td>
+<td>Ikpeng</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txj">txj</a></td>
+<td>Tarjumo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txm">txm</a></td>
+<td>Tomini</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txn">txn</a></td>
+<td>West Tarangan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txo">txo</a></td>
+<td>Toto</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txq">txq</a></td>
+<td>Tii</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txr">txr</a></td>
+<td>Tartessian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txs">txs</a></td>
+<td>Tonsea</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txt">txt</a></td>
+<td>Citak</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txu">txu</a></td>
+<td>Kayapó</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txx">txx</a></td>
+<td>Tatana</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/txy">txy</a></td>
+<td>Tanosy Malagasy</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tya">tya</a></td>
+<td>Tauya</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tye">tye</a></td>
+<td>Kyenga</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tyh">tyh</a></td>
+<td>O'du</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tyi">tyi</a></td>
+<td>Teke-Tsaayi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tyj">tyj</a></td>
+<td>Tai Do-Mene-Yo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tyl">tyl</a></td>
+<td>Thu Lao</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tyn">tyn</a></td>
+<td>Kombai</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/typ">typ</a></td>
+<td>Thaypan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tyr">tyr</a></td>
+<td>Tai Daeng-Meuay</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tys">tys</a></td>
+<td>Tày Sa Pa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tyt">tyt</a></td>
+<td>Tày Tac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tyu">tyu</a></td>
+<td>Southern Tshwa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tyv">tyv</a></td>
+<td>Tuvinian</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tyx">tyx</a></td>
+<td>Teke-Tyee</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tyy">tyy</a></td>
+<td>Tiyaa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tyz">tyz</a></td>
+<td>Tày</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tza">tza</a></td>
+<td>Tanzanian Sign Language</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzb">tzb</a></td>
+<td>Tzeltal, Bachajón</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzc">tzc</a></td>
+<td>Tzotzil, Chamula</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tze">tze</a></td>
+<td>Tzotzil, Chenalhó</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzh">tzh</a></td>
+<td>Tzeltal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzj">tzj</a></td>
+<td>Tz'utujil</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzl">tzl</a></td>
+<td>Talossan</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzm">tzm</a></td>
+<td>Central Moroccan Berber</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzn">tzn</a></td>
+<td>Tugun</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzo">tzo</a></td>
+<td>Tzotzil</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzs">tzs</a></td>
+<td>Tzotzil, San Andrés Larrainzar</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzt">tzt</a></td>
+<td>Tz'utujil, Western</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzu">tzu</a></td>
+<td>Tzotzil, Huixtán</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzx">tzx</a></td>
+<td>Tabriak</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/shinjiwlab/cmu_multilingual_speech/tree/main/data/lang/tzz">tzz</a></td>
+<td>Tzotzil, Zinacantán</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.tabs", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+        <script src="../../javascripts/leaflet.js"></script>
+      
+        <script src="../../javascripts/build_map.js"></script>
+      
+    
+  </body>
+</html>

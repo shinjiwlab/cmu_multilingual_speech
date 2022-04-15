@@ -1,0 +1,603 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>Corpus - CMU Multilingual Speech DB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/leaflet.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#corpus" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="CMU Multilingual Speech DB" class="md-header__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CMU Multilingual Speech DB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Corpus
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../corpus/" class="md-tabs__link">
+      Corpus
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../model/" class="md-tabs__link">
+      Model
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../recipe/" class="md-tabs__link">
+      Recipe
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../index/" class="md-tabs__link">
+      Language
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CMU Multilingual Speech DB" class="md-nav__button md-logo" aria-label="CMU Multilingual Speech DB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CMU Multilingual Speech DB
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../corpus/" class="md-nav__link">
+        Corpus
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../model/" class="md-nav__link">
+        Model
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../recipe/" class="md-nav__link">
+        Recipe
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index/" class="md-nav__link">
+        Language
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="corpus">Corpus</h1>
+<table>
+<thead>
+<tr>
+<th>Corpus name</th>
+<th>Task</th>
+<th>Language</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The AMI Meeting Corpus</td>
+<td>ASR</td>
+<td>EN</td>
+<td><a href="http://groups.inf.ed.ac.uk/ami/corpus/">http://groups.inf.ed.ac.uk/ami/corpus/</a></td>
+</tr>
+<tr>
+<td>CMU AN4 database</td>
+<td>ASR/TTS</td>
+<td>EN</td>
+<td><a href="http://www.speech.cs.cmu.edu/databases/an4/">http://www.speech.cs.cmu.edu/databases/an4/</a></td>
+</tr>
+<tr>
+<td>The 4<sup>th</sup> CHiME Speech Separation and Recognition Challenge</td>
+<td>ASR/Multichannel ASR</td>
+<td>EN</td>
+<td><a href="http://spandh.dcs.shef.ac.uk/chime_challenge/chime2016/">http://spandh.dcs.shef.ac.uk/chime_challenge/chime2016/</a></td>
+</tr>
+<tr>
+<td>Distant-speech Interaction for Robust Home Applications</td>
+<td>Multichannel ASR</td>
+<td>EN</td>
+<td><a href="https://dirha.fbk.eu/">https://dirha.fbk.eu/</a>, <a href="https://github.com/SHINE-FBK/DIRHA_English_wsj">https://github.com/SHINE-FBK/DIRHA_English_wsj</a></td>
+</tr>
+<tr>
+<td>Fluent Speech Commands Dataset</td>
+<td>SLU</td>
+<td>EN</td>
+<td><a href="https://fluent.ai/fluent-speech-commands-a-dataset-for-spoken-language-understanding-research/">https://fluent.ai/fluent-speech-commands-a-dataset-for-spoken-language-understanding-research/</a></td>
+</tr>
+<tr>
+<td>Fluent Speech Commands Dataset MASE Eval Unseen splits</td>
+<td>SLU</td>
+<td>EN</td>
+<td><a href="https://github.com/maseEval/mase">https://github.com/maseEval/mase</a></td>
+</tr>
+<tr>
+<td>Fluent Speech Commands Dataset MASE Eval Challenge splits</td>
+<td>SLU</td>
+<td>EN</td>
+<td><a href="https://github.com/maseEval/mase">https://github.com/maseEval/mase</a></td>
+</tr>
+<tr>
+<td>GigaSpeech: An Evolving, Multi-domain ASR Corpus with 10,000 Hours of Transcribed Audio</td>
+<td>ASR</td>
+<td>EN</td>
+<td><a href="https://github.com/SpeechColab/GigaSpeech">https://github.com/SpeechColab/GigaSpeech</a></td>
+</tr>
+<tr>
+<td>Grabo dataset</td>
+<td>SLU</td>
+<td>EN + NL</td>
+<td><a href="https://www.esat.kuleuven.be/psi/spraak/downloads/">https://www.esat.kuleuven.be/psi/spraak/downloads/</a></td>
+</tr>
+<tr>
+<td>How2: A Large-scale Dataset for Multimodal Language Understanding</td>
+<td>ASR/MT/ST</td>
+<td>EN-&gt;PT</td>
+<td><a href="https://github.com/srvk/how2-dataset">https://github.com/srvk/how2-dataset</a></td>
+</tr>
+<tr>
+<td>IEMOCAP database: The Interactive Emotional Dyadic Motion Capture database</td>
+<td>SLU</td>
+<td>EN</td>
+<td><a href="https://sail.usc.edu/iemocap/">https://sail.usc.edu/iemocap/</a></td>
+</tr>
+<tr>
+<td>LibriSpeech ASR corpus</td>
+<td>ASR</td>
+<td>EN</td>
+<td><a href="http://www.openslr.org/12">http://www.openslr.org/12</a></td>
+</tr>
+<tr>
+<td>LibriSpeech ASR corpus 100h subset</td>
+<td>ASR</td>
+<td>EN</td>
+<td><a href="http://www.openslr.org/12">http://www.openslr.org/12</a></td>
+</tr>
+<tr>
+<td>LibriTTS corpus</td>
+<td>TTS</td>
+<td>EN</td>
+<td><a href="http://www.openslr.org/60">http://www.openslr.org/60</a></td>
+</tr>
+<tr>
+<td>The LJ Speech Dataset</td>
+<td>TTS</td>
+<td>EN</td>
+<td><a href="https://keithito.com/LJ-Speech-Dataset/">https://keithito.com/LJ-Speech-Dataset/</a></td>
+</tr>
+<tr>
+<td>The Oxford-BBC Lip Reading Sentences 2 (LRS2) Dataset</td>
+<td>Lipreading/ASR</td>
+<td>EN</td>
+<td><a href="https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs2.html">https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs2.html</a></td>
+</tr>
+<tr>
+<td>Mini version of CMU AN4 database for the integration test</td>
+<td>ASR/TTS/SE</td>
+<td>EN</td>
+<td><a href="http://www.speech.cs.cmu.edu/databases/an4/">http://www.speech.cs.cmu.edu/databases/an4/</a></td>
+</tr>
+<tr>
+<td>National Speech Corpus</td>
+<td>ASR</td>
+<td>EN-SG</td>
+<td><a href="https://www.imda.gov.sg/programme-listing/digital-services-lab/national-speech-corpus">https://www.imda.gov.sg/programme-listing/digital-services-lab/national-speech-corpus</a></td>
+</tr>
+<tr>
+<td>REVERB (REverberant Voice Enhancement and Recognition Benchmark) challenge</td>
+<td>ASR</td>
+<td>EN</td>
+<td><a href="https://reverb2014.dereverberation.com/">https://reverb2014.dereverberation.com/</a></td>
+</tr>
+<tr>
+<td>SNIPS: A dataset for spoken language understanding</td>
+<td>SLU</td>
+<td>EN</td>
+<td><a href="https://github.com/sonos/spoken-language-understanding-research-datasets">https://github.com/sonos/spoken-language-understanding-research-datasets</a></td>
+</tr>
+<tr>
+<td>SEAME: a Mandarin-English Code-switching Speech Corpus in South-East Asia</td>
+<td>ASR</td>
+<td>EN + ZH</td>
+<td><a href="https://catalog.ldc.upenn.edu/LDC2015S04">https://catalog.ldc.upenn.edu/LDC2015S04</a></td>
+</tr>
+<tr>
+<td>SLUE: Spoken Language Understanding Evaluation</td>
+<td>SLU</td>
+<td>EN</td>
+<td><a href="https://github.com/asappresearch/slue-toolkit">https://github.com/asappresearch/slue-toolkit</a></td>
+</tr>
+<tr>
+<td>SLURP: A Spoken Language Understanding Resource Package</td>
+<td>SLU</td>
+<td>EN</td>
+<td><a href="https://github.com/pswietojanski/slurp">https://github.com/pswietojanski/slurp</a></td>
+</tr>
+<tr>
+<td>SLURP: A Spoken Language Understanding Resource Package</td>
+<td>SLU/Entity Classification</td>
+<td>EN</td>
+<td><a href="https://github.com/pswietojanski/slurp">https://github.com/pswietojanski/slurp</a></td>
+</tr>
+<tr>
+<td>Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition</td>
+<td>SLU</td>
+<td>EN</td>
+<td><a href="https://www.tensorflow.org/datasets/catalog/speech_commands">https://www.tensorflow.org/datasets/catalog/speech_commands</a></td>
+</tr>
+<tr>
+<td>SPGISpeech 5k corpus</td>
+<td>ASR</td>
+<td>EN</td>
+<td><a href="https://datasets.kensho.com/datasets/scribe">https://datasets.kensho.com/datasets/scribe</a></td>
+</tr>
+<tr>
+<td>Switchboard Corpus for 2-channel Conversational Telephone Speech (300h)</td>
+<td>ASR</td>
+<td>EN</td>
+<td><a href="https://catalog.ldc.upenn.edu/LDC97S62">https://catalog.ldc.upenn.edu/LDC97S62</a></td>
+</tr>
+<tr>
+<td>NXT Switchboard Annotations</td>
+<td>SLU</td>
+<td>EN</td>
+<td><a href="https://catalog.ldc.upenn.edu/LDC2009T26">https://catalog.ldc.upenn.edu/LDC2009T26</a></td>
+</tr>
+<tr>
+<td>TED-LIUM corpus release 2</td>
+<td>ASR</td>
+<td>EN</td>
+<td><a href="https://www.openslr.org/19/">https://www.openslr.org/19/</a>, <a href="http://www.lrec-conf.org/proceedings/lrec2014/pdf/1104_Paper.pdf">http://www.lrec-conf.org/proceedings/lrec2014/pdf/1104_Paper.pdf</a></td>
+</tr>
+<tr>
+<td>TIMIT Acoustic-Phonetic Continuous Speech Corpus</td>
+<td>ASR</td>
+<td>EN</td>
+<td><a href="https://catalog.ldc.upenn.edu/LDC93S1">https://catalog.ldc.upenn.edu/LDC93S1</a></td>
+</tr>
+<tr>
+<td>English Multi-speaker Corpus for CSTR Voice Cloning Toolkit</td>
+<td>TTS</td>
+<td>EN</td>
+<td><a href="http://www.udialogue.org/download/cstr-vctk-corpus.html">http://www.udialogue.org/download/cstr-vctk-corpus.html</a></td>
+</tr>
+<tr>
+<td>CSR-I (WSJ0) Complete, CSR-II (WSJ1) Complete</td>
+<td>ASR</td>
+<td>EN</td>
+<td><a href="https://catalog.ldc.upenn.edu/LDC93S6A,https://catalog.ldc.upenn.edu/LDC94S13A">https://catalog.ldc.upenn.edu/LDC93S6A,https://catalog.ldc.upenn.edu/LDC94S13A</a></td>
+</tr>
+<tr>
+<td>MERL WSJ0-mix multi-speaker dataset</td>
+<td>ASR/SE</td>
+<td>EN</td>
+<td><a href="http://www.merl.com/demos/deep-clustering">http://www.merl.com/demos/deep-clustering</a></td>
+</tr>
+<tr>
+<td>MERL WSJ0-mix multi-speaker dataset (Spatialized version)</td>
+<td>ASR/Multichannel ASR/SE</td>
+<td>EN</td>
+<td><a href="http://www.merl.com/demos/deep-clustering">http://www.merl.com/demos/deep-clustering</a></td>
+</tr>
+<tr>
+<td>Common Voice</td>
+<td>ASR</td>
+<td>eng</td>
+<td><a href="https://commonvoice.mozilla.org/">https://commonvoice.mozilla.org/</a></td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["toc.integrate", "navigation.tabs", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+        <script src="../../../javascripts/leaflet.js"></script>
+      
+        <script src="../../../javascripts/build_map.js"></script>
+      
+    
+  </body>
+</html>
